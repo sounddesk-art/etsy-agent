@@ -1,29 +1,42 @@
 #!/usr/bin/env python3
 import sys, json
-from etsy_api import refresh_access_token, get_owner_shop, create_draft, upload_image, upload_file
+from etsy_api import (
+    refresh_access_token, get_owner_shop, find_taxonomy_id,
+    create_draft, upload_image, upload_file
+)
 
 def main():
     if len(sys.argv) != 2:
         raise SystemExit("Usage: python scripts/create_draft.py <listing-package.json>")
+
     pkg=json.load(open(sys.argv[1],encoding="utf-8"))
     token=refresh_access_token()["access_token"]
     shop=get_owner_shop(token)
     shop_id=shop["shop_id"]
 
+    taxonomy_id=pkg.get("taxonomy_id")
+    taxonomy_name=None
+    if not taxonomy_id:
+        taxonomy_id,taxonomy_name=find_taxonomy_id(
+            token, pkg.get("taxonomy_query","Digital Prints")
+        )
+
     payload={
-        "quantity": pkg.get("quantity",999),
+        "quantity": str(pkg.get("quantity",1)),
         "title": pkg["title"],
         "description": pkg["description"],
-        "price": pkg["price"],
+        "price": str(pkg["price"]),
         "who_made": pkg.get("who_made","i_did"),
         "when_made": pkg.get("when_made","2020_2026"),
-        "taxonomy_id": pkg["taxonomy_id"],
-        "is_supply": str(pkg.get("is_supply",False)).lower(),
+        "taxonomy_id": str(taxonomy_id),
+        "is_supply": "true" if pkg.get("is_supply",False) else "false",
         "type": "download",
         "should_auto_renew": "false",
     }
-    for i,t in enumerate(pkg.get("tags",[])[:13]):
-        payload[f"tags[{i}]"]=t
+
+    tags=[str(t).strip() for t in pkg.get("tags",[]) if str(t).strip()][:13]
+    if tags:
+        payload["tags"]=",".join(tags)
 
     listing=create_draft(token,shop_id,payload)
     listing_id=listing["listing_id"]
@@ -39,7 +52,9 @@ def main():
         "shop_id":shop_id,
         "shop_name":shop.get("shop_name"),
         "listing_id":listing_id,
-        "state":listing.get("state","draft")
+        "state":listing.get("state","draft"),
+        "taxonomy_id":taxonomy_id,
+        "taxonomy_name":taxonomy_name
     },indent=2))
 
 if __name__=="__main__":
