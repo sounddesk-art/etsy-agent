@@ -1,0 +1,47 @@
+{
+  "version": 2,
+  "series": [
+    {
+      "id": "cozy-animals",
+      "name": "Cozy Animals",
+      "style": "warm photorealistic cozy interiors, expressive cute animals, tactile blankets/books/mugs, elegant hand-lettered short quote",
+      "products": [
+        "wall_art",
+        "greeting_card",
+        "postcard"
+      ]
+    },
+    {
+      "id": "landscapes",
+      "name": "Landscapes",
+      "style": "dreamy premium landscape photography/illustration hybrid, sunrise/sunset, alpine lakes, coastlines, clean quote placement",
+      "products": [
+        "wall_art",
+        "greeting_card",
+        "postcard"
+      ]
+    },
+    {
+      "id": "celestial",
+      "name": "Moon / Zodiac / Celestial",
+      "style": "dark navy, warm gold, elegant mystical celestial artwork, moon phases, zodiac symbolism, botanical accents",
+      "products": [
+        "wall_art",
+        "greeting_card",
+        "postcard",
+        "bookmark"
+      ]
+    },
+    {
+      "id": "botanical-sun",
+      "name": "Botanical / Sun Symbolism",
+      "style": "warm ivory, watercolor botanicals, eucalyptus/wildflowers, ornate sun motifs, gold accents",
+      "products": [
+        "wall_art",
+        "greeting_card",
+        "postcard",
+        "bookmark"
+      ]
+    }
+  ]
+}
