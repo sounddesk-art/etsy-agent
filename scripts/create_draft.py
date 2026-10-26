@@ -2,7 +2,7 @@
 import sys, json
 from etsy_api import (
     refresh_access_token, get_owner_shop, find_taxonomy_id,
-    create_draft, upload_image, upload_file
+    create_draft, upload_image, upload_file, update_listing
 )
 
 def main():
@@ -30,7 +30,6 @@ def main():
         "when_made": pkg.get("when_made","2020_2026"),
         "taxonomy_id": str(taxonomy_id),
         "is_supply": "true" if pkg.get("is_supply",False) else "false",
-        "type": "download",
         "should_auto_renew": "false",
     }
 
@@ -46,6 +45,9 @@ def main():
 
     for rank,path in enumerate(pkg.get("files",[]),start=1):
         upload_file(token,shop_id,listing_id,path,rank)
+
+    if pkg.get("files"):
+        update_listing(token,shop_id,listing_id,{"type":"download"})
 
     print(json.dumps({
         "status":"draft_created",
