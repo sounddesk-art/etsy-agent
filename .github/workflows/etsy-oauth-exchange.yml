@@ -11,40 +11,62 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Exchange Etsy authorization code
-        id: exchange
         env:
           ETSY_KEYSTRING: ${{ secrets.ETSY_KEYSTRING }}
           ETSY_OAUTH_CODE: ${{ secrets.ETSY_OAUTH_CODE }}
           ETSY_PKCE_VERIFIER: ${{ secrets.ETSY_PKCE_VERIFIER }}
         run: |
           python - <<'PY'
-          import os, requests
-          r = requests.post(
+          import os, requests, json
+
+          def clean(value, prefix):
+              v=(value or "").strip().strip('"').strip("'")
+              if v.upper().startswith(prefix):
+                  v=v[len(prefix):].strip()
+              # tolerate accidental copy of multiple lines from helper
+              v=v.splitlines()[0].strip()
+              return v
+
+          key=clean(os.environ.get("ETSY_KEYSTRING"), "KEYSTRING=")
+          code=clean(os.environ.get("ETSY_OAUTH_CODE"), "CODE=")
+          verifier=clean(os.environ.get("ETSY_PKCE_VERIFIER"), "VERIFIER=")
+
+          if not key or not code or not verifier:
+              raise SystemExit("One or more required secrets are empty after normalization.")
+
+          r=requests.post(
               "https://api.etsy.com/v3/public/oauth/token",
+              headers={"Content-Type":"application/x-www-form-urlencoded"},
               data={
-                  "grant_type": "authorization_code",
-                  "client_id": os.environ["ETSY_KEYSTRING"],
-                  "redirect_uri": "https://sounddesk-art.github.io/etsy-agent/oauth-callback.html",
-                  "code": os.environ["ETSY_OAUTH_CODE"],
-                  "code_verifier": os.environ["ETSY_PKCE_VERIFIER"],
+                  "grant_type":"authorization_code",
+                  "client_id":key,
+                  "code":code,
+                  "code_verifier":verifier,
               },
               timeout=30,
           )
-          r.raise_for_status()
-          token = r.json().get("refresh_token")
-          if not token:
-              raise SystemExit("No refresh_token returned by Etsy")
-          with open("/tmp/etsy_refresh_token","w",encoding="utf-8") as f:
-              f.write(token)
-          print("Etsy token exchange succeeded.")
-          PY
 
-      - name: Store refresh token as GitHub secret
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: |
-          gh secret set ETSY_REFRESH_TOKEN --repo "${{ github.repository }}" < /tmp/etsy_refresh_token
-          echo "ETSY_REFRESH_TOKEN stored successfully."
+          if not r.ok:
+              try:
+                  err=r.json()
+                  safe={k:v for k,v in err.items() if k in ("error","error_description","message")}
+                  print("Etsy token exchange failed:", json.dumps(safe))
+              except Exception:
+                  print("Etsy token exchange failed with HTTP", r.status_code)
+              raise SystemExit(1)
+
+          t=r.json()
+          refresh=t.get("refresh_token")
+          if not refresh:
+              raise SystemExit("Etsy returned no refresh_token.")
+
+          # Mask immediately so the generated token can never appear unredacted later.
+          print(f"::add-mask::{refresh}")
+          with open("/tmp/etsy_refresh_token","w",encoding="utf-8") as fh:
+              fh.write(refresh)
+          print("Etsy token exchange succeeded.")
+          print("Next step: store the generated refresh token securely.")
+          PY
 
       - name: Remove temporary token file
         if: always()
