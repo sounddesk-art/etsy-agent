@@ -29,27 +29,44 @@ def auth_headers(access_token):
         "Authorization": f"Bearer {access_token}",
     }
 
+def api_headers():
+    return {"x-api-key": api_key_header()}
+
 def get_me(access_token):
     r=requests.get(f"{BASE}/application/users/me",headers=auth_headers(access_token),timeout=30)
     r.raise_for_status()
     return r.json()
 
-def list_shops(access_token):
-    r=requests.get(f"{BASE}/application/shops",headers=auth_headers(access_token),timeout=30)
+def user_id_from_token(access_token):
+    prefix=access_token.split(".",1)[0]
+    if not prefix.isdigit():
+        raise RuntimeError("Could not derive Etsy user ID from OAuth access token.")
+    return int(prefix)
+
+def get_owner_shop(access_token):
+    user_id=user_id_from_token(access_token)
+    r=requests.get(
+        f"{BASE}/application/users/{user_id}/shops",
+        headers=api_headers(),
+        timeout=30,
+    )
     r.raise_for_status()
     return r.json()
 
 def create_draft(access_token, shop_id, payload):
-    url=f"{BASE}/application/shops/{shop_id}/listings"
-    r=requests.post(url,headers=auth_headers(access_token),data=payload,timeout=60)
+    r=requests.post(
+        f"{BASE}/application/shops/{shop_id}/listings",
+        headers=auth_headers(access_token),
+        data=payload,
+        timeout=60,
+    )
     r.raise_for_status()
     return r.json()
 
 def upload_image(access_token, shop_id, listing_id, path, rank=1, alt_text=""):
-    url=f"{BASE}/application/shops/{shop_id}/listings/{listing_id}/images"
     with open(path,"rb") as fh:
         r=requests.post(
-            url,
+            f"{BASE}/application/shops/{shop_id}/listings/{listing_id}/images",
             headers=auth_headers(access_token),
             files={"image":(os.path.basename(path),fh)},
             data={"rank":rank,"alt_text":alt_text},
@@ -59,10 +76,9 @@ def upload_image(access_token, shop_id, listing_id, path, rank=1, alt_text=""):
     return r.json()
 
 def upload_file(access_token, shop_id, listing_id, path, rank=1):
-    url=f"{BASE}/application/shops/{shop_id}/listings/{listing_id}/files"
     with open(path,"rb") as fh:
         r=requests.post(
-            url,
+            f"{BASE}/application/shops/{shop_id}/listings/{listing_id}/files",
             headers=auth_headers(access_token),
             files={"file":(os.path.basename(path),fh)},
             data={"name":os.path.basename(path),"rank":rank},
@@ -74,9 +90,15 @@ def upload_file(access_token, shop_id, listing_id, path, rank=1):
 if __name__=="__main__":
     tokens=refresh_access_token()
     access=tokens["access_token"]
-    # Never print tokens.
     me=get_me(access)
-    print(json.dumps({"connection":"ok","user":me,"scope":tokens.get("scope")},indent=2))
+    shop=get_owner_shop(access)
+    print(json.dumps({
+        "connection":"ok",
+        "user_id":user_id_from_token(access),
+        "shop_id":shop.get("shop_id"),
+        "shop_name":shop.get("shop_name"),
+        "scope":tokens.get("scope"),
+    },indent=2))
     returned=tokens.get("refresh_token")
     current=os.environ.get("ETSY_REFRESH_TOKEN")
     if returned and returned != current:
