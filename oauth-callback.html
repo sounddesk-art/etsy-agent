@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Etsy OAuth Callback — Sounddesk Etsy Agent</title>
+<style>
+body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;max-width:820px;margin:48px auto;padding:0 20px;color:#1f2937;line-height:1.55}
+pre{white-space:pre-wrap;word-break:break-all;background:#f3f4f6;padding:16px;border-radius:12px}.ok{color:#166534}.bad{color:#991b1b}.box{border:1px solid #e5e7eb;border-radius:16px;padding:22px;margin-top:22px}button{font:inherit;padding:10px 14px;border-radius:10px;border:1px solid #d1d5db;cursor:pointer}
+</style>
+</head><body>
+<h1>Etsy authorization</h1>
+<div id="status" class="box">Processing…</div>
+<div id="details" class="box" hidden>
+<p><strong>Authorization code</strong></p><pre id="code"></pre>
+<p><strong>PKCE verifier</strong></p><pre id="verifier"></pre>
+<button id="copy">Copy code + verifier</button>
+<p>Keep these values private. They are only needed for the one-time token exchange.</p>
+</div>
+<script>
+const q=new URLSearchParams(location.search);
+const code=q.get('code'), state=q.get('state'), error=q.get('error');
+const expected=sessionStorage.getItem('etsy_oauth_state');
+const verifier=sessionStorage.getItem('etsy_pkce_verifier');
+const status=document.getElementById('status');
+if(error){status.className='box bad';status.textContent='Etsy returned an error: '+error}
+else if(!code){status.className='box bad';status.textContent='No authorization code was returned.'}
+else if(!verifier){status.className='box bad';status.textContent='PKCE verifier is missing. Restart the connection from /oauth.html in the same browser.'}
+else if(expected && state!==expected){status.className='box bad';status.textContent='OAuth state mismatch. Do not continue; restart authorization.'}
+else{
+ status.className='box ok';status.textContent='Authorization succeeded. Copy the two temporary values below for the token-exchange step.';
+ document.getElementById('details').hidden=false;
+ document.getElementById('code').textContent=code;
+ document.getElementById('verifier').textContent=verifier;
+ document.getElementById('copy').onclick=()=>navigator.clipboard.writeText('CODE='+code+'\nVERIFIER='+verifier);
+}
+</script>
+</body></html>
