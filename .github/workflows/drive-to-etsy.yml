@@ -31,7 +31,7 @@ jobs:
           GOOGLE_DRIVE_INBOX_FOLDER_ID: ${{ vars.GOOGLE_DRIVE_INBOX_FOLDER_ID }}
           GOOGLE_DRIVE_UPLOADED_FOLDER_ID: ${{ vars.GOOGLE_DRIVE_UPLOADED_FOLDER_ID }}
           GOOGLE_DRIVE_MANIFESTS_FOLDER_ID: ${{ vars.GOOGLE_DRIVE_MANIFESTS_FOLDER_ID }}
-        run: python scripts/import_from_drive.py
+        run: python scripts/import_drive_inbox.py
 
       - name: Check whether inbox has images
         id: count
