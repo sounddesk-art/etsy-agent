@@ -27,5 +27,11 @@
     "label": "Printable Art Bundle",
     "price": "8.90",
     "delivery": "ZIP"
+  },
+  "wallpaper": {
+    "label": "Phone Wallpaper",
+    "price": "2.90",
+    "ratio": "9:16",
+    "delivery": "PNG in ZIP"
   }
 }
