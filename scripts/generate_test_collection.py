@@ -52,15 +52,21 @@ def heart(d,x,y,s,fill):
     d.ellipse((x-s,y-s,x,y),fill=fill); d.ellipse((x,y-s,x+s,y),fill=fill)
     d.polygon([(x-s,y-s//2),(x+s,y-s//2),(x,y+s)],fill=fill)
 
+def rgb(v, default=(35,28,24)):
+    if v is None: v=default
+    while isinstance(v,(list,tuple)) and len(v)==1 and isinstance(v[0],(list,tuple)):
+        v=v[0]
+    if not isinstance(v,(list,tuple)) or len(v) < 3:
+        v=default
+    return tuple(int(x) for x in v[:3])
+
 def poster(spec):
     bg=spec["bg"]
+    bg=(rgb(bg[0],(245,240,230)), rgb(bg[1],(220,210,195)))
     img=gradient(bg[0],bg[1])
     d=ImageDraw.Draw(img)
-    fg=tuple(spec.get("fg",(35,28,24)))
-    raw_accent=spec.get("accent",(180,100,70))
-    if isinstance(raw_accent,list) and len(raw_accent)==1 and isinstance(raw_accent[0],(list,tuple)):
-        raw_accent=raw_accent[0]
-    accent=tuple(raw_accent)
+    fg=rgb(spec.get("fg"),(35,28,24))
+    accent=rgb(spec.get("accent"),(180,100,70))
     y=350
     y=center_text(d,spec["headline"],y,220,fg,True)
     y+=70
