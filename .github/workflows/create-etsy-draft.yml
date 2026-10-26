@@ -39,7 +39,10 @@ jobs:
           d.text((200,700),"NOT FOR SALE",fill="black")
           d.text((200,840),"Sounddesk Etsy API connection test",fill="black")
           img.save(out/"listing-01.png")
-          img.save(out/"test-download.png")
+          (out/"test-download.txt").write_text(
+              "Sounddesk Etsy API digital download test.\nThis file is only for verifying the Etsy uploadListingFile endpoint.\n",
+              encoding="utf-8"
+          )
           PY
 
       - name: Create Etsy draft listing
