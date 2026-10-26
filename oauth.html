@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Connect Etsy — Sounddesk Etsy Agent</title>
+<style>
+body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;max-width:760px;margin:48px auto;padding:0 20px;color:#1f2937;line-height:1.55}
+input,button{font:inherit;padding:12px;border-radius:10px;border:1px solid #d1d5db} input{width:100%;box-sizing:border-box}
+button{margin-top:14px;background:#111827;color:white;cursor:pointer}.box{border:1px solid #e5e7eb;border-radius:16px;padding:22px;margin-top:22px}.muted{color:#6b7280;font-size:.95rem}
+</style>
+</head><body>
+<h1>Connect Etsy</h1>
+<p>This page creates a PKCE authorization request locally in your browser. Your Etsy shared secret is never entered here.</p>
+<div class="box">
+<label for="key">Etsy API Keystring</label>
+<input id="key" autocomplete="off" placeholder="Paste keystring">
+<button id="go">Authorize Etsy shop</button>
+<p class="muted">Requested scopes: listings_r listings_w shops_r</p>
+</div>
+<script>
+const REDIRECT='https://sounddesk-art.github.io/etsy-agent/oauth-callback.html';
+const SCOPES='listings_r listings_w shops_r';
+function b64url(bytes){return btoa(String.fromCharCode(...bytes)).replace(/\+/g,'-').replace(/\//g,'_').replace(/=+$/,'')}
+async function sha256(s){return new Uint8Array(await crypto.subtle.digest('SHA-256',new TextEncoder().encode(s)))}
+document.getElementById('go').onclick=async()=>{
+  const key=document.getElementById('key').value.trim();
+  if(!key){alert('Enter your Etsy keystring first.');return}
+  const verifier=b64url(crypto.getRandomValues(new Uint8Array(32)));
+  const challenge=b64url(await sha256(verifier));
+  const state=b64url(crypto.getRandomValues(new Uint8Array(24)));
+  sessionStorage.setItem('etsy_pkce_verifier',verifier);
+  sessionStorage.setItem('etsy_oauth_state',state);
+  sessionStorage.setItem('etsy_keystring',key);
+  const u=new URL('https://www.etsy.com/oauth/connect');
+  u.searchParams.set('response_type','code');
+  u.searchParams.set('redirect_uri',REDIRECT);
+  u.searchParams.set('scope',SCOPES);
+  u.searchParams.set('client_id',key);
+  u.searchParams.set('state',state);
+  u.searchParams.set('code_challenge',challenge);
+  u.searchParams.set('code_challenge_method','S256');
+  location.href=u.toString();
+};
+</script>
+</body></html>
