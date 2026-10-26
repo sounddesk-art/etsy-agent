@@ -95,6 +95,11 @@ def create_draft(access_token, shop_id, payload):
         data=payload,
         timeout=60,
     )
+    if not r.ok:
+        try:
+            print("Etsy create draft error:", r.json())
+        except Exception:
+            print("Etsy create draft HTTP", r.status_code, r.text[:500])
     r.raise_for_status()
     return r.json()
 
