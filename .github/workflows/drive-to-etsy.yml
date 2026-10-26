@@ -1,0 +1,65 @@
+name: Drive inbox to Etsy drafts
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 * * * *"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: drive-to-etsy
+  cancel-in-progress: false
+
+jobs:
+  process:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install requests pillow google-api-python-client google-auth
+
+      - name: Download new images from Drive
+        env:
+          GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
+          GOOGLE_DRIVE_INBOX_FOLDER_ID: ${{ vars.GOOGLE_DRIVE_INBOX_FOLDER_ID }}
+          GOOGLE_DRIVE_UPLOADED_FOLDER_ID: ${{ vars.GOOGLE_DRIVE_UPLOADED_FOLDER_ID }}
+          GOOGLE_DRIVE_MANIFESTS_FOLDER_ID: ${{ vars.GOOGLE_DRIVE_MANIFESTS_FOLDER_ID }}
+        run: python scripts/import_from_drive.py
+
+      - name: Check whether inbox has images
+        id: count
+        run: |
+          python - <<'PY'
+          import json
+          d=json.load(open("data/generated_manifest.json"))
+          n=len(d.get("items",[]))
+          print(f"count={n}")
+          with open("$GITHUB_OUTPUT","a") as f: f.write(f"count={n}\n")
+          PY
+
+      - name: Repurpose approved images
+        if: steps.count.outputs.count != '0'
+        run: python scripts/repurpose_products.py
+
+      - name: Create Etsy drafts
+        if: steps.count.outputs.count != '0'
+        env:
+          ETSY_KEYSTRING: ${{ secrets.ETSY_KEYSTRING }}
+          ETSY_SHARED_SECRET: ${{ secrets.ETSY_SHARED_SECRET }}
+          ETSY_REFRESH_TOKEN: ${{ secrets.ETSY_REFRESH_TOKEN }}
+        run: python scripts/upload_repurposed_drafts.py
+
+      - name: Move successfully uploaded Drive images
+        if: success() && steps.count.outputs.count != '0'
+        env:
+          GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
+          GOOGLE_DRIVE_INBOX_FOLDER_ID: ${{ vars.GOOGLE_DRIVE_INBOX_FOLDER_ID }}
+          GOOGLE_DRIVE_UPLOADED_FOLDER_ID: ${{ vars.GOOGLE_DRIVE_UPLOADED_FOLDER_ID }}
+        run: python scripts/move_drive_uploaded.py
