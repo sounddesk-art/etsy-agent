@@ -6,7 +6,7 @@ on:
       listing_package:
         description: "Path to listing package JSON in the repo"
         required: true
-        default: "examples/listing-package.example.json"
+        default: "examples/test-draft.json"
 
 permissions:
   contents: read
@@ -15,11 +15,33 @@ jobs:
   create-draft:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
-      - run: pip install requests
+
+      - name: Install dependencies
+        run: pip install requests pillow
+
+      - name: Generate safe test assets
+        run: |
+          python - <<'PY'
+          from PIL import Image, ImageDraw, ImageFont
+          from pathlib import Path
+
+          out=Path("output/test")
+          out.mkdir(parents=True,exist_ok=True)
+
+          img=Image.new("RGB",(2000,1600),"white")
+          d=ImageDraw.Draw(img)
+          d.rectangle((80,80,1920,1520),outline="black",width=8)
+          d.text((200,560),"TEST DRAFT",fill="black")
+          d.text((200,700),"NOT FOR SALE",fill="black")
+          d.text((200,840),"Sounddesk Etsy API connection test",fill="black")
+          img.save(out/"listing-01.png")
+          img.save(out/"test-download.png")
+          PY
+
       - name: Create Etsy draft listing
         env:
           ETSY_KEYSTRING: ${{ secrets.ETSY_KEYSTRING }}
