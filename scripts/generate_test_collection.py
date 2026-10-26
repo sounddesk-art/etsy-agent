@@ -56,8 +56,11 @@ def poster(spec):
     bg=spec["bg"]
     img=gradient(bg[0],bg[1])
     d=ImageDraw.Draw(img)
-    fg=spec.get("fg",(35,28,24))
-    accent=spec.get("accent",(180,100,70))
+    fg=tuple(spec.get("fg",(35,28,24)))
+    raw_accent=spec.get("accent",(180,100,70))
+    if isinstance(raw_accent,list) and len(raw_accent)==1 and isinstance(raw_accent[0],(list,tuple)):
+        raw_accent=raw_accent[0]
+    accent=tuple(raw_accent)
     y=350
     y=center_text(d,spec["headline"],y,220,fg,True)
     y+=70
