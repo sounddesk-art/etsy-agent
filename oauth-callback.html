@@ -5,41 +5,50 @@
 <title>Etsy OAuth Callback — Sounddesk Etsy Agent</title>
 <style>
 body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;max-width:820px;margin:48px auto;padding:0 20px;color:#1f2937;line-height:1.55}
-pre{white-space:pre-wrap;word-break:break-all;background:#f3f4f6;padding:16px;border-radius:12px}.ok{color:#166534}.bad{color:#991b1b}.box{border:1px solid #e5e7eb;border-radius:16px;padding:22px;margin-top:22px}button{font:inherit;padding:10px 14px;border-radius:10px;border:1px solid #d1d5db;cursor:pointer}.muted{color:#6b7280}
+.box{border:1px solid #e5e7eb;border-radius:16px;padding:22px;margin-top:22px}.ok{color:#166534}.bad{color:#991b1b}
+button{font:inherit;padding:12px 16px;border-radius:10px;border:1px solid #d1d5db;cursor:pointer;background:#111827;color:white}
+code{background:#f3f4f6;padding:2px 5px;border-radius:5px}.muted{color:#6b7280}
 </style>
-</head><body>
+</head>
+<body>
 <h1>Etsy authorization</h1>
-<div id="status" class="box">Processing…</div>
-<div id="details" class="box" hidden>
-<p><strong>Authorization code</strong></p><pre id="code"></pre>
-<p><strong>PKCE verifier</strong></p><pre id="verifier"></pre>
-<button id="copy">Copy code + verifier</button>
-<p class="muted">These are temporary one-time OAuth values. This page does NOT contact Etsy's token endpoint, so the authorization code remains unused until the GitHub workflow exchanges it.</p>
+<div id="status" class="box">Checking authorization…</div>
+<div id="next" class="box" hidden>
+<p>The Etsy authorization succeeded and the one-time code has not been exchanged yet.</p>
+<p>Click the button below once. Your browser will submit the OAuth token exchange directly to Etsy.</p>
+<form method="post" action="https://api.etsy.com/v3/public/oauth/token">
+<input type="hidden" name="grant_type" value="authorization_code">
+<input type="hidden" name="client_id" id="clientId">
+<input type="hidden" name="code" id="authCode">
+<input type="hidden" name="code_verifier" id="pkceVerifier">
+<button type="submit">Open Etsy token response</button>
+</form>
+<p class="muted">On the next page, copy only the value named <code>refresh_token</code>. Store it as the GitHub Actions secret <code>ETSY_REFRESH_TOKEN</code>. Do not share it in chat.</p>
 </div>
 <script>
-const q=new URLSearchParams(location.search);
-const code=q.get('code'), state=q.get('state'), error=q.get('error');
+const p=new URLSearchParams(location.search);
+const code=p.get('code');
+const state=p.get('state');
+const error=p.get('error');
 const expected=sessionStorage.getItem('etsy_oauth_state');
 const verifier=sessionStorage.getItem('etsy_pkce_verifier');
+const clientId=sessionStorage.getItem('etsy_keystring');
 const status=document.getElementById('status');
 
-function fail(msg){status.className='box bad';status.textContent=msg}
+function fail(s){status.className='box bad';status.textContent=s;}
 
-if(error){
-  fail('Etsy returned an error: '+error);
-}else if(!code){
-  fail('No authorization code was returned.');
-}else if(!verifier){
-  fail('PKCE verifier is missing. Restart from /oauth.html in the same browser.');
-}else if(expected && state!==expected){
-  fail('OAuth state mismatch. Do not continue; restart authorization.');
-}else{
+if(error) fail('Etsy returned an error: '+error);
+else if(!code) fail('No authorization code was returned.');
+else if(!verifier || !clientId) fail('OAuth session data is missing. Restart from oauth.html in the same browser.');
+else if(expected && state!==expected) fail('OAuth state mismatch. Restart authorization.');
+else {
   status.className='box ok';
-  status.textContent='Authorization succeeded. The code has NOT been exchanged or used yet.';
-  document.getElementById('details').hidden=false;
-  document.getElementById('code').textContent=code;
-  document.getElementById('verifier').textContent=verifier;
-  document.getElementById('copy').onclick=()=>navigator.clipboard.writeText('CODE='+code+'\nVERIFIER='+verifier);
+  status.textContent='Authorization succeeded. The code is unused.';
+  document.getElementById('clientId').value=clientId;
+  document.getElementById('authCode').value=code;
+  document.getElementById('pkceVerifier').value=verifier;
+  document.getElementById('next').hidden=false;
 }
 </script>
-</body></html>
+</body>
+</html>
