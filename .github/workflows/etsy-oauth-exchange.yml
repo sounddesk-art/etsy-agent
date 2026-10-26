@@ -1,0 +1,51 @@
+name: Etsy OAuth token exchange
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  exchange:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Exchange Etsy authorization code
+        id: exchange
+        env:
+          ETSY_KEYSTRING: ${{ secrets.ETSY_KEYSTRING }}
+          ETSY_OAUTH_CODE: ${{ secrets.ETSY_OAUTH_CODE }}
+          ETSY_PKCE_VERIFIER: ${{ secrets.ETSY_PKCE_VERIFIER }}
+        run: |
+          python - <<'PY'
+          import os, requests
+          r = requests.post(
+              "https://api.etsy.com/v3/public/oauth/token",
+              data={
+                  "grant_type": "authorization_code",
+                  "client_id": os.environ["ETSY_KEYSTRING"],
+                  "redirect_uri": "https://sounddesk-art.github.io/etsy-agent/oauth-callback.html",
+                  "code": os.environ["ETSY_OAUTH_CODE"],
+                  "code_verifier": os.environ["ETSY_PKCE_VERIFIER"],
+              },
+              timeout=30,
+          )
+          r.raise_for_status()
+          token = r.json().get("refresh_token")
+          if not token:
+              raise SystemExit("No refresh_token returned by Etsy")
+          with open("/tmp/etsy_refresh_token","w",encoding="utf-8") as f:
+              f.write(token)
+          print("Etsy token exchange succeeded.")
+          PY
+
+      - name: Store refresh token as GitHub secret
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh secret set ETSY_REFRESH_TOKEN --repo "${{ github.repository }}" < /tmp/etsy_refresh_token
+          echo "ETSY_REFRESH_TOKEN stored successfully."
+
+      - name: Remove temporary token file
+        if: always()
+        run: rm -f /tmp/etsy_refresh_token
