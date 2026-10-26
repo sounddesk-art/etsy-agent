@@ -53,6 +53,41 @@ def get_owner_shop(access_token):
     r.raise_for_status()
     return r.json()
 
+def get_seller_taxonomy(access_token):
+    r=requests.get(
+        f"{BASE}/application/seller-taxonomy/nodes",
+        headers=auth_headers(access_token),
+        timeout=60,
+    )
+    r.raise_for_status()
+    return r.json()
+
+def flatten_taxonomy(nodes):
+    out=[]
+    def walk(node):
+        out.append(node)
+        for child in node.get("children") or []:
+            walk(child)
+    for node in nodes:
+        walk(node)
+    return out
+
+def find_taxonomy_id(access_token, query):
+    data=get_seller_taxonomy(access_token)
+    nodes=flatten_taxonomy(data.get("results") or [])
+    q=(query or "").strip().lower()
+    if not q:
+        raise RuntimeError("taxonomy_query is empty")
+    exact=[n for n in nodes if (n.get("name") or "").strip().lower()==q]
+    if exact:
+        exact.sort(key=lambda n:n.get("level",0), reverse=True)
+        return exact[0]["id"], exact[0]["name"]
+    contains=[n for n in nodes if q in (n.get("name") or "").lower()]
+    if contains:
+        contains.sort(key=lambda n:n.get("level",0), reverse=True)
+        return contains[0]["id"], contains[0]["name"]
+    raise RuntimeError(f"No Etsy seller taxonomy node matched: {query}")
+
 def create_draft(access_token, shop_id, payload):
     r=requests.post(
         f"{BASE}/application/shops/{shop_id}/listings",
