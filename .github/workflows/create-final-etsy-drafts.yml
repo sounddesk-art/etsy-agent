@@ -1,0 +1,46 @@
+name: Create final Etsy image drafts
+
+on:
+  push:
+    paths:
+      - "assets/final/*.png"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  final-drafts:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Verify all 10 final assets
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          expected = [
+            "01-coffee-first.png","02-good-vibes-only.png","03-just-one-more-chapter.png",
+            "04-adventure-awaits.png","05-life-is-better-with-a-dog.png","06-stay-kind.png",
+            "07-slow-down.png","08-good-things-take-time.png","09-trust-the-process.png",
+            "10-radiate-good-energy.png"
+          ]
+          missing=[x for x in expected if not (Path("assets/final")/x).exists()]
+          if missing:
+              raise SystemExit("Upload all 10 files together. Missing: "+", ".join(missing))
+          print("All 10 final images found.")
+          PY
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Create 10 final Etsy drafts
+        env:
+          ETSY_KEYSTRING: ${{ secrets.ETSY_KEYSTRING }}
+          ETSY_SHARED_SECRET: ${{ secrets.ETSY_SHARED_SECRET }}
+          ETSY_REFRESH_TOKEN: ${{ secrets.ETSY_REFRESH_TOKEN }}
+        run: python scripts/create_final_drafts.py
