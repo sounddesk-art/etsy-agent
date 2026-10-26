@@ -16,7 +16,7 @@
     "output/test/listing-01.png"
   ],
   "files": [
-    "output/test/test-download.png"
+    "output/test/test-download.txt"
   ],
   "alt_text": "Test draft image for Etsy API connection verification"
 }
