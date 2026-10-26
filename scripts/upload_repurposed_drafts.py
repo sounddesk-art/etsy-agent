@@ -32,7 +32,14 @@ def main():
     for i,item in enumerate(M["items"],1):
         t=TEMPLATES[item["product"]]
         title=f"{item['display_name']} | {t['label']} | Digital Download"
-        tags=(item.get("tags") or [])[:11] + [t["label"].lower(),"digital download"]
+        raw_tags=(item.get("tags") or [])[:11] + [t["label"].lower(),"digital download"]
+        tags=[]
+        for tag in raw_tags:
+            tag=" ".join(str(tag).strip().lower().split())
+            if len(tag)>20:
+                tag=tag[:20].rstrip()
+            if tag and tag not in tags:
+                tags.append(tag)
         payload={
           "quantity":"999","title":title,"description":desc(item,t),"price":t["price"],
           "who_made":"i_did","when_made":"2020_2026","taxonomy_id":str(tax),
