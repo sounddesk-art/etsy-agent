@@ -1,0 +1,29 @@
+name: Generate 30 series artworks and Etsy drafts
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "data/generation_run_token.txt"
+permissions:
+  contents: read
+jobs:
+  generate-and-upload:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - name: Install dependencies
+        run: pip install requests pillow cairosvg
+      - name: Generate 30 high-resolution artworks
+        run: python scripts/generate_30_series.py
+      - name: Repurpose into product formats
+        run: python scripts/repurpose_products.py
+      - name: Create Etsy drafts
+        env:
+          ETSY_KEYSTRING: ${{ secrets.ETSY_KEYSTRING }}
+          ETSY_SHARED_SECRET: ${{ secrets.ETSY_SHARED_SECRET }}
+          ETSY_REFRESH_TOKEN: ${{ secrets.ETSY_REFRESH_TOKEN }}
+        run: python scripts/upload_repurposed_drafts.py
