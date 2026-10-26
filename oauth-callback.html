@@ -9,67 +9,37 @@ pre{white-space:pre-wrap;word-break:break-all;background:#f3f4f6;padding:16px;bo
 </style>
 </head><body>
 <h1>Etsy authorization</h1>
-<div id="status" class="box">Processing authorization…</div>
-<div id="tokenbox" class="box" hidden>
-<p><strong>Refresh token</strong></p><pre id="refresh"></pre>
-<button id="copyRefresh">Copy refresh token</button>
-<p class="muted">Store this as the GitHub Actions secret <code>ETSY_REFRESH_TOKEN</code>. Do not commit it to the repository.</p>
-<p><strong>Granted scopes</strong></p><pre id="scopes"></pre>
-</div>
-<div id="fallback" class="box" hidden>
-<p>The browser could not complete the token exchange automatically. Your authorization itself succeeded.</p>
-<p><strong>Temporary authorization code</strong></p><pre id="code"></pre>
-<p><strong>Temporary PKCE verifier</strong></p><pre id="verifier"></pre>
-<button id="copyFallback">Copy code + verifier</button>
-<p class="muted">Keep these temporary values private. We can use the fallback token-exchange workflow if needed.</p>
+<div id="status" class="box">Processing…</div>
+<div id="details" class="box" hidden>
+<p><strong>Authorization code</strong></p><pre id="code"></pre>
+<p><strong>PKCE verifier</strong></p><pre id="verifier"></pre>
+<button id="copy">Copy code + verifier</button>
+<p class="muted">These are temporary one-time OAuth values. This page does NOT contact Etsy's token endpoint, so the authorization code remains unused until the GitHub workflow exchanges it.</p>
 </div>
 <script>
-const REDIRECT='https://sounddesk-art.github.io/etsy-agent/oauth-callback.html';
 const q=new URLSearchParams(location.search);
 const code=q.get('code'), state=q.get('state'), error=q.get('error');
 const expected=sessionStorage.getItem('etsy_oauth_state');
 const verifier=sessionStorage.getItem('etsy_pkce_verifier');
-const key=sessionStorage.getItem('etsy_keystring');
 const status=document.getElementById('status');
+
 function fail(msg){status.className='box bad';status.textContent=msg}
-async function exchange(){
- if(error)return fail('Etsy returned an error: '+error);
- if(!code)return fail('No authorization code was returned.');
- if(!verifier||!key)return fail('OAuth session data is missing. Restart from /oauth.html in the same browser.');
- if(expected && state!==expected)return fail('OAuth state mismatch. Do not continue; restart authorization.');
- const body=new URLSearchParams({
-   grant_type:'authorization_code',
-   client_id:key,
-   redirect_uri:REDIRECT,
-   code:code,
-   code_verifier:verifier
- });
- try{
-   const r=await fetch('https://api.etsy.com/v3/public/oauth/token',{
-     method:'POST',
-     headers:{'Content-Type':'application/x-www-form-urlencoded'},
-     body:body.toString()
-   });
-   if(!r.ok)throw new Error('Token endpoint returned HTTP '+r.status+' — '+await r.text());
-   const t=await r.json();
-   if(!t.refresh_token)throw new Error('No refresh token returned.');
-   status.className='box ok';
-   status.textContent='Etsy shop authorization succeeded.';
-   document.getElementById('tokenbox').hidden=false;
-   document.getElementById('refresh').textContent=t.refresh_token;
-   document.getElementById('scopes').textContent=t.scope||'';
-   document.getElementById('copyRefresh').onclick=()=>navigator.clipboard.writeText(t.refresh_token);
-   sessionStorage.removeItem('etsy_pkce_verifier');
-   sessionStorage.removeItem('etsy_oauth_state');
- }catch(e){
-   status.className='box bad';
-   status.textContent='Authorization succeeded, but automatic token exchange was blocked: '+e.message;
-   document.getElementById('fallback').hidden=false;
-   document.getElementById('code').textContent=code;
-   document.getElementById('verifier').textContent=verifier;
-   document.getElementById('copyFallback').onclick=()=>navigator.clipboard.writeText('CODE='+code+'\nVERIFIER='+verifier);
- }
+
+if(error){
+  fail('Etsy returned an error: '+error);
+}else if(!code){
+  fail('No authorization code was returned.');
+}else if(!verifier){
+  fail('PKCE verifier is missing. Restart from /oauth.html in the same browser.');
+}else if(expected && state!==expected){
+  fail('OAuth state mismatch. Do not continue; restart authorization.');
+}else{
+  status.className='box ok';
+  status.textContent='Authorization succeeded. The code has NOT been exchanged or used yet.';
+  document.getElementById('details').hidden=false;
+  document.getElementById('code').textContent=code;
+  document.getElementById('verifier').textContent=verifier;
+  document.getElementById('copy').onclick=()=>navigator.clipboard.writeText('CODE='+code+'\nVERIFIER='+verifier);
 }
-exchange();
 </script>
 </body></html>
