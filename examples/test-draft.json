@@ -1,0 +1,22 @@
+{
+  "title": "TEST DRAFT Sounddesk Etsy API Connection",
+  "description": "Internal API connection test for NiceDesignStudios. This listing is intentionally created as a draft only and is not intended for sale or publication.",
+  "price": "1.00",
+  "quantity": 1,
+  "taxonomy_query": "Digital Prints",
+  "who_made": "i_did",
+  "when_made": "2020_2026",
+  "is_supply": false,
+  "tags": [
+    "test draft",
+    "api connection",
+    "digital test"
+  ],
+  "images": [
+    "output/test/listing-01.png"
+  ],
+  "files": [
+    "output/test/test-download.png"
+  ],
+  "alt_text": "Test draft image for Etsy API connection verification"
+}
