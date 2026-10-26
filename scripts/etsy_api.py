@@ -98,6 +98,21 @@ def create_draft(access_token, shop_id, payload):
     r.raise_for_status()
     return r.json()
 
+def update_listing(access_token, shop_id, listing_id, payload):
+    r=requests.patch(
+        f"{BASE}/application/shops/{shop_id}/listings/{listing_id}",
+        headers=auth_headers(access_token),
+        data=payload,
+        timeout=60,
+    )
+    if not r.ok:
+        try:
+            print("Etsy update listing error:", r.json())
+        except Exception:
+            print("Etsy update listing HTTP", r.status_code)
+    r.raise_for_status()
+    return r.json()
+
 def upload_image(access_token, shop_id, listing_id, path, rank=1, alt_text=""):
     with open(path,"rb") as fh:
         r=requests.post(
@@ -119,6 +134,11 @@ def upload_file(access_token, shop_id, listing_id, path, rank=1):
             data={"name":os.path.basename(path),"rank":rank},
             timeout=120,
         )
+    if not r.ok:
+        try:
+            print("Etsy upload file error:", r.json())
+        except Exception:
+            print("Etsy upload file HTTP", r.status_code)
     r.raise_for_status()
     return r.json()
 
