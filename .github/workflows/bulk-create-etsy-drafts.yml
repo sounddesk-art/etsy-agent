@@ -1,0 +1,33 @@
+name: Bulk create 10 Etsy drafts
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "data/bulk_run_token.txt"
+
+permissions:
+  contents: read
+
+jobs:
+  bulk-drafts:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install requests pillow
+
+      - name: Generate 10 printable products
+        run: python scripts/generate_test_collection.py
+
+      - name: Create 10 Etsy drafts
+        env:
+          ETSY_KEYSTRING: ${{ secrets.ETSY_KEYSTRING }}
+          ETSY_SHARED_SECRET: ${{ secrets.ETSY_SHARED_SECRET }}
+          ETSY_REFRESH_TOKEN: ${{ secrets.ETSY_REFRESH_TOKEN }}
+        run: python scripts/create_bulk_drafts.py output/listing_manifest.json
