@@ -1,0 +1,21 @@
+{
+  "title": "EXAMPLE ONLY - replace before running",
+  "description": "Complete Etsy listing description.",
+  "price": 4.90,
+  "quantity": 999,
+  "taxonomy_id": 1,
+  "who_made": "i_did",
+  "when_made": "2020_2026",
+  "is_supply": false,
+  "tags": [
+    "example tag 1",
+    "example tag 2"
+  ],
+  "images": [
+    "output/example/listing-01.jpg"
+  ],
+  "files": [
+    "output/example/download.png"
+  ],
+  "alt_text": "Description of the listing image"
+}
