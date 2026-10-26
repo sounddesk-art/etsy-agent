@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-import os, json, requests
+import os, json, mimetypes, requests
 
 BASE="https://api.etsy.com/v3"
 
@@ -135,7 +135,11 @@ def upload_file(access_token, shop_id, listing_id, path, rank=1):
         r=requests.post(
             f"{BASE}/application/shops/{shop_id}/listings/{listing_id}/files",
             headers=auth_headers(access_token),
-            files={"file":(os.path.basename(path),fh)},
+            files={"file":(
+                os.path.basename(path),
+                fh,
+                mimetypes.guess_type(path)[0] or "application/octet-stream"
+            )},
             data={"name":os.path.basename(path),"rank":rank},
             timeout=120,
         )
