@@ -1,13 +1,14 @@
 #!/usr/bin/env python3
-import os, sys, json
-from etsy_api import refresh_access_token, create_draft, upload_image, upload_file
+import sys, json
+from etsy_api import refresh_access_token, get_owner_shop, create_draft, upload_image, upload_file
 
 def main():
     if len(sys.argv) != 2:
         raise SystemExit("Usage: python scripts/create_draft.py <listing-package.json>")
     pkg=json.load(open(sys.argv[1],encoding="utf-8"))
-    shop_id=os.environ["ETSY_SHOP_ID"]
     token=refresh_access_token()["access_token"]
+    shop=get_owner_shop(token)
+    shop_id=shop["shop_id"]
 
     payload={
         "quantity": pkg.get("quantity",999),
@@ -21,8 +22,7 @@ def main():
         "type": "download",
         "should_auto_renew": "false",
     }
-    tags=pkg.get("tags",[])
-    for i,t in enumerate(tags[:13]):
+    for i,t in enumerate(pkg.get("tags",[])[:13]):
         payload[f"tags[{i}]"]=t
 
     listing=create_draft(token,shop_id,payload)
@@ -36,6 +36,8 @@ def main():
 
     print(json.dumps({
         "status":"draft_created",
+        "shop_id":shop_id,
+        "shop_name":shop.get("shop_name"),
         "listing_id":listing_id,
         "state":listing.get("state","draft")
     },indent=2))
