@@ -1,0 +1,28 @@
+name: Create Etsy draft
+
+on:
+  workflow_dispatch:
+    inputs:
+      listing_package:
+        description: "Path to listing package JSON in the repo"
+        required: true
+        default: "examples/listing-package.example.json"
+
+permissions:
+  contents: read
+
+jobs:
+  create-draft:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install requests
+      - name: Create Etsy draft listing
+        env:
+          ETSY_KEYSTRING: ${{ secrets.ETSY_KEYSTRING }}
+          ETSY_SHARED_SECRET: ${{ secrets.ETSY_SHARED_SECRET }}
+          ETSY_REFRESH_TOKEN: ${{ secrets.ETSY_REFRESH_TOKEN }}
+        run: python scripts/create_draft.py "${{ inputs.listing_package }}"
