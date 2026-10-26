@@ -47,7 +47,7 @@ def get_owner_shop(access_token):
     user_id=user_id_from_token(access_token)
     r=requests.get(
         f"{BASE}/application/users/{user_id}/shops",
-        headers=api_headers(),
+        headers=auth_headers(access_token),
         timeout=30,
     )
     r.raise_for_status()
