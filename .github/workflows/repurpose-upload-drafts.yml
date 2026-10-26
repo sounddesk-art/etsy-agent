@@ -1,0 +1,27 @@
+name: Repurpose approved art and create Etsy drafts
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "assets/generated/**"
+      - "data/generated_manifest.json"
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - run: pip install requests pillow
+      - name: Repurpose approved images
+        run: python scripts/repurpose_products.py
+      - name: Create Etsy drafts
+        env:
+          ETSY_KEYSTRING: ${{ secrets.ETSY_KEYSTRING }}
+          ETSY_SHARED_SECRET: ${{ secrets.ETSY_SHARED_SECRET }}
+          ETSY_REFRESH_TOKEN: ${{ secrets.ETSY_REFRESH_TOKEN }}
+        run: python scripts/upload_repurposed_drafts.py
