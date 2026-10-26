@@ -5,8 +5,8 @@ from google.oauth2 import service_account
 from googleapiclient.discovery import build
 
 SCOPES=["https://www.googleapis.com/auth/drive"]
-INBOX=os.environ["GOOGLE_DRIVE_INBOX_FOLDER_ID"]
-UPLOADED=os.environ["GOOGLE_DRIVE_UPLOADED_FOLDER_ID"]
+INBOX="1dg_YipMZrJ5OFydC9GK1qifojdCi5zXw"
+UPLOADED="1IziCTuYTfNpmWP8Yzzi8eDw0-M0Z-bWV"
 
 def main():
     info=json.loads(os.environ["GOOGLE_SERVICE_ACCOUNT_JSON"])
