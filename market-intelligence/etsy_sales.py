@@ -49,10 +49,19 @@ def main():
  a=p.parse_args()
  with open(a.mapping,encoding="utf-8-sig",newline="") as f:
   mapping={str(r["listing_id"]).strip():r["keyword"].strip().lower() for r in csv.DictReader(f)}
- for name in ("ETSY_SHOP_ID","ETSY_KEYSTRING","ETSY_SHARED_SECRET","ETSY_ACCESS_TOKEN"):
+ for name in ("ETSY_KEYSTRING","ETSY_SHARED_SECRET","ETSY_REFRESH_TOKEN"):
   if not os.getenv(name):raise SystemExit(f"Missing secret {name}")
+ import sys
+ sys.path.insert(0,str(Path(__file__).resolve().parents[1]/"scripts"))
+ from etsy_api import refresh_access_token,get_owner_shop
+ token_data=refresh_access_token()
+ scopes=token_data.get("scope","")
+ if "transactions_r" not in (scopes.split() if isinstance(scopes,str) else scopes):
+  raise SystemExit("OAuth missing transactions_r scope; reauthorize Etsy before sales sync")
+ token=token_data["access_token"]
+ shop=get_owner_shop(token)
  key=os.environ["ETSY_KEYSTRING"]+":"+os.environ["ETSY_SHARED_SECRET"]
- data=collect(os.environ["ETSY_SHOP_ID"],key,os.environ["ETSY_ACCESS_TOKEN"],mapping)
+ data=collect(shop["shop_id"],key,token,mapping)
  Path(a.output).parent.mkdir(parents=True,exist_ok=True)
  Path(a.output).write_text(json.dumps({"source":"etsy_own_shop","metric":"gross transaction sales, fees excluded","data":data},indent=2)+"\n")
  print(f"Aggregated {len(data)} keyword/currency groups (no buyer information exported).")
