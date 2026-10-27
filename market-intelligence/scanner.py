@@ -6,10 +6,10 @@ SCHEMA="""CREATE TABLE IF NOT EXISTS observations(keyword TEXT, source TEXT, obs
 CREATE TABLE IF NOT EXISTS performance(keyword TEXT,observed_at TEXT,impressions INTEGER,clicks INTEGER,orders INTEGER,revenue REAL,fees REAL,PRIMARY KEY(keyword,observed_at));"""
 def init(path):
  con=sqlite3.connect(path);con.executescript(SCHEMA);return con
-def metric(value):
+def metric(value,allow_negative=False):
  if value is None or str(value).strip()=="":return None
  n=float(value)
- if not math.isfinite(n) or n<0:raise ValueError("invalid metric")
+ if not math.isfinite(n) or (n<0 and not allow_negative):raise ValueError("invalid metric")
  return n
 def ingest(con,path,kind):
  count=0
@@ -21,7 +21,7 @@ def ingest(con,path,kind):
    if kind=="observations":
     source=(r.get("source") or "").strip().lower()
     if not source:raise ValueError("source required")
-    values=[metric(r.get(k)) for k in ("searches","competition","price","trend")]
+    values=[metric(r.get(k),allow_negative=(k=="trend")) for k in ("searches","competition","price","trend")]
     con.execute("INSERT OR REPLACE INTO observations VALUES (?,?,?,?,?,?,?)",(name,source,date,*values))
    else:
     vals=[metric(r.get(k)) or 0 for k in ("impressions","clicks","orders","revenue","fees")]
@@ -38,6 +38,7 @@ def rank(con):
  for name in set(SEEDS)|set(records)|set(perf):
   eligible=[r for r in records.get(name,[]) if r["source"]=="etsy_insights" and r["searches"] is not None and r["competition"] is not None]
   latest=max(eligible,key=lambda r:r["date"]) if eligible else None
+  if latest and (dt.date.today()-dt.date.fromisoformat(latest["date"])).days>45:latest=None
   p=perf.get(name,(0,0,0,0,0));impressions,clicks,orders,revenue,fees=p
   if latest:
    s,c=latest["searches"],latest["competition"]
