@@ -1,5 +1,9 @@
 name: Market intelligence (safe baseline)
 on:
+  pull_request:
+    paths:
+      - 'market-intelligence/**'
+      - '.github/workflows/market-intelligence.yml'
   workflow_dispatch:
   schedule:
     - cron: '23 7 * * *'
