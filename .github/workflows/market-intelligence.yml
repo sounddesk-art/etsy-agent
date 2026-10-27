@@ -26,5 +26,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: market-intelligence-report
-          path: /tmp/market-report.json
+          path: |
+            /tmp/market-report.json
+            /tmp/market-report.csv
           retention-days: 14
