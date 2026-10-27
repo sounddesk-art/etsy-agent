@@ -25,6 +25,13 @@ class Tests(unittest.TestCase):
  def test_old_data_not_verified(self):
   self.load("observations",["keyword","source","observed_at","searches","competition"],[dict(keyword="test",source="etsy_insights",observed_at="2020-01-01",searches=500,competition=200)])
   self.assertIsNone(next(x for x in rank(self.db) if x["keyword"]=="test")["score"])
+ def test_reject_future_dates(self):
+  with self.assertRaises(ValueError):
+   self.load("observations",["keyword","source","observed_at","searches","competition"],[dict(keyword="future",source="etsy_insights",observed_at="2099-01-01",searches=1,competition=1)])
+ def test_atomic_import(self):
+  with self.assertRaises(ValueError):
+   self.load("observations",["keyword","source","searches","competition"],[dict(keyword="first",source="etsy_insights",searches=10,competition=2),dict(keyword="second",source="etsy_insights",searches=-1,competition=2)])
+  self.assertEqual(self.db.execute("SELECT COUNT(*) FROM observations").fetchone()[0],0)
  def test_profit(self):
   self.load("performance",["keyword","impressions","clicks","orders","revenue","fees"],[dict(keyword="test",impressions=100,clicks=10,orders=2,revenue=7,fees=3)])
   self.assertEqual(next(x for x in rank(self.db) if x["keyword"]=="test")["net_revenue"],4)
