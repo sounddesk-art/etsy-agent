@@ -1,0 +1,56 @@
+"""Offline-first market research, using only explicitly imported permitted data."""
+import argparse,csv,datetime as dt,json,math,sqlite3
+from pathlib import Path
+SEEDS=["alpine botanical print","celestial botanical wall art","woodland animal nursery print","vintage mushroom wall art","dark academia wall art","cozy reading nook print","moody landscape printable","sun and moon printable art","vintage wildflower print","whimsical animal wall art","vintage alpine flower print","cottagecore kitchen art","forest nursery wall art","moon phase botanical print","cozy animal reading print"]
+SCHEMA="""CREATE TABLE IF NOT EXISTS observations(keyword TEXT, source TEXT, observed_at TEXT, searches REAL, competition REAL, price REAL, trend REAL, PRIMARY KEY(keyword,source,observed_at));
+CREATE TABLE IF NOT EXISTS performance(keyword TEXT,observed_at TEXT,impressions INTEGER,clicks INTEGER,orders INTEGER,revenue REAL,fees REAL,PRIMARY KEY(keyword,observed_at));"""
+def init(path):
+ con=sqlite3.connect(path);con.executescript(SCHEMA);return con
+def metric(value):
+ if value is None or str(value).strip()=="":return None
+ n=float(value)
+ if not math.isfinite(n) or n<0:raise ValueError("invalid metric")
+ return n
+def ingest(con,path,kind):
+ count=0
+ with open(path,encoding="utf-8-sig",newline="") as f:
+  for r in csv.DictReader(f):
+   name=(r.get("keyword") or "").strip().lower()
+   if not name:raise ValueError("keyword required")
+   date=(r.get("observed_at") or dt.date.today().isoformat()).strip();dt.date.fromisoformat(date)
+   if kind=="observations":
+    source=(r.get("source") or "").strip().lower()
+    if not source:raise ValueError("source required")
+    values=[metric(r.get(k)) for k in ("searches","competition","price","trend")]
+    con.execute("INSERT OR REPLACE INTO observations VALUES (?,?,?,?,?,?,?)",(name,source,date,*values))
+   else:
+    vals=[metric(r.get(k)) or 0 for k in ("impressions","clicks","orders","revenue","fees")]
+    if any(int(v)!=v for v in vals[:3]) or vals[2]>vals[1] or vals[1]>vals[0]:raise ValueError("invalid funnel")
+    con.execute("INSERT OR REPLACE INTO performance VALUES (?,?,?,?,?,?,?)",(name,date,*map(int,vals[:3]),*vals[3:]))
+   count+=1
+ con.commit();return count
+def rank(con):
+ records={}
+ for name,source,date,searches,competition,price,trend in con.execute("SELECT keyword,source,observed_at,searches,competition,price,trend FROM observations"):
+  records.setdefault(name,[]).append(dict(source=source,date=date,searches=searches,competition=competition,price=price,trend=trend))
+ perf={name:(impressions,clicks,orders,revenue,fees) for name,impressions,clicks,orders,revenue,fees in con.execute("SELECT keyword,SUM(impressions),SUM(clicks),SUM(orders),SUM(revenue),SUM(fees) FROM performance GROUP BY keyword")}
+ results=[]
+ for name in set(SEEDS)|set(records)|set(perf):
+  eligible=[r for r in records.get(name,[]) if r["source"]=="etsy_insights" and r["searches"] is not None and r["competition"] is not None]
+  latest=max(eligible,key=lambda r:r["date"]) if eligible else None
+  p=perf.get(name,(0,0,0,0,0));impressions,clicks,orders,revenue,fees=p
+  if latest:
+   s,c=latest["searches"],latest["competition"]
+   score=round(100*(.5*min(1,math.log1p(s)/math.log1p(50000))+.4/(1+c/max(s,1))+.1*(1+max(-1,min(1,(latest["trend"] or 0)/100)))/2),2)
+  else:score=None
+  results.append(dict(keyword=name,score=score,confidence="measured" if latest else "unverified",searches=latest["searches"] if latest else None,competition=latest["competition"] if latest else None,impressions=impressions,clicks=clicks,orders=orders,net_revenue=round(revenue-fees,2),ctr=round(clicks/impressions,4) if impressions else None,conversion=round(orders/clicks,4) if clicks else None))
+ return sorted(results,key=lambda r:(r["score"] is None,-(r["score"] or 0),r["keyword"]))
+def main():
+ p=argparse.ArgumentParser();p.add_argument("--db",default="market-intelligence/data/market.sqlite");p.add_argument("--observations");p.add_argument("--performance");p.add_argument("--output",default="market-intelligence/reports/latest.json");a=p.parse_args()
+ Path(a.db).parent.mkdir(parents=True,exist_ok=True);con=init(a.db)
+ for kind,path in (("observations",a.observations),("performance",a.performance)):
+  if path:print("imported",ingest(con,path,kind),kind)
+ data=rank(con);Path(a.output).parent.mkdir(parents=True,exist_ok=True)
+ Path(a.output).write_text(json.dumps({"generated_at":dt.datetime.now(dt.timezone.utc).isoformat(),"ranked":data,"warning":"No market estimates are invented. Unverified niches are not demand-confirmed."},indent=2,ensure_ascii=False)+"\n")
+ print("ranked",len(data),"verified",sum(x["score"] is not None for x in data))
+if __name__=="__main__":main()
