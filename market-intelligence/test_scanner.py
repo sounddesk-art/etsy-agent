@@ -19,6 +19,12 @@ class Tests(unittest.TestCase):
  def test_invalid_funnel(self):
   with self.assertRaises(ValueError):
    self.load("performance",["keyword","impressions","clicks","orders"],[dict(keyword="test",impressions=1,clicks=2,orders=0)])
+ def test_negative_trend(self):
+  self.load("observations",["keyword","source","searches","competition","trend"],[dict(keyword="test",source="etsy_insights",searches=500,competition=200,trend=-35)])
+  self.assertIsNotNone(next(x for x in rank(self.db) if x["keyword"]=="test")["score"])
+ def test_old_data_not_verified(self):
+  self.load("observations",["keyword","source","observed_at","searches","competition"],[dict(keyword="test",source="etsy_insights",observed_at="2020-01-01",searches=500,competition=200)])
+  self.assertIsNone(next(x for x in rank(self.db) if x["keyword"]=="test")["score"])
  def test_profit(self):
   self.load("performance",["keyword","impressions","clicks","orders","revenue","fees"],[dict(keyword="test",impressions=100,clicks=10,orders=2,revenue=7,fees=3)])
   self.assertEqual(next(x for x in rank(self.db) if x["keyword"]=="test")["net_revenue"],4)
