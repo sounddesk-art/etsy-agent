@@ -62,5 +62,9 @@ def main():
   if path:print("imported",ingest(con,path,kind),kind)
  data=rank(con);Path(a.output).parent.mkdir(parents=True,exist_ok=True)
  Path(a.output).write_text(json.dumps({"generated_at":dt.datetime.now(dt.timezone.utc).isoformat(),"ranked":data,"warning":"No market estimates are invented. Unverified niches are not demand-confirmed."},indent=2,ensure_ascii=False)+"\n")
+ csv_path=Path(a.output).with_suffix(".csv")
+ with csv_path.open("w",encoding="utf-8",newline="") as f:
+  writer=csv.DictWriter(f,fieldnames=["keyword","score","confidence","searches","competition","impressions","clicks","orders","net_revenue","ctr","conversion"])
+  writer.writeheader();writer.writerows(data)
  print("ranked",len(data),"verified",sum(x["score"] is not None for x in data))
 if __name__=="__main__":main()
