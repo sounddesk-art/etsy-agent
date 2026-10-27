@@ -14,20 +14,29 @@ def metric(value,allow_negative=False):
 def ingest(con,path,kind):
  count=0
  with open(path,encoding="utf-8-sig",newline="") as f:
-  for r in csv.DictReader(f):
-   name=(r.get("keyword") or "").strip().lower()
-   if not name:raise ValueError("keyword required")
-   date=(r.get("observed_at") or dt.date.today().isoformat()).strip();dt.date.fromisoformat(date)
-   if kind=="observations":
-    source=(r.get("source") or "").strip().lower()
-    if not source:raise ValueError("source required")
-    values=[metric(r.get(k),allow_negative=(k=="trend")) for k in ("searches","competition","price","trend")]
-    con.execute("INSERT OR REPLACE INTO observations VALUES (?,?,?,?,?,?,?)",(name,source,date,*values))
-   else:
-    vals=[metric(r.get(k)) or 0 for k in ("impressions","clicks","orders","revenue","fees")]
-    if any(int(v)!=v for v in vals[:3]) or vals[2]>vals[1] or vals[1]>vals[0]:raise ValueError("invalid funnel")
-    con.execute("INSERT OR REPLACE INTO performance VALUES (?,?,?,?,?,?,?)",(name,date,*map(int,vals[:3]),*vals[3:]))
-   count+=1
+  con.execute("SAVEPOINT import_rows")
+  try:
+   rows=list(csv.DictReader(f))
+   for r in rows:
+    name=(r.get("keyword") or "").strip().lower()
+    if not name:raise ValueError("keyword required")
+    date=(r.get("observed_at") or dt.date.today().isoformat()).strip()
+    if dt.date.fromisoformat(date)>dt.date.today():raise ValueError("future observation date")
+    if kind=="observations":
+     source=(r.get("source") or "").strip().lower()
+     if not source:raise ValueError("source required")
+     values=[metric(r.get(k),allow_negative=(k=="trend")) for k in ("searches","competition","price","trend")]
+     con.execute("INSERT OR REPLACE INTO observations VALUES (?,?,?,?,?,?,?)",(name,source,date,*values))
+    else:
+     vals=[metric(r.get(k)) or 0 for k in ("impressions","clicks","orders","revenue","fees")]
+     if any(int(v)!=v for v in vals[:3]) or vals[2]>vals[1] or vals[1]>vals[0]:raise ValueError("invalid funnel")
+     con.execute("INSERT OR REPLACE INTO performance VALUES (?,?,?,?,?,?,?)",(name,date,*map(int,vals[:3]),*vals[3:]))
+    count+=1
+   con.execute("RELEASE SAVEPOINT import_rows")
+  except Exception:
+   con.execute("ROLLBACK TO SAVEPOINT import_rows")
+   con.execute("RELEASE SAVEPOINT import_rows")
+   raise
  con.commit();return count
 def rank(con):
  records={}
