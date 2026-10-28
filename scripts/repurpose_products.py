@@ -2,6 +2,7 @@
 from pathlib import Path
 from PIL import Image, ImageOps
 import json, zipfile
+from review_gate import review_errors
 
 ASSETS=Path("assets/generated")
 OUT=Path("output/repurposed")
@@ -24,7 +25,9 @@ def main():
     data=json.loads(manifest_path.read_text(encoding="utf-8"))
     out=[]
     for item in data["items"]:
-        if item.get("status")!="approved":
+        errors=review_errors(item)
+        if errors:
+            print(f"review-blocked {item.get('id','item')}: {'; '.join(errors)}")
             continue
         src=ASSETS/item["file"]
         if not src.exists():
