@@ -1,9 +1,6 @@
-name: Create final Etsy image drafts
+name: Create final Etsy image drafts — legacy manual only
 
 on:
-  push:
-    paths:
-      - "assets/final/*.png"
   workflow_dispatch:
 
 permissions:
