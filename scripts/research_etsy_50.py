@@ -153,9 +153,9 @@ def listing_description(row, variant):
     keyword=row["keyword"].title()
     angle="a focused series anchor" if variant==1 else "a complementary long-tail variation"
     series=row["series"].replace("-"," ")
-    return f"""${keyword} — Original Digital Wall Art
+    return f"""{keyword} — Original Digital Wall Art
 
-A high-resolution printable artwork concept developed from current Etsy market research. This candidate is ${angle} within the ${series} collection.
+A high-resolution printable artwork concept developed from current Etsy market research. This candidate is {angle} within the {series} collection.
 
 WHAT THE FINAL LISTING WILL INCLUDE
 • High-resolution digital artwork
@@ -164,7 +164,7 @@ WHAT THE FINAL LISTING WILL INCLUDE
 • No physical item will be shipped
 
 RESEARCH BASIS
-This concept was selected using current Etsy active-listing competition, engagement among top search results, and recent listing activity. Research score: ${row['opportunity_score']} / 100.
+This concept was selected using current Etsy active-listing competition, engagement among top search results, and recent listing activity. Research score: {row['opportunity_score']} / 100.
 
 CREATIVE PROCESS
 This is a research-stage concept only. Before any Etsy upload, the final design must receive direct individual human creative input and review. If AI-assisted tools are used in the final artwork, the final Etsy description will disclose that use.
