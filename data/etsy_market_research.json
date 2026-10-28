@@ -1,0 +1,5620 @@
+{
+  "generated_at_utc": "2026-10-28T13:20:35.584148+00:00",
+  "source": "Etsy Open API findAllListingsActive",
+  "method_note": "No claimed search-volume data. Score uses only current Etsy competition and top-result engagement/freshness proxies.",
+  "niches": [
+    {
+      "keyword": "eucalyptus wall art",
+      "series": "botanical-sun",
+      "product_type": "wall_art",
+      "competition_count": 20828,
+      "sample_size": 100,
+      "sample_total_favorers": 4276,
+      "sample_median_favorers": 0.0,
+      "sample_top10_favorers": 3989,
+      "recent_90d_in_top_sample": 97,
+      "common_tags": [
+        {
+          "tag": "eucalyptus wall art",
+          "count": 100
+        },
+        {
+          "tag": "botanical wall art",
+          "count": 50
+        },
+        {
+          "tag": "eucalyptus print",
+          "count": 41
+        },
+        {
+          "tag": "printable wall art",
+          "count": 26
+        },
+        {
+          "tag": "sage green decor",
+          "count": 23
+        },
+        {
+          "tag": "botanical print",
+          "count": 19
+        },
+        {
+          "tag": "sage green wall art",
+          "count": 19
+        },
+        {
+          "tag": "neutral wall art",
+          "count": 18
+        },
+        {
+          "tag": "neutral wall decor",
+          "count": 17
+        },
+        {
+          "tag": "nature wall art",
+          "count": 16
+        },
+        {
+          "tag": "digital download",
+          "count": 15
+        },
+        {
+          "tag": "eucalyptus decor",
+          "count": 12
+        },
+        {
+          "tag": "gallery wall set",
+          "count": 11
+        },
+        {
+          "tag": "set of 3 prints",
+          "count": 11
+        },
+        {
+          "tag": "watercolor leaves",
+          "count": 10
+        },
+        {
+          "tag": "farmhouse wall art",
+          "count": 10
+        },
+        {
+          "tag": "bedroom wall art",
+          "count": 10
+        },
+        {
+          "tag": "living room art",
+          "count": 10
+        },
+        {
+          "tag": "scandinavian decor",
+          "count": 9
+        },
+        {
+          "tag": "vintage botanical",
+          "count": 9
+        }
+      ],
+      "common_terms": [
+        {
+          "term": "eucalyptus",
+          "count": 347
+        },
+        {
+          "term": "botanical",
+          "count": 317
+        },
+        {
+          "term": "green",
+          "count": 177
+        },
+        {
+          "term": "sage",
+          "count": 105
+        },
+        {
+          "term": "set",
+          "count": 97
+        },
+        {
+          "term": "prints",
+          "count": 95
+        },
+        {
+          "term": "neutral",
+          "count": 81
+        },
+        {
+          "term": "leaf",
+          "count": 78
+        },
+        {
+          "term": "nature",
+          "count": 73
+        },
+        {
+          "term": "minimalist",
+          "count": 69
+        },
+        {
+          "term": "watercolor",
+          "count": 54
+        },
+        {
+          "term": "modern",
+          "count": 47
+        },
+        {
+          "term": "plant",
+          "count": 47
+        },
+        {
+          "term": "canvas",
+          "count": 45
+        },
+        {
+          "term": "room",
+          "count": 44
+        },
+        {
+          "term": "living",
+          "count": 39
+        },
+        {
+          "term": "bedroom",
+          "count": 37
+        },
+        {
+          "term": "farmhouse",
+          "count": 35
+        },
+        {
+          "term": "boho",
+          "count": 34
+        },
+        {
+          "term": "leaves",
+          "count": 33
+        }
+      ],
+      "sample_median_price_by_currency": {
+        "USD": 10.99,
+        "GBP": 9.99,
+        "MAD": 355.0,
+        "EUR": 8.0,
+        "CAD": 144.46,
+        "ZAR": 119.7,
+        "INR": 675.0,
+        "VND": 364000.0,
+        "AUD": 8.93,
+        "CHF": 9.4,
+        "MXN": 129.0
+      },
+      "opportunity_score": 82.5,
+      "score_basis": "relative Etsy top-result engagement 45% + lower competition 40% + recent top-sample activity 15%"
+    },
+    {
+      "keyword": "sun and moon wall art",
+      "series": "celestial",
+      "product_type": "wall_art",
+      "competition_count": 29073,
+      "sample_size": 100,
+      "sample_total_favorers": 7610,
+      "sample_median_favorers": 1.0,
+      "sample_top10_favorers": 6827,
+      "recent_90d_in_top_sample": 89,
+      "common_tags": [
+        {
+          "tag": "celestial wall art",
+          "count": 32
+        },
+        {
+          "tag": "sun and moon art",
+          "count": 31
+        },
+        {
+          "tag": "sun and moon",
+          "count": 19
+        },
+        {
+          "tag": "sun moon wall art",
+          "count": 14
+        },
+        {
+          "tag": "celestial decor",
+          "count": 13
+        },
+        {
+          "tag": "sun and moon print",
+          "count": 12
+        },
+        {
+          "tag": "boho wall art",
+          "count": 11
+        },
+        {
+          "tag": "boho wall decor",
+          "count": 10
+        },
+        {
+          "tag": "moon wall art",
+          "count": 10
+        },
+        {
+          "tag": "astrology decor",
+          "count": 9
+        },
+        {
+          "tag": "printable wall art",
+          "count": 9
+        },
+        {
+          "tag": "mystical wall art",
+          "count": 9
+        },
+        {
+          "tag": "digital download",
+          "count": 8
+        },
+        {
+          "tag": "housewarming gift",
+          "count": 8
+        },
+        {
+          "tag": "sun moon art",
+          "count": 8
+        },
+        {
+          "tag": "celestial wall decor",
+          "count": 7
+        },
+        {
+          "tag": "wall art",
+          "count": 7
+        },
+        {
+          "tag": "sun and moon decor",
+          "count": 7
+        },
+        {
+          "tag": "neutral wall art",
+          "count": 7
+        },
+        {
+          "tag": "gallery wall set",
+          "count": 6
+        }
+      ],
+      "common_terms": [
+        {
+          "term": "moon",
+          "count": 338
+        },
+        {
+          "term": "sun",
+          "count": 309
+        },
+        {
+          "term": "celestial",
+          "count": 193
+        },
+        {
+          "term": "boho",
+          "count": 136
+        },
+        {
+          "term": "canvas",
+          "count": 100
+        },
+        {
+          "term": "set",
+          "count": 60
+        },
+        {
+          "term": "modern",
+          "count": 46
+        },
+        {
+          "term": "gold",
+          "count": 42
+        },
+        {
+          "term": "astrology",
+          "count": 41
+        },
+        {
+          "term": "bedroom",
+          "count": 39
+        },
+        {
+          "term": "abstract",
+          "count": 37
+        },
+        {
+          "term": "prints",
+          "count": 36
+        },
+        {
+          "term": "mystical",
+          "count": 36
+        },
+        {
+          "term": "spiritual",
+          "count": 33
+        },
+        {
+          "term": "vintage",
+          "count": 31
+        },
+        {
+          "term": "room",
+          "count": 31
+        },
+        {
+          "term": "metal",
+          "count": 31
+        },
+        {
+          "term": "cosmic",
+          "count": 30
+        },
+        {
+          "term": "artwork",
+          "count": 26
+        },
+        {
+          "term": "nature",
+          "count": 25
+        }
+      ],
+      "sample_median_price_by_currency": {
+        "EUR": 10.0,
+        "GBP": 14.01,
+        "TRY": 320.0,
+        "USD": 67.5,
+        "INR": 80222.0
+      },
+      "opportunity_score": 82.0,
+      "score_basis": "relative Etsy top-result engagement 45% + lower competition 40% + recent top-sample activity 15%"
+    },
+    {
+      "keyword": "crescent moon botanical art",
+      "series": "celestial",
+      "product_type": "wall_art",
+      "competition_count": 5042,
+      "sample_size": 100,
+      "sample_total_favorers": 269,
+      "sample_median_favorers": 0.0,
+      "sample_top10_favorers": 225,
+      "recent_90d_in_top_sample": 88,
+      "common_tags": [
+        {
+          "tag": "crescent moon art",
+          "count": 43
+        },
+        {
+          "tag": "botanical wall art",
+          "count": 22
+        },
+        {
+          "tag": "celestial wall art",
+          "count": 11
+        },
+        {
+          "tag": "crescent moon decor",
+          "count": 11
+        },
+        {
+          "tag": "moon wall art",
+          "count": 10
+        },
+        {
+          "tag": "botanical moon art",
+          "count": 10
+        },
+        {
+          "tag": "crescent moon",
+          "count": 9
+        },
+        {
+          "tag": "housewarming gift",
+          "count": 9
+        },
+        {
+          "tag": "celestial wall decor",
+          "count": 9
+        },
+        {
+          "tag": "moon wall decor",
+          "count": 8
+        },
+        {
+          "tag": "botanical decor",
+          "count": 8
+        },
+        {
+          "tag": "nature wall decor",
+          "count": 8
+        },
+        {
+          "tag": "floral wall art",
+          "count": 8
+        },
+        {
+          "tag": "boho wall decor",
+          "count": 8
+        },
+        {
+          "tag": "cottagecore decor",
+          "count": 6
+        },
+        {
+          "tag": "celestial decor",
+          "count": 6
+        },
+        {
+          "tag": "metal wall art",
+          "count": 6
+        },
+        {
+          "tag": "botanical print",
+          "count": 5
+        },
+        {
+          "tag": "floral moon art",
+          "count": 5
+        },
+        {
+          "tag": "crescent moon print",
+          "count": 5
+        }
+      ],
+      "common_terms": [
+        {
+          "term": "moon",
+          "count": 345
+        },
+        {
+          "term": "botanical",
+          "count": 205
+        },
+        {
+          "term": "crescent",
+          "count": 188
+        },
+        {
+          "term": "floral",
+          "count": 136
+        },
+        {
+          "term": "metal",
+          "count": 118
+        },
+        {
+          "term": "celestial",
+          "count": 114
+        },
+        {
+          "term": "canvas",
+          "count": 104
+        },
+        {
+          "term": "nature",
+          "count": 71
+        },
+        {
+          "term": "boho",
+          "count": 60
+        },
+        {
+          "term": "night",
+          "count": 57
+        },
+        {
+          "term": "flower",
+          "count": 45
+        },
+        {
+          "term": "garden",
+          "count": 44
+        },
+        {
+          "term": "shirt",
+          "count": 44
+        },
+        {
+          "term": "cat",
+          "count": 43
+        },
+        {
+          "term": "mystical",
+          "count": 40
+        },
+        {
+          "term": "lover",
+          "count": 39
+        },
+        {
+          "term": "vintage",
+          "count": 36
+        },
+        {
+          "term": "tee",
+          "count": 34
+        },
+        {
+          "term": "nails",
+          "count": 33
+        },
+        {
+          "term": "artwork",
+          "count": 30
+        }
+      ],
+      "sample_median_price_by_currency": {
+        "EUR": 10.43,
+        "TRY": 175.0,
+        "USD": 79.0,
+        "GBP": 12.49,
+        "VND": 145000.0,
+        "CHF": 28.25,
+        "AUD": 9.96
+      },
+      "opportunity_score": 81.9,
+      "score_basis": "relative Etsy top-result engagement 45% + lower competition 40% + recent top-sample activity 15%"
+    },
+    {
+      "keyword": "eclipse wall art",
+      "series": "celestial",
+      "product_type": "wall_art",
+      "competition_count": 7229,
+      "sample_size": 100,
+      "sample_total_favorers": 540,
+      "sample_median_favorers": 0.0,
+      "sample_top10_favorers": 428,
+      "recent_90d_in_top_sample": 80,
+      "common_tags": [
+        {
+          "tag": "eclipse wall art",
+          "count": 100
+        },
+        {
+          "tag": "celestial wall art",
+          "count": 31
+        },
+        {
+          "tag": "solar eclipse art",
+          "count": 30
+        },
+        {
+          "tag": "printable wall art",
+          "count": 18
+        },
+        {
+          "tag": "cosmic wall art",
+          "count": 16
+        },
+        {
+          "tag": "digital download",
+          "count": 15
+        },
+        {
+          "tag": "solar eclipse",
+          "count": 10
+        },
+        {
+          "tag": "digital wall art",
+          "count": 10
+        },
+        {
+          "tag": "solar eclipse print",
+          "count": 9
+        },
+        {
+          "tag": "astronomy wall art",
+          "count": 9
+        },
+        {
+          "tag": "moon wall art",
+          "count": 9
+        },
+        {
+          "tag": "celestial decor",
+          "count": 9
+        },
+        {
+          "tag": "space wall art",
+          "count": 9
+        },
+        {
+          "tag": "celestial poster",
+          "count": 9
+        },
+        {
+          "tag": "astronomy decor",
+          "count": 8
+        },
+        {
+          "tag": "dark academia art",
+          "count": 8
+        },
+        {
+          "tag": "cosmic wall decor",
+          "count": 7
+        },
+        {
+          "tag": "total solar eclipse",
+          "count": 7
+        },
+        {
+          "tag": "astrophotography",
+          "count": 7
+        },
+        {
+          "tag": "modern wall decor",
+          "count": 6
+        }
+      ],
+      "common_terms": [
+        {
+          "term": "eclipse",
+          "count": 412
+        },
+        {
+          "term": "solar",
+          "count": 134
+        },
+        {
+          "term": "celestial",
+          "count": 123
+        },
+        {
+          "term": "dark",
+          "count": 82
+        },
+        {
+          "term": "space",
+          "count": 73
+        },
+        {
+          "term": "moon",
+          "count": 69
+        },
+        {
+          "term": "astronomy",
+          "count": 57
+        },
+        {
+          "term": "cosmic",
+          "count": 57
+        },
+        {
+          "term": "black",
+          "count": 51
+        },
+        {
+          "term": "sun",
+          "count": 49
+        },
+        {
+          "term": "gold",
+          "count": 48
+        },
+        {
+          "term": "modern",
+          "count": 43
+        },
+        {
+          "term": "gothic",
+          "count": 38
+        },
+        {
+          "term": "abstract",
+          "count": 32
+        },
+        {
+          "term": "fantasy",
+          "count": 28
+        },
+        {
+          "term": "lunar",
+          "count": 27
+        },
+        {
+          "term": "total",
+          "count": 26
+        },
+        {
+          "term": "canvas",
+          "count": 26
+        },
+        {
+          "term": "room",
+          "count": 24
+        },
+        {
+          "term": "artwork",
+          "count": 24
+        }
+      ],
+      "sample_median_price_by_currency": {
+        "USD": 27.5,
+        "CAD": 12.99,
+        "AUD": 61.38,
+        "GBP": 13.99,
+        "EUR": 9.02,
+        "TRY": 749.5,
+        "INR": 449.0
+      },
+      "opportunity_score": 81.6,
+      "score_basis": "relative Etsy top-result engagement 45% + lower competition 40% + recent top-sample activity 15%"
+    },
+    {
+      "keyword": "moon phase wall art",
+      "series": "celestial",
+      "product_type": "wall_art",
+      "competition_count": 23626,
+      "sample_size": 100,
+      "sample_total_favorers": 4287,
+      "sample_median_favorers": 0.5,
+      "sample_top10_favorers": 3857,
+      "recent_90d_in_top_sample": 96,
+      "common_tags": [
+        {
+          "tag": "moon phase wall art",
+          "count": 69
+        },
+        {
+          "tag": "celestial wall art",
+          "count": 44
+        },
+        {
+          "tag": "moon phases wall art",
+          "count": 38
+        },
+        {
+          "tag": "spiritual wall art",
+          "count": 15
+        },
+        {
+          "tag": "moon wall art",
+          "count": 15
+        },
+        {
+          "tag": "moon phases print",
+          "count": 14
+        },
+        {
+          "tag": "moon phase print",
+          "count": 13
+        },
+        {
+          "tag": "moon phase decor",
+          "count": 11
+        },
+        {
+          "tag": "moon wall decor",
+          "count": 11
+        },
+        {
+          "tag": "astrology wall art",
+          "count": 11
+        },
+        {
+          "tag": "boho wall decor",
+          "count": 11
+        },
+        {
+          "tag": "moon phase poster",
+          "count": 11
+        },
+        {
+          "tag": "celestial decor",
+          "count": 11
+        },
+        {
+          "tag": "moon wall hanging",
+          "count": 11
+        },
+        {
+          "tag": "moon lover gift",
+          "count": 10
+        },
+        {
+          "tag": "bedroom wall art",
+          "count": 10
+        },
+        {
+          "tag": "printable wall art",
+          "count": 10
+        },
+        {
+          "tag": "lunar cycle art",
+          "count": 10
+        },
+        {
+          "tag": "phases of the moon",
+          "count": 10
+        },
+        {
+          "tag": "celestial wall decor",
+          "count": 9
+        }
+      ],
+      "common_terms": [
+        {
+          "term": "moon",
+          "count": 628
+        },
+        {
+          "term": "phase",
+          "count": 223
+        },
+        {
+          "term": "phases",
+          "count": 170
+        },
+        {
+          "term": "celestial",
+          "count": 166
+        },
+        {
+          "term": "lunar",
+          "count": 115
+        },
+        {
+          "term": "boho",
+          "count": 115
+        },
+        {
+          "term": "bedroom",
+          "count": 48
+        },
+        {
+          "term": "spiritual",
+          "count": 44
+        },
+        {
+          "term": "cycle",
+          "count": 44
+        },
+        {
+          "term": "night",
+          "count": 40
+        },
+        {
+          "term": "witchy",
+          "count": 38
+        },
+        {
+          "term": "metal",
+          "count": 33
+        },
+        {
+          "term": "sky",
+          "count": 33
+        },
+        {
+          "term": "set",
+          "count": 32
+        },
+        {
+          "term": "minimalist",
+          "count": 32
+        },
+        {
+          "term": "hanging",
+          "count": 31
+        },
+        {
+          "term": "astrology",
+          "count": 31
+        },
+        {
+          "term": "canvas",
+          "count": 30
+        },
+        {
+          "term": "wood",
+          "count": 29
+        },
+        {
+          "term": "modern",
+          "count": 27
+        }
+      ],
+      "sample_median_price_by_currency": {
+        "USD": 44.42,
+        "GBP": 17.99,
+        "TRY": 495.0,
+        "CAD": 62.44,
+        "AUD": 50.04,
+        "EUR": 15.0,
+        "MXN": 129.0
+      },
+      "opportunity_score": 81.1,
+      "score_basis": "relative Etsy top-result engagement 45% + lower competition 40% + recent top-sample activity 15%"
+    },
+    {
+      "keyword": "fjord wall art",
+      "series": "landscapes",
+      "product_type": "wall_art",
+      "competition_count": 7703,
+      "sample_size": 100,
+      "sample_total_favorers": 286,
+      "sample_median_favorers": 0.0,
+      "sample_top10_favorers": 237,
+      "recent_90d_in_top_sample": 87,
+      "common_tags": [
+        {
+          "tag": "fjord wall art",
+          "count": 90
+        },
+        {
+          "tag": "scandinavian art",
+          "count": 38
+        },
+        {
+          "tag": "norway wall art",
+          "count": 26
+        },
+        {
+          "tag": "mountain wall art",
+          "count": 26
+        },
+        {
+          "tag": "nordic wall art",
+          "count": 24
+        },
+        {
+          "tag": "nature wall art",
+          "count": 21
+        },
+        {
+          "tag": "scandinavian decor",
+          "count": 17
+        },
+        {
+          "tag": "nordic landscape",
+          "count": 17
+        },
+        {
+          "tag": "printable wall art",
+          "count": 16
+        },
+        {
+          "tag": "digital download",
+          "count": 13
+        },
+        {
+          "tag": "norway print",
+          "count": 12
+        },
+        {
+          "tag": "norway landscape",
+          "count": 10
+        },
+        {
+          "tag": "norway poster",
+          "count": 10
+        },
+        {
+          "tag": "travel wall art",
+          "count": 10
+        },
+        {
+          "tag": "norway travel poster",
+          "count": 9
+        },
+        {
+          "tag": "norwegian fjord",
+          "count": 9
+        },
+        {
+          "tag": "landscape print",
+          "count": 9
+        },
+        {
+          "tag": "cabin wall decor",
+          "count": 8
+        },
+        {
+          "tag": "norwegian wall art",
+          "count": 7
+        },
+        {
+          "tag": "mountain landscape",
+          "count": 7
+        }
+      ],
+      "common_terms": [
+        {
+          "term": "fjord",
+          "count": 260
+        },
+        {
+          "term": "norway",
+          "count": 192
+        },
+        {
+          "term": "landscape",
+          "count": 191
+        },
+        {
+          "term": "travel",
+          "count": 146
+        },
+        {
+          "term": "nordic",
+          "count": 127
+        },
+        {
+          "term": "mountain",
+          "count": 124
+        },
+        {
+          "term": "scandinavian",
+          "count": 117
+        },
+        {
+          "term": "nature",
+          "count": 76
+        },
+        {
+          "term": "norwegian",
+          "count": 72
+        },
+        {
+          "term": "fjords",
+          "count": 70
+        },
+        {
+          "term": "coastal",
+          "count": 35
+        },
+        {
+          "term": "lake",
+          "count": 31
+        },
+        {
+          "term": "canvas",
+          "count": 31
+        },
+        {
+          "term": "vintage",
+          "count": 30
+        },
+        {
+          "term": "cabin",
+          "count": 30
+        },
+        {
+          "term": "moody",
+          "count": 28
+        },
+        {
+          "term": "winter",
+          "count": 26
+        },
+        {
+          "term": "painting",
+          "count": 24
+        },
+        {
+          "term": "blue",
+          "count": 20
+        },
+        {
+          "term": "waterfall",
+          "count": 20
+        }
+      ],
+      "sample_median_price_by_currency": {
+        "USD": 18.99,
+        "EUR": 23.99,
+        "GBP": 16.99,
+        "DKK": 35.0,
+        "CAD": 7.0,
+        "NZD": 38.0,
+        "NOK": 69.0,
+        "AUD": 160.0,
+        "TRY": 2219.5,
+        "INR": 8014.0
+      },
+      "opportunity_score": 78.1,
+      "score_basis": "relative Etsy top-result engagement 45% + lower competition 40% + recent top-sample activity 15%"
+    },
+    {
+      "keyword": "constellation wall art",
+      "series": "celestial",
+      "product_type": "wall_art",
+      "competition_count": 26651,
+      "sample_size": 100,
+      "sample_total_favorers": 2790,
+      "sample_median_favorers": 0.0,
+      "sample_top10_favorers": 2521,
+      "recent_90d_in_top_sample": 92,
+      "common_tags": [
+        {
+          "tag": "constellation art",
+          "count": 36
+        },
+        {
+          "tag": "celestial wall art",
+          "count": 29
+        },
+        {
+          "tag": "zodiac wall art",
+          "count": 22
+        },
+        {
+          "tag": "celestial decor",
+          "count": 18
+        },
+        {
+          "tag": "astronomy wall art",
+          "count": 14
+        },
+        {
+          "tag": "astrology wall art",
+          "count": 14
+        },
+        {
+          "tag": "constellation print",
+          "count": 12
+        },
+        {
+          "tag": "astrology gift",
+          "count": 12
+        },
+        {
+          "tag": "night sky decor",
+          "count": 12
+        },
+        {
+          "tag": "night sky art",
+          "count": 10
+        },
+        {
+          "tag": "constellation decor",
+          "count": 9
+        },
+        {
+          "tag": "astrology decor",
+          "count": 9
+        },
+        {
+          "tag": "cosmic home decor",
+          "count": 8
+        },
+        {
+          "tag": "star sign print",
+          "count": 8
+        },
+        {
+          "tag": "constellation",
+          "count": 8
+        },
+        {
+          "tag": "printable wall art",
+          "count": 7
+        },
+        {
+          "tag": "zodiac constellation",
+          "count": 7
+        },
+        {
+          "tag": "star map print",
+          "count": 7
+        },
+        {
+          "tag": "cosmic wall decor",
+          "count": 7
+        },
+        {
+          "tag": "celestial wall decor",
+          "count": 7
+        }
+      ],
+      "common_terms": [
+        {
+          "term": "constellation",
+          "count": 208
+        },
+        {
+          "term": "celestial",
+          "count": 158
+        },
+        {
+          "term": "zodiac",
+          "count": 158
+        },
+        {
+          "term": "star",
+          "count": 128
+        },
+        {
+          "term": "canvas",
+          "count": 128
+        },
+        {
+          "term": "astrology",
+          "count": 95
+        },
+        {
+          "term": "night",
+          "count": 94
+        },
+        {
+          "term": "sky",
+          "count": 86
+        },
+        {
+          "term": "map",
+          "count": 75
+        },
+        {
+          "term": "cosmic",
+          "count": 65
+        },
+        {
+          "term": "sign",
+          "count": 64
+        },
+        {
+          "term": "astronomy",
+          "count": 48
+        },
+        {
+          "term": "space",
+          "count": 44
+        },
+        {
+          "term": "moon",
+          "count": 33
+        },
+        {
+          "term": "horoscope",
+          "count": 32
+        },
+        {
+          "term": "gold",
+          "count": 31
+        },
+        {
+          "term": "modern",
+          "count": 30
+        },
+        {
+          "term": "artwork",
+          "count": 29
+        },
+        {
+          "term": "starry",
+          "count": 29
+        },
+        {
+          "term": "nursery",
+          "count": 29
+        }
+      ],
+      "sample_median_price_by_currency": {
+        "EUR": 15.0,
+        "USD": 70.0,
+        "GBP": 13.5,
+        "AUD": 30.95,
+        "INR": 5254.0,
+        "CAD": 15.99
+      },
+      "opportunity_score": 77.9,
+      "score_basis": "relative Etsy top-result engagement 45% + lower competition 40% + recent top-sample activity 15%"
+    },
+    {
+      "keyword": "boho sun wall art",
+      "series": "botanical-sun",
+      "product_type": "wall_art",
+      "competition_count": 44678,
+      "sample_size": 100,
+      "sample_total_favorers": 8019,
+      "sample_median_favorers": 3.0,
+      "sample_top10_favorers": 6489,
+      "recent_90d_in_top_sample": 76,
+      "common_tags": [
+        {
+          "tag": "boho sun wall art",
+          "count": 98
+        },
+        {
+          "tag": "boho wall decor",
+          "count": 18
+        },
+        {
+          "tag": "printable wall art",
+          "count": 14
+        },
+        {
+          "tag": "minimalist wall art",
+          "count": 14
+        },
+        {
+          "tag": "neutral wall art",
+          "count": 13
+        },
+        {
+          "tag": "abstract sun print",
+          "count": 13
+        },
+        {
+          "tag": "terracotta wall art",
+          "count": 11
+        },
+        {
+          "tag": "mid century modern",
+          "count": 11
+        },
+        {
+          "tag": "sunburst wall art",
+          "count": 11
+        },
+        {
+          "tag": "boho sun print",
+          "count": 11
+        },
+        {
+          "tag": "abstract sun art",
+          "count": 10
+        },
+        {
+          "tag": "sun wall decor",
+          "count": 10
+        },
+        {
+          "tag": "boho home decor",
+          "count": 9
+        },
+        {
+          "tag": "digital download",
+          "count": 8
+        },
+        {
+          "tag": "sunrise wall art",
+          "count": 8
+        },
+        {
+          "tag": "boho wall art",
+          "count": 8
+        },
+        {
+          "tag": "celestial wall art",
+          "count": 7
+        },
+        {
+          "tag": "bedroom wall decor",
+          "count": 7
+        },
+        {
+          "tag": "living room decor",
+          "count": 7
+        },
+        {
+          "tag": "modern boho decor",
+          "count": 7
+        }
+      ],
+      "common_terms": [
+        {
+          "term": "sun",
+          "count": 484
+        },
+        {
+          "term": "boho",
+          "count": 368
+        },
+        {
+          "term": "abstract",
+          "count": 91
+        },
+        {
+          "term": "modern",
+          "count": 86
+        },
+        {
+          "term": "minimalist",
+          "count": 65
+        },
+        {
+          "term": "room",
+          "count": 64
+        },
+        {
+          "term": "mid",
+          "count": 58
+        },
+        {
+          "term": "century",
+          "count": 58
+        },
+        {
+          "term": "neutral",
+          "count": 55
+        },
+        {
+          "term": "sunrise",
+          "count": 53
+        },
+        {
+          "term": "nursery",
+          "count": 51
+        },
+        {
+          "term": "terracotta",
+          "count": 51
+        },
+        {
+          "term": "retro",
+          "count": 50
+        },
+        {
+          "term": "sunshine",
+          "count": 44
+        },
+        {
+          "term": "living",
+          "count": 39
+        },
+        {
+          "term": "landscape",
+          "count": 39
+        },
+        {
+          "term": "sunburst",
+          "count": 36
+        },
+        {
+          "term": "prints",
+          "count": 34
+        },
+        {
+          "term": "bedroom",
+          "count": 34
+        },
+        {
+          "term": "canvas",
+          "count": 32
+        }
+      ],
+      "sample_median_price_by_currency": {
+        "USD": 9.95,
+        "GBP": 13.99,
+        "EUR": 8.3,
+        "PHP": 420.0,
+        "HKD": 220.0,
+        "INR": 199.0,
+        "AUD": 14.87,
+        "TRY": 400.0,
+        "ILS": 1303.83,
+        "CAD": 12.97
+      },
+      "opportunity_score": 77.6,
+      "score_basis": "relative Etsy top-result engagement 45% + lower competition 40% + recent top-sample activity 15%"
+    },
+    {
+      "keyword": "lavender field wall art",
+      "series": "landscapes",
+      "product_type": "wall_art",
+      "competition_count": 10226,
+      "sample_size": 100,
+      "sample_total_favorers": 198,
+      "sample_median_favorers": 0.0,
+      "sample_top10_favorers": 175,
+      "recent_90d_in_top_sample": 93,
+      "common_tags": [
+        {
+          "tag": "lavender field art",
+          "count": 36
+        },
+        {
+          "tag": "lavender field",
+          "count": 29
+        },
+        {
+          "tag": "lavender wall art",
+          "count": 27
+        },
+        {
+          "tag": "provence wall art",
+          "count": 18
+        },
+        {
+          "tag": "countryside art",
+          "count": 14
+        },
+        {
+          "tag": "nature wall art",
+          "count": 13
+        },
+        {
+          "tag": "living room art",
+          "count": 11
+        },
+        {
+          "tag": "farmhouse wall art",
+          "count": 10
+        },
+        {
+          "tag": "purple flowers",
+          "count": 10
+        },
+        {
+          "tag": "countryside canvas",
+          "count": 10
+        },
+        {
+          "tag": "digital download",
+          "count": 10
+        },
+        {
+          "tag": "printable wall art",
+          "count": 9
+        },
+        {
+          "tag": "lavender fields",
+          "count": 9
+        },
+        {
+          "tag": "cottagecore decor",
+          "count": 9
+        },
+        {
+          "tag": "lavender field print",
+          "count": 9
+        },
+        {
+          "tag": "purple wall art",
+          "count": 9
+        },
+        {
+          "tag": "nature wall decor",
+          "count": 9
+        },
+        {
+          "tag": "french country art",
+          "count": 8
+        },
+        {
+          "tag": "vintage landscape",
+          "count": 8
+        },
+        {
+          "tag": "countryside wall art",
+          "count": 7
+        }
+      ],
+      "common_terms": [
+        {
+          "term": "lavender",
+          "count": 289
+        },
+        {
+          "term": "landscape",
+          "count": 207
+        },
+        {
+          "term": "field",
+          "count": 183
+        },
+        {
+          "term": "canvas",
+          "count": 180
+        },
+        {
+          "term": "countryside",
+          "count": 98
+        },
+        {
+          "term": "nature",
+          "count": 92
+        },
+        {
+          "term": "purple",
+          "count": 89
+        },
+        {
+          "term": "floral",
+          "count": 79
+        },
+        {
+          "term": "provence",
+          "count": 66
+        },
+        {
+          "term": "farmhouse",
+          "count": 64
+        },
+        {
+          "term": "sunset",
+          "count": 59
+        },
+        {
+          "term": "painting",
+          "count": 55
+        },
+        {
+          "term": "french",
+          "count": 49
+        },
+        {
+          "term": "rustic",
+          "count": 49
+        },
+        {
+          "term": "vintage",
+          "count": 44
+        },
+        {
+          "term": "country",
+          "count": 42
+        },
+        {
+          "term": "fields",
+          "count": 41
+        },
+        {
+          "term": "bedroom",
+          "count": 29
+        },
+        {
+          "term": "scene",
+          "count": 29
+        },
+        {
+          "term": "artwork",
+          "count": 28
+        }
+      ],
+      "sample_median_price_by_currency": {
+        "EUR": 27.05,
+        "USD": 70.0,
+        "HKD": 3963.3,
+        "ZAR": 139.4,
+        "CHF": 7.0,
+        "INR": 749.0,
+        "GBP": 13.99,
+        "NZD": 7.5,
+        "TRY": 2799.0
+      },
+      "opportunity_score": 73.9,
+      "score_basis": "relative Etsy top-result engagement 45% + lower competition 40% + recent top-sample activity 15%"
+    },
+    {
+      "keyword": "olive branch wall art",
+      "series": "botanical-sun",
+      "product_type": "wall_art",
+      "competition_count": 18047,
+      "sample_size": 100,
+      "sample_total_favorers": 496,
+      "sample_median_favorers": 0.0,
+      "sample_top10_favorers": 460,
+      "recent_90d_in_top_sample": 87,
+      "common_tags": [
+        {
+          "tag": "olive branch art",
+          "count": 62
+        },
+        {
+          "tag": "botanical wall art",
+          "count": 26
+        },
+        {
+          "tag": "mediterranean decor",
+          "count": 24
+        },
+        {
+          "tag": "kitchen wall art",
+          "count": 24
+        },
+        {
+          "tag": "botanical print",
+          "count": 21
+        },
+        {
+          "tag": "rustic wall art",
+          "count": 21
+        },
+        {
+          "tag": "mediterranean art",
+          "count": 19
+        },
+        {
+          "tag": "botanical canvas",
+          "count": 15
+        },
+        {
+          "tag": "farmhouse wall art",
+          "count": 15
+        },
+        {
+          "tag": "nature wall art",
+          "count": 14
+        },
+        {
+          "tag": "living room art",
+          "count": 14
+        },
+        {
+          "tag": "neutral wall art",
+          "count": 13
+        },
+        {
+          "tag": "olive branch print",
+          "count": 13
+        },
+        {
+          "tag": "printable wall art",
+          "count": 12
+        },
+        {
+          "tag": "dining room art",
+          "count": 12
+        },
+        {
+          "tag": "canvas wall art",
+          "count": 11
+        },
+        {
+          "tag": "minimalist wall art",
+          "count": 10
+        },
+        {
+          "tag": "olive branch decor",
+          "count": 9
+        },
+        {
+          "tag": "olive wall art",
+          "count": 9
+        },
+        {
+          "tag": "kitchen wall decor",
+          "count": 8
+        }
+      ],
+      "common_terms": [
+        {
+          "term": "olive",
+          "count": 330
+        },
+        {
+          "term": "branch",
+          "count": 236
+        },
+        {
+          "term": "botanical",
+          "count": 210
+        },
+        {
+          "term": "canvas",
+          "count": 202
+        },
+        {
+          "term": "mediterranean",
+          "count": 103
+        },
+        {
+          "term": "kitchen",
+          "count": 102
+        },
+        {
+          "term": "rustic",
+          "count": 93
+        },
+        {
+          "term": "nature",
+          "count": 85
+        },
+        {
+          "term": "room",
+          "count": 83
+        },
+        {
+          "term": "neutral",
+          "count": 77
+        },
+        {
+          "term": "green",
+          "count": 60
+        },
+        {
+          "term": "vintage",
+          "count": 59
+        },
+        {
+          "term": "minimalist",
+          "count": 49
+        },
+        {
+          "term": "tree",
+          "count": 48
+        },
+        {
+          "term": "living",
+          "count": 47
+        },
+        {
+          "term": "farmhouse",
+          "count": 46
+        },
+        {
+          "term": "modern",
+          "count": 40
+        },
+        {
+          "term": "dining",
+          "count": 37
+        },
+        {
+          "term": "vase",
+          "count": 35
+        },
+        {
+          "term": "style",
+          "count": 29
+        }
+      ],
+      "sample_median_price_by_currency": {
+        "MAD": 82.5,
+        "CHF": 11.9,
+        "EUR": 5.99,
+        "USD": 79.0,
+        "GBP": 70.61,
+        "TRY": 4144.92,
+        "AUD": 4.96,
+        "INR": 699.0,
+        "ZAR": 139.4
+      },
+      "opportunity_score": 73.2,
+      "score_basis": "relative Etsy top-result engagement 45% + lower competition 40% + recent top-sample activity 15%"
+    },
+    {
+      "keyword": "daisy wall art",
+      "series": "botanical-sun",
+      "product_type": "wall_art",
+      "competition_count": 91963,
+      "sample_size": 100,
+      "sample_total_favorers": 8883,
+      "sample_median_favorers": 0.0,
+      "sample_top10_favorers": 8785,
+      "recent_90d_in_top_sample": 88,
+      "common_tags": [
+        {
+          "tag": "daisy wall art",
+          "count": 91
+        },
+        {
+          "tag": "floral wall art",
+          "count": 20
+        },
+        {
+          "tag": "living room art",
+          "count": 19
+        },
+        {
+          "tag": "botanical print",
+          "count": 17
+        },
+        {
+          "tag": "nursery wall art",
+          "count": 16
+        },
+        {
+          "tag": "canvas wall art",
+          "count": 14
+        },
+        {
+          "tag": "floral wall decor",
+          "count": 13
+        },
+        {
+          "tag": "cottagecore decor",
+          "count": 12
+        },
+        {
+          "tag": "floral canvas",
+          "count": 9
+        },
+        {
+          "tag": "daisy print",
+          "count": 8
+        },
+        {
+          "tag": "botanical art",
+          "count": 7
+        },
+        {
+          "tag": "daisy wall decor",
+          "count": 7
+        },
+        {
+          "tag": "botanical wall art",
+          "count": 7
+        },
+        {
+          "tag": "daisy flower print",
+          "count": 7
+        },
+        {
+          "tag": "printable wall art",
+          "count": 7
+        },
+        {
+          "tag": "spring wall art",
+          "count": 7
+        },
+        {
+          "tag": "home decor",
+          "count": 7
+        },
+        {
+          "tag": "flower lover gift",
+          "count": 6
+        },
+        {
+          "tag": "bedroom wall art",
+          "count": 6
+        },
+        {
+          "tag": "digital download",
+          "count": 6
+        }
+      ],
+      "common_terms": [
+        {
+          "term": "daisy",
+          "count": 353
+        },
+        {
+          "term": "floral",
+          "count": 246
+        },
+        {
+          "term": "flower",
+          "count": 207
+        },
+        {
+          "term": "canvas",
+          "count": 125
+        },
+        {
+          "term": "room",
+          "count": 103
+        },
+        {
+          "term": "nursery",
+          "count": 95
+        },
+        {
+          "term": "botanical",
+          "count": 93
+        },
+        {
+          "term": "nature",
+          "count": 55
+        },
+        {
+          "term": "living",
+          "count": 52
+        },
+        {
+          "term": "vintage",
+          "count": 41
+        },
+        {
+          "term": "white",
+          "count": 38
+        },
+        {
+          "term": "bedroom",
+          "count": 38
+        },
+        {
+          "term": "artwork",
+          "count": 37
+        },
+        {
+          "term": "prints",
+          "count": 37
+        },
+        {
+          "term": "modern",
+          "count": 37
+        },
+        {
+          "term": "name",
+          "count": 35
+        },
+        {
+          "term": "cottagecore",
+          "count": 34
+        },
+        {
+          "term": "wildflower",
+          "count": 32
+        },
+        {
+          "term": "rustic",
+          "count": 29
+        },
+        {
+          "term": "girls",
+          "count": 29
+        }
+      ],
+      "sample_median_price_by_currency": {
+        "EUR": 6.49,
+        "USD": 49.0,
+        "GBP": 15.99,
+        "TRY": 482.0,
+        "ZAR": 100.0,
+        "AUD": 2.99,
+        "HKD": 985.86
+      },
+      "opportunity_score": 72.2,
+      "score_basis": "relative Etsy top-result engagement 45% + lower competition 40% + recent top-sample activity 15%"
+    },
+    {
+      "keyword": "lemon kitchen wall art",
+      "series": "botanical-sun",
+      "product_type": "wall_art",
+      "competition_count": 43545,
+      "sample_size": 100,
+      "sample_total_favorers": 679,
+      "sample_median_favorers": 0.0,
+      "sample_top10_favorers": 584,
+      "recent_90d_in_top_sample": 84,
+      "common_tags": [
+        {
+          "tag": "lemon wall art",
+          "count": 64
+        },
+        {
+          "tag": "kitchen wall art",
+          "count": 37
+        },
+        {
+          "tag": "lemon kitchen art",
+          "count": 29
+        },
+        {
+          "tag": "citrus wall art",
+          "count": 27
+        },
+        {
+          "tag": "kitchen wall decor",
+          "count": 24
+        },
+        {
+          "tag": "mediterranean art",
+          "count": 23
+        },
+        {
+          "tag": "mediterranean decor",
+          "count": 19
+        },
+        {
+          "tag": "fruit wall art",
+          "count": 16
+        },
+        {
+          "tag": "printable wall art",
+          "count": 16
+        },
+        {
+          "tag": "italian kitchen art",
+          "count": 15
+        },
+        {
+          "tag": "lemon kitchen decor",
+          "count": 14
+        },
+        {
+          "tag": "dining room art",
+          "count": 14
+        },
+        {
+          "tag": "digital download",
+          "count": 13
+        },
+        {
+          "tag": "lemon print",
+          "count": 13
+        },
+        {
+          "tag": "housewarming gift",
+          "count": 13
+        },
+        {
+          "tag": "kitchen decor",
+          "count": 12
+        },
+        {
+          "tag": "lemon poster",
+          "count": 10
+        },
+        {
+          "tag": "farmhouse kitchen",
+          "count": 10
+        },
+        {
+          "tag": "lemon art print",
+          "count": 10
+        },
+        {
+          "tag": "fruit wall decor",
+          "count": 9
+        }
+      ],
+      "common_terms": [
+        {
+          "term": "kitchen",
+          "count": 492
+        },
+        {
+          "term": "lemon",
+          "count": 350
+        },
+        {
+          "term": "fruit",
+          "count": 131
+        },
+        {
+          "term": "citrus",
+          "count": 103
+        },
+        {
+          "term": "mediterranean",
+          "count": 88
+        },
+        {
+          "term": "yellow",
+          "count": 70
+        },
+        {
+          "term": "life",
+          "count": 56
+        },
+        {
+          "term": "italian",
+          "count": 53
+        },
+        {
+          "term": "still",
+          "count": 53
+        },
+        {
+          "term": "food",
+          "count": 49
+        },
+        {
+          "term": "blue",
+          "count": 46
+        },
+        {
+          "term": "dining",
+          "count": 43
+        },
+        {
+          "term": "botanical",
+          "count": 41
+        },
+        {
+          "term": "room",
+          "count": 40
+        },
+        {
+          "term": "farmhouse",
+          "count": 37
+        },
+        {
+          "term": "summer",
+          "count": 35
+        },
+        {
+          "term": "painting",
+          "count": 30
+        },
+        {
+          "term": "lemons",
+          "count": 30
+        },
+        {
+          "term": "retro",
+          "count": 29
+        },
+        {
+          "term": "framed",
+          "count": 26
+        }
+      ],
+      "sample_median_price_by_currency": {
+        "USD": 26.39,
+        "GBP": 13.99,
+        "EUR": 8.39,
+        "CAD": 5.0,
+        "AUD": 43.0,
+        "TRY": 2023.59,
+        "INR": 800.0,
+        "ILS": 25.0,
+        "NOK": 189.0
+      },
+      "opportunity_score": 65.9,
+      "score_basis": "relative Etsy top-result engagement 45% + lower competition 40% + recent top-sample activity 15%"
+    },
+    {
+      "keyword": "fox wall art",
+      "series": "cozy-animals",
+      "product_type": "wall_art",
+      "competition_count": 101888,
+      "sample_size": 100,
+      "sample_total_favorers": 2796,
+      "sample_median_favorers": 0.0,
+      "sample_top10_favorers": 2724,
+      "recent_90d_in_top_sample": 87,
+      "common_tags": [
+        {
+          "tag": "fox wall art",
+          "count": 92
+        },
+        {
+          "tag": "fox lover gift",
+          "count": 22
+        },
+        {
+          "tag": "living room art",
+          "count": 22
+        },
+        {
+          "tag": "woodland decor",
+          "count": 14
+        },
+        {
+          "tag": "woodland wall art",
+          "count": 13
+        },
+        {
+          "tag": "canvas wall art",
+          "count": 12
+        },
+        {
+          "tag": "animal wall art",
+          "count": 11
+        },
+        {
+          "tag": "kids room decor",
+          "count": 11
+        },
+        {
+          "tag": "forest animal art",
+          "count": 10
+        },
+        {
+          "tag": "home decor",
+          "count": 10
+        },
+        {
+          "tag": "nature print",
+          "count": 10
+        },
+        {
+          "tag": "animal lover gift",
+          "count": 10
+        },
+        {
+          "tag": "animal canvas",
+          "count": 9
+        },
+        {
+          "tag": "animal print",
+          "count": 9
+        },
+        {
+          "tag": "wildlife decor",
+          "count": 9
+        },
+        {
+          "tag": "cottagecore decor",
+          "count": 8
+        },
+        {
+          "tag": "nature wall art",
+          "count": 8
+        },
+        {
+          "tag": "fox decor",
+          "count": 7
+        },
+        {
+          "tag": "fox poster",
+          "count": 7
+        },
+        {
+          "tag": "nature lover gift",
+          "count": 7
+        }
+      ],
+      "common_terms": [
+        {
+          "term": "fox",
+          "count": 473
+        },
+        {
+          "term": "animal",
+          "count": 222
+        },
+        {
+          "term": "canvas",
+          "count": 126
+        },
+        {
+          "term": "woodland",
+          "count": 109
+        },
+        {
+          "term": "nature",
+          "count": 97
+        },
+        {
+          "term": "room",
+          "count": 84
+        },
+        {
+          "term": "forest",
+          "count": 62
+        },
+        {
+          "term": "lover",
+          "count": 60
+        },
+        {
+          "term": "rustic",
+          "count": 57
+        },
+        {
+          "term": "nursery",
+          "count": 57
+        },
+        {
+          "term": "wildlife",
+          "count": 57
+        },
+        {
+          "term": "living",
+          "count": 52
+        },
+        {
+          "term": "artwork",
+          "count": 40
+        },
+        {
+          "term": "vintage",
+          "count": 37
+        },
+        {
+          "term": "kids",
+          "count": 37
+        },
+        {
+          "term": "colorful",
+          "count": 35
+        },
+        {
+          "term": "painting",
+          "count": 33
+        },
+        {
+          "term": "whimsical",
+          "count": 31
+        },
+        {
+          "term": "cottagecore",
+          "count": 28
+        },
+        {
+          "term": "winter",
+          "count": 27
+        }
+      ],
+      "sample_median_price_by_currency": {
+        "GBP": 19.99,
+        "USD": 65.0,
+        "AUD": 59.95,
+        "EUR": 5.1,
+        "TRY": 450.0,
+        "HKD": 1540.0
+      },
+      "opportunity_score": 65.4,
+      "score_basis": "relative Etsy top-result engagement 45% + lower competition 40% + recent top-sample activity 15%"
+    },
+    {
+      "keyword": "alpine lake wall art",
+      "series": "landscapes",
+      "product_type": "wall_art",
+      "competition_count": 16521,
+      "sample_size": 100,
+      "sample_total_favorers": 85,
+      "sample_median_favorers": 0.0,
+      "sample_top10_favorers": 65,
+      "recent_90d_in_top_sample": 93,
+      "common_tags": [
+        {
+          "tag": "alpine lake wall art",
+          "count": 38
+        },
+        {
+          "tag": "mountain wall art",
+          "count": 31
+        },
+        {
+          "tag": "alpine lake art",
+          "count": 25
+        },
+        {
+          "tag": "nature wall decor",
+          "count": 20
+        },
+        {
+          "tag": "cabin wall decor",
+          "count": 16
+        },
+        {
+          "tag": "lake house decor",
+          "count": 16
+        },
+        {
+          "tag": "nature wall art",
+          "count": 14
+        },
+        {
+          "tag": "living room art",
+          "count": 14
+        },
+        {
+          "tag": "mountain lake print",
+          "count": 14
+        },
+        {
+          "tag": "rustic cabin decor",
+          "count": 14
+        },
+        {
+          "tag": "alpine lake print",
+          "count": 13
+        },
+        {
+          "tag": "printable wall art",
+          "count": 11
+        },
+        {
+          "tag": "mountain landscape",
+          "count": 10
+        },
+        {
+          "tag": "alpine landscape",
+          "count": 10
+        },
+        {
+          "tag": "mountain canvas art",
+          "count": 10
+        },
+        {
+          "tag": "digital download",
+          "count": 9
+        },
+        {
+          "tag": "scenic landscape",
+          "count": 8
+        },
+        {
+          "tag": "wilderness wall art",
+          "count": 8
+        },
+        {
+          "tag": "alpine wall art",
+          "count": 8
+        },
+        {
+          "tag": "mountain lake art",
+          "count": 7
+        }
+      ],
+      "common_terms": [
+        {
+          "term": "lake",
+          "count": 355
+        },
+        {
+          "term": "mountain",
+          "count": 263
+        },
+        {
+          "term": "alpine",
+          "count": 228
+        },
+        {
+          "term": "landscape",
+          "count": 195
+        },
+        {
+          "term": "nature",
+          "count": 145
+        },
+        {
+          "term": "canvas",
+          "count": 101
+        },
+        {
+          "term": "travel",
+          "count": 83
+        },
+        {
+          "term": "cabin",
+          "count": 72
+        },
+        {
+          "term": "rustic",
+          "count": 57
+        },
+        {
+          "term": "scenic",
+          "count": 53
+        },
+        {
+          "term": "forest",
+          "count": 52
+        },
+        {
+          "term": "room",
+          "count": 42
+        },
+        {
+          "term": "living",
+          "count": 40
+        },
+        {
+          "term": "vintage",
+          "count": 38
+        },
+        {
+          "term": "sunset",
+          "count": 29
+        },
+        {
+          "term": "wildflower",
+          "count": 26
+        },
+        {
+          "term": "painting",
+          "count": 26
+        },
+        {
+          "term": "blue",
+          "count": 26
+        },
+        {
+          "term": "serene",
+          "count": 25
+        },
+        {
+          "term": "scenery",
+          "count": 25
+        }
+      ],
+      "sample_median_price_by_currency": {
+        "USD": 47.99,
+        "CAD": 8.19,
+        "EUR": 24.95,
+        "AUD": 120.6,
+        "GBP": 17.99,
+        "SGD": 179.0,
+        "CHF": 5.9,
+        "TRY": 3600.0,
+        "ILS": 30.59
+      },
+      "opportunity_score": 64.4,
+      "score_basis": "relative Etsy top-result engagement 45% + lower competition 40% + recent top-sample activity 15%"
+    },
+    {
+      "keyword": "mountain printable wall art",
+      "series": "landscapes",
+      "product_type": "wall_art",
+      "competition_count": 66395,
+      "sample_size": 100,
+      "sample_total_favorers": 922,
+      "sample_median_favorers": 0.0,
+      "sample_top10_favorers": 813,
+      "recent_90d_in_top_sample": 100,
+      "common_tags": [
+        {
+          "tag": "printable wall art",
+          "count": 63
+        },
+        {
+          "tag": "digital download",
+          "count": 43
+        },
+        {
+          "tag": "mountain wall art",
+          "count": 32
+        },
+        {
+          "tag": "instant download",
+          "count": 14
+        },
+        {
+          "tag": "nature wall art",
+          "count": 13
+        },
+        {
+          "tag": "printable art",
+          "count": 12
+        },
+        {
+          "tag": "mountain printable",
+          "count": 12
+        },
+        {
+          "tag": "landscape wall art",
+          "count": 11
+        },
+        {
+          "tag": "mountain print",
+          "count": 10
+        },
+        {
+          "tag": "bedroom wall art",
+          "count": 10
+        },
+        {
+          "tag": "landscape printable",
+          "count": 8
+        },
+        {
+          "tag": "winter wall art",
+          "count": 7
+        },
+        {
+          "tag": "digital download art",
+          "count": 7
+        },
+        {
+          "tag": "nature printable",
+          "count": 6
+        },
+        {
+          "tag": "digital wall art",
+          "count": 6
+        },
+        {
+          "tag": "neutral wall art",
+          "count": 6
+        },
+        {
+          "tag": "landscape print",
+          "count": 6
+        },
+        {
+          "tag": "misty mountain art",
+          "count": 6
+        },
+        {
+          "tag": "mountain landscape",
+          "count": 6
+        },
+        {
+          "tag": "living room art",
+          "count": 6
+        }
+      ],
+      "common_terms": [
+        {
+          "term": "mountain",
+          "count": 271
+        },
+        {
+          "term": "landscape",
+          "count": 182
+        },
+        {
+          "term": "nature",
+          "count": 69
+        },
+        {
+          "term": "winter",
+          "count": 41
+        },
+        {
+          "term": "cabin",
+          "count": 39
+        },
+        {
+          "term": "vintage",
+          "count": 39
+        },
+        {
+          "term": "modern",
+          "count": 38
+        },
+        {
+          "term": "mountains",
+          "count": 37
+        },
+        {
+          "term": "room",
+          "count": 33
+        },
+        {
+          "term": "rustic",
+          "count": 31
+        },
+        {
+          "term": "painting",
+          "count": 29
+        },
+        {
+          "term": "blue",
+          "count": 29
+        },
+        {
+          "term": "prints",
+          "count": 27
+        },
+        {
+          "term": "alpine",
+          "count": 26
+        },
+        {
+          "term": "neutral",
+          "count": 26
+        },
+        {
+          "term": "forest",
+          "count": 25
+        },
+        {
+          "term": "set",
+          "count": 25
+        },
+        {
+          "term": "bedroom",
+          "count": 25
+        },
+        {
+          "term": "green",
+          "count": 24
+        },
+        {
+          "term": "misty",
+          "count": 24
+        }
+      ],
+      "sample_median_price_by_currency": {
+        "USD": 5.99,
+        "CAD": 13.0,
+        "GBP": 4.0,
+        "EUR": 4.85,
+        "INR": 600.0,
+        "TRY": 290.0,
+        "AUD": 7.2
+      },
+      "opportunity_score": 63.5,
+      "score_basis": "relative Etsy top-result engagement 45% + lower competition 40% + recent top-sample activity 15%"
+    },
+    {
+      "keyword": "book lover wall art",
+      "series": "cozy-animals",
+      "product_type": "wall_art",
+      "competition_count": 174569,
+      "sample_size": 100,
+      "sample_total_favorers": 5000,
+      "sample_median_favorers": 0.0,
+      "sample_top10_favorers": 4835,
+      "recent_90d_in_top_sample": 96,
+      "common_tags": [
+        {
+          "tag": "book lover wall art",
+          "count": 100
+        },
+        {
+          "tag": "reading nook decor",
+          "count": 55
+        },
+        {
+          "tag": "book lover gift",
+          "count": 43
+        },
+        {
+          "tag": "literary wall art",
+          "count": 38
+        },
+        {
+          "tag": "woman reading art",
+          "count": 23
+        },
+        {
+          "tag": "bookish wall art",
+          "count": 19
+        },
+        {
+          "tag": "bookish wall decor",
+          "count": 18
+        },
+        {
+          "tag": "library wall decor",
+          "count": 16
+        },
+        {
+          "tag": "home library decor",
+          "count": 15
+        },
+        {
+          "tag": "printable wall art",
+          "count": 13
+        },
+        {
+          "tag": "library wall art",
+          "count": 12
+        },
+        {
+          "tag": "digital download",
+          "count": 12
+        },
+        {
+          "tag": "reader gift",
+          "count": 11
+        },
+        {
+          "tag": "bookworm gift",
+          "count": 11
+        },
+        {
+          "tag": "reading woman art",
+          "count": 11
+        },
+        {
+          "tag": "cozy reading decor",
+          "count": 10
+        },
+        {
+          "tag": "reading room decor",
+          "count": 9
+        },
+        {
+          "tag": "bibliophile gift",
+          "count": 8
+        },
+        {
+          "tag": "reading nook art",
+          "count": 8
+        },
+        {
+          "tag": "bedroom wall art",
+          "count": 8
+        }
+      ],
+      "common_terms": [
+        {
+          "term": "book",
+          "count": 387
+        },
+        {
+          "term": "reading",
+          "count": 339
+        },
+        {
+          "term": "lover",
+          "count": 271
+        },
+        {
+          "term": "nook",
+          "count": 121
+        },
+        {
+          "term": "woman",
+          "count": 117
+        },
+        {
+          "term": "library",
+          "count": 104
+        },
+        {
+          "term": "cozy",
+          "count": 101
+        },
+        {
+          "term": "literary",
+          "count": 88
+        },
+        {
+          "term": "bookish",
+          "count": 84
+        },
+        {
+          "term": "room",
+          "count": 62
+        },
+        {
+          "term": "reader",
+          "count": 51
+        },
+        {
+          "term": "canvas",
+          "count": 48
+        },
+        {
+          "term": "vintage",
+          "count": 40
+        },
+        {
+          "term": "green",
+          "count": 32
+        },
+        {
+          "term": "bedroom",
+          "count": 31
+        },
+        {
+          "term": "modern",
+          "count": 29
+        },
+        {
+          "term": "books",
+          "count": 28
+        },
+        {
+          "term": "cat",
+          "count": 27
+        },
+        {
+          "term": "girl",
+          "count": 27
+        },
+        {
+          "term": "window",
+          "count": 24
+        }
+      ],
+      "sample_median_price_by_currency": {
+        "USD": 30.0,
+        "EUR": 10.0,
+        "MYR": 19.9,
+        "GBP": 12.5,
+        "AUD": 15.5,
+        "CAD": 104.36,
+        "TRY": 287.0,
+        "SEK": 118.94,
+        "NOK": 75.0
+      },
+      "opportunity_score": 63.1,
+      "score_basis": "relative Etsy top-result engagement 45% + lower competition 40% + recent top-sample activity 15%"
+    },
+    {
+      "keyword": "owl wall art",
+      "series": "cozy-animals",
+      "product_type": "wall_art",
+      "competition_count": 85005,
+      "sample_size": 100,
+      "sample_total_favorers": 1115,
+      "sample_median_favorers": 0.0,
+      "sample_top10_favorers": 953,
+      "recent_90d_in_top_sample": 90,
+      "common_tags": [
+        {
+          "tag": "owl wall art",
+          "count": 83
+        },
+        {
+          "tag": "owl lover gift",
+          "count": 23
+        },
+        {
+          "tag": "bird lover gift",
+          "count": 14
+        },
+        {
+          "tag": "owl wall decor",
+          "count": 13
+        },
+        {
+          "tag": "owl decor",
+          "count": 12
+        },
+        {
+          "tag": "nature wall art",
+          "count": 12
+        },
+        {
+          "tag": "bird wall art",
+          "count": 11
+        },
+        {
+          "tag": "living room art",
+          "count": 10
+        },
+        {
+          "tag": "bird wall decor",
+          "count": 10
+        },
+        {
+          "tag": "owl painting",
+          "count": 8
+        },
+        {
+          "tag": "owl poster",
+          "count": 8
+        },
+        {
+          "tag": "owl art print",
+          "count": 8
+        },
+        {
+          "tag": "woodland decor",
+          "count": 8
+        },
+        {
+          "tag": "home decor",
+          "count": 7
+        },
+        {
+          "tag": "barn owl wall art",
+          "count": 7
+        },
+        {
+          "tag": "nature wall decor",
+          "count": 7
+        },
+        {
+          "tag": "animal wall art",
+          "count": 7
+        },
+        {
+          "tag": "housewarming gift",
+          "count": 6
+        },
+        {
+          "tag": "nature lover gift",
+          "count": 6
+        },
+        {
+          "tag": "digital download",
+          "count": 6
+        }
+      ],
+      "common_terms": [
+        {
+          "term": "owl",
+          "count": 567
+        },
+        {
+          "term": "bird",
+          "count": 121
+        },
+        {
+          "term": "canvas",
+          "count": 77
+        },
+        {
+          "term": "nature",
+          "count": 77
+        },
+        {
+          "term": "animal",
+          "count": 68
+        },
+        {
+          "term": "woodland",
+          "count": 62
+        },
+        {
+          "term": "lover",
+          "count": 59
+        },
+        {
+          "term": "wildlife",
+          "count": 57
+        },
+        {
+          "term": "room",
+          "count": 52
+        },
+        {
+          "term": "glass",
+          "count": 49
+        },
+        {
+          "term": "rustic",
+          "count": 48
+        },
+        {
+          "term": "artwork",
+          "count": 46
+        },
+        {
+          "term": "painting",
+          "count": 42
+        },
+        {
+          "term": "forest",
+          "count": 40
+        },
+        {
+          "term": "barn",
+          "count": 35
+        },
+        {
+          "term": "vintage",
+          "count": 34
+        },
+        {
+          "term": "framed",
+          "count": 32
+        },
+        {
+          "term": "living",
+          "count": 32
+        },
+        {
+          "term": "modern",
+          "count": 32
+        },
+        {
+          "term": "dark",
+          "count": 26
+        }
+      ],
+      "sample_median_price_by_currency": {
+        "USD": 50.5,
+        "INR": 7000.0,
+        "AUD": 114.47,
+        "GBP": 13.99,
+        "PLN": 139.0,
+        "EUR": 8.0,
+        "TRY": 7486.16,
+        "CAD": 120.0
+      },
+      "opportunity_score": 62.0,
+      "score_basis": "relative Etsy top-result engagement 45% + lower competition 40% + recent top-sample activity 15%"
+    },
+    {
+      "keyword": "highland cow wall art",
+      "series": "cozy-animals",
+      "product_type": "wall_art",
+      "competition_count": 72437,
+      "sample_size": 100,
+      "sample_total_favorers": 699,
+      "sample_median_favorers": 0.0,
+      "sample_top10_favorers": 630,
+      "recent_90d_in_top_sample": 92,
+      "common_tags": [
+        {
+          "tag": "highland cow art",
+          "count": 69
+        },
+        {
+          "tag": "farmhouse decor",
+          "count": 30
+        },
+        {
+          "tag": "farmhouse wall art",
+          "count": 29
+        },
+        {
+          "tag": "rustic wall art",
+          "count": 24
+        },
+        {
+          "tag": "cow lover gift",
+          "count": 23
+        },
+        {
+          "tag": "cow wall art",
+          "count": 20
+        },
+        {
+          "tag": "living room decor",
+          "count": 19
+        },
+        {
+          "tag": "highland cow print",
+          "count": 18
+        },
+        {
+          "tag": "animal wall art",
+          "count": 14
+        },
+        {
+          "tag": "canvas wall art",
+          "count": 14
+        },
+        {
+          "tag": "living room art",
+          "count": 13
+        },
+        {
+          "tag": "farm animal art",
+          "count": 13
+        },
+        {
+          "tag": "country home decor",
+          "count": 12
+        },
+        {
+          "tag": "highland cow wall art",
+          "count": 11
+        },
+        {
+          "tag": "rustic home decor",
+          "count": 11
+        },
+        {
+          "tag": "highland cow",
+          "count": 11
+        },
+        {
+          "tag": "nature wall art",
+          "count": 10
+        },
+        {
+          "tag": "highland cow decor",
+          "count": 9
+        },
+        {
+          "tag": "country decor",
+          "count": 9
+        },
+        {
+          "tag": "rustic wall decor",
+          "count": 9
+        }
+      ],
+      "common_terms": [
+        {
+          "term": "cow",
+          "count": 521
+        },
+        {
+          "term": "highland",
+          "count": 294
+        },
+        {
+          "term": "animal",
+          "count": 197
+        },
+        {
+          "term": "farmhouse",
+          "count": 174
+        },
+        {
+          "term": "rustic",
+          "count": 157
+        },
+        {
+          "term": "canvas",
+          "count": 131
+        },
+        {
+          "term": "country",
+          "count": 77
+        },
+        {
+          "term": "room",
+          "count": 77
+        },
+        {
+          "term": "living",
+          "count": 72
+        },
+        {
+          "term": "scottish",
+          "count": 53
+        },
+        {
+          "term": "farm",
+          "count": 51
+        },
+        {
+          "term": "cattle",
+          "count": 51
+        },
+        {
+          "term": "lover",
+          "count": 47
+        },
+        {
+          "term": "nature",
+          "count": 40
+        },
+        {
+          "term": "portrait",
+          "count": 37
+        },
+        {
+          "term": "artwork",
+          "count": 36
+        },
+        {
+          "term": "floral",
+          "count": 28
+        },
+        {
+          "term": "painting",
+          "count": 26
+        },
+        {
+          "term": "funny",
+          "count": 24
+        },
+        {
+          "term": "western",
+          "count": 23
+        }
+      ],
+      "sample_median_price_by_currency": {
+        "EUR": 8.11,
+        "USD": 65.0,
+        "CHF": 3.5,
+        "GBP": 9.0,
+        "INR": 9099.0,
+        "HKD": 120.09,
+        "ZAR": 139.4,
+        "AUD": 10.98,
+        "CAD": 4.99
+      },
+      "opportunity_score": 61.5,
+      "score_basis": "relative Etsy top-result engagement 45% + lower competition 40% + recent top-sample activity 15%"
+    },
+    {
+      "keyword": "zodiac wall art",
+      "series": "celestial",
+      "product_type": "wall_art",
+      "competition_count": 103203,
+      "sample_size": 100,
+      "sample_total_favorers": 1327,
+      "sample_median_favorers": 1.0,
+      "sample_top10_favorers": 889,
+      "recent_90d_in_top_sample": 74,
+      "common_tags": [
+        {
+          "tag": "zodiac wall art",
+          "count": 95
+        },
+        {
+          "tag": "astrology wall art",
+          "count": 27
+        },
+        {
+          "tag": "astrology gift",
+          "count": 21
+        },
+        {
+          "tag": "astrology decor",
+          "count": 20
+        },
+        {
+          "tag": "digital download",
+          "count": 20
+        },
+        {
+          "tag": "astrology print",
+          "count": 14
+        },
+        {
+          "tag": "zodiac printable",
+          "count": 12
+        },
+        {
+          "tag": "celestial wall art",
+          "count": 11
+        },
+        {
+          "tag": "zodiac gift",
+          "count": 11
+        },
+        {
+          "tag": "astrology poster",
+          "count": 10
+        },
+        {
+          "tag": "zodiac print",
+          "count": 10
+        },
+        {
+          "tag": "zodiac poster",
+          "count": 10
+        },
+        {
+          "tag": "constellation art",
+          "count": 10
+        },
+        {
+          "tag": "zodiac home decor",
+          "count": 10
+        },
+        {
+          "tag": "printable wall art",
+          "count": 9
+        },
+        {
+          "tag": "astrology art",
+          "count": 8
+        },
+        {
+          "tag": "horoscope art",
+          "count": 8
+        },
+        {
+          "tag": "astrology printable",
+          "count": 8
+        },
+        {
+          "tag": "zodiac decor",
+          "count": 8
+        },
+        {
+          "tag": "horoscope wall art",
+          "count": 8
+        }
+      ],
+      "common_terms": [
+        {
+          "term": "zodiac",
+          "count": 453
+        },
+        {
+          "term": "astrology",
+          "count": 238
+        },
+        {
+          "term": "sign",
+          "count": 118
+        },
+        {
+          "term": "horoscope",
+          "count": 74
+        },
+        {
+          "term": "star",
+          "count": 70
+        },
+        {
+          "term": "gemini",
+          "count": 63
+        },
+        {
+          "term": "celestial",
+          "count": 61
+        },
+        {
+          "term": "birthday",
+          "count": 60
+        },
+        {
+          "term": "libra",
+          "count": 57
+        },
+        {
+          "term": "pisces",
+          "count": 46
+        },
+        {
+          "term": "cancer",
+          "count": 43
+        },
+        {
+          "term": "constellation",
+          "count": 43
+        },
+        {
+          "term": "sagittarius",
+          "count": 39
+        },
+        {
+          "term": "scorpio",
+          "count": 38
+        },
+        {
+          "term": "aquarius",
+          "count": 33
+        },
+        {
+          "term": "virgo",
+          "count": 32
+        },
+        {
+          "term": "prints",
+          "count": 28
+        },
+        {
+          "term": "aries",
+          "count": 27
+        },
+        {
+          "term": "minimalist",
+          "count": 27
+        },
+        {
+          "term": "taurus",
+          "count": 26
+        }
+      ],
+      "sample_median_price_by_currency": {
+        "CAD": 7.01,
+        "USD": 6.0,
+        "GBP": 10.0,
+        "EUR": 7.9,
+        "MAD": 29.0,
+        "AUD": 48.0,
+        "IDR": 77280.0
+      },
+      "opportunity_score": 59.8,
+      "score_basis": "relative Etsy top-result engagement 45% + lower competition 40% + recent top-sample activity 15%"
+    },
+    {
+      "keyword": "coastal sunset wall art",
+      "series": "landscapes",
+      "product_type": "wall_art",
+      "competition_count": 101282,
+      "sample_size": 100,
+      "sample_total_favorers": 993,
+      "sample_median_favorers": 0.0,
+      "sample_top10_favorers": 786,
+      "recent_90d_in_top_sample": 87,
+      "common_tags": [
+        {
+          "tag": "coastal wall art",
+          "count": 37
+        },
+        {
+          "tag": "beach house decor",
+          "count": 33
+        },
+        {
+          "tag": "coastal sunset art",
+          "count": 24
+        },
+        {
+          "tag": "sunset wall art",
+          "count": 20
+        },
+        {
+          "tag": "living room art",
+          "count": 19
+        },
+        {
+          "tag": "ocean wall art",
+          "count": 14
+        },
+        {
+          "tag": "beach house art",
+          "count": 12
+        },
+        {
+          "tag": "beach wall art",
+          "count": 10
+        },
+        {
+          "tag": "printable wall art",
+          "count": 10
+        },
+        {
+          "tag": "housewarming gift",
+          "count": 10
+        },
+        {
+          "tag": "coastal wall decor",
+          "count": 10
+        },
+        {
+          "tag": "coastal sunset",
+          "count": 9
+        },
+        {
+          "tag": "ocean sunset print",
+          "count": 9
+        },
+        {
+          "tag": "coastal decor",
+          "count": 9
+        },
+        {
+          "tag": "ocean sunset art",
+          "count": 8
+        },
+        {
+          "tag": "ocean wall decor",
+          "count": 8
+        },
+        {
+          "tag": "mediterranean art",
+          "count": 8
+        },
+        {
+          "tag": "beach wall decor",
+          "count": 7
+        },
+        {
+          "tag": "sunset painting",
+          "count": 7
+        },
+        {
+          "tag": "digital download",
+          "count": 7
+        }
+      ],
+      "common_terms": [
+        {
+          "term": "coastal",
+          "count": 320
+        },
+        {
+          "term": "sunset",
+          "count": 286
+        },
+        {
+          "term": "beach",
+          "count": 239
+        },
+        {
+          "term": "ocean",
+          "count": 162
+        },
+        {
+          "term": "landscape",
+          "count": 85
+        },
+        {
+          "term": "canvas",
+          "count": 76
+        },
+        {
+          "term": "house",
+          "count": 70
+        },
+        {
+          "term": "painting",
+          "count": 69
+        },
+        {
+          "term": "seascape",
+          "count": 66
+        },
+        {
+          "term": "room",
+          "count": 54
+        },
+        {
+          "term": "living",
+          "count": 53
+        },
+        {
+          "term": "seaside",
+          "count": 45
+        },
+        {
+          "term": "artwork",
+          "count": 33
+        },
+        {
+          "term": "modern",
+          "count": 31
+        },
+        {
+          "term": "mediterranean",
+          "count": 29
+        },
+        {
+          "term": "nature",
+          "count": 28
+        },
+        {
+          "term": "photography",
+          "count": 27
+        },
+        {
+          "term": "sea",
+          "count": 25
+        },
+        {
+          "term": "view",
+          "count": 25
+        },
+        {
+          "term": "bedroom",
+          "count": 25
+        }
+      ],
+      "sample_median_price_by_currency": {
+        "USD": 26.99,
+        "AUD": 19.0,
+        "CAD": 6.99,
+        "EUR": 43.38,
+        "GBP": 15.99,
+        "TRY": 240.0,
+        "HKD": 425.74,
+        "MAD": 40.36,
+        "INR": 9099.0
+      },
+      "opportunity_score": 59.3,
+      "score_basis": "relative Etsy top-result engagement 45% + lower competition 40% + recent top-sample activity 15%"
+    },
+    {
+      "keyword": "waterfall wall art",
+      "series": "landscapes",
+      "product_type": "wall_art",
+      "competition_count": 55762,
+      "sample_size": 100,
+      "sample_total_favorers": 267,
+      "sample_median_favorers": 0.0,
+      "sample_top10_favorers": 196,
+      "recent_90d_in_top_sample": 88,
+      "common_tags": [
+        {
+          "tag": "waterfall wall art",
+          "count": 99
+        },
+        {
+          "tag": "nature wall art",
+          "count": 17
+        },
+        {
+          "tag": "landscape wall art",
+          "count": 9
+        },
+        {
+          "tag": "cabin wall decor",
+          "count": 8
+        },
+        {
+          "tag": "tempered glass art",
+          "count": 8
+        },
+        {
+          "tag": "landscape canvas",
+          "count": 8
+        },
+        {
+          "tag": "japanese wall art",
+          "count": 8
+        },
+        {
+          "tag": "waterfall print",
+          "count": 7
+        },
+        {
+          "tag": "printable wall art",
+          "count": 7
+        },
+        {
+          "tag": "living room wall art",
+          "count": 7
+        },
+        {
+          "tag": "waterfall decor",
+          "count": 7
+        },
+        {
+          "tag": "forest waterfall",
+          "count": 7
+        },
+        {
+          "tag": "nature lover gift",
+          "count": 7
+        },
+        {
+          "tag": "waterfall canvas",
+          "count": 6
+        },
+        {
+          "tag": "mountain wall art",
+          "count": 6
+        },
+        {
+          "tag": "digital download",
+          "count": 6
+        },
+        {
+          "tag": "glass wall decor",
+          "count": 6
+        },
+        {
+          "tag": "abstract wall art",
+          "count": 6
+        },
+        {
+          "tag": "tempered glass",
+          "count": 6
+        },
+        {
+          "tag": "glass printing",
+          "count": 6
+        }
+      ],
+      "common_terms": [
+        {
+          "term": "waterfall",
+          "count": 333
+        },
+        {
+          "term": "landscape",
+          "count": 181
+        },
+        {
+          "term": "nature",
+          "count": 175
+        },
+        {
+          "term": "canvas",
+          "count": 158
+        },
+        {
+          "term": "mountain",
+          "count": 86
+        },
+        {
+          "term": "forest",
+          "count": 85
+        },
+        {
+          "term": "glass",
+          "count": 56
+        },
+        {
+          "term": "japanese",
+          "count": 39
+        },
+        {
+          "term": "painting",
+          "count": 35
+        },
+        {
+          "term": "room",
+          "count": 33
+        },
+        {
+          "term": "living",
+          "count": 30
+        },
+        {
+          "term": "rustic",
+          "count": 28
+        },
+        {
+          "term": "travel",
+          "count": 25
+        },
+        {
+          "term": "falls",
+          "count": 24
+        },
+        {
+          "term": "tempered",
+          "count": 24
+        },
+        {
+          "term": "serene",
+          "count": 23
+        },
+        {
+          "term": "fantasy",
+          "count": 22
+        },
+        {
+          "term": "river",
+          "count": 22
+        },
+        {
+          "term": "scenery",
+          "count": 22
+        },
+        {
+          "term": "green",
+          "count": 21
+        }
+      ],
+      "sample_median_price_by_currency": {
+        "AUD": 112.35,
+        "USD": 65.0,
+        "EUR": 20.99,
+        "CAD": 147.5,
+        "GBP": 10.99,
+        "CHF": 5.0,
+        "INR": 749.0,
+        "NOK": 51.0
+      },
+      "opportunity_score": 58.2,
+      "score_basis": "relative Etsy top-result engagement 45% + lower competition 40% + recent top-sample activity 15%"
+    },
+    {
+      "keyword": "sunflower wall art",
+      "series": "botanical-sun",
+      "product_type": "wall_art",
+      "competition_count": 112061,
+      "sample_size": 100,
+      "sample_total_favorers": 807,
+      "sample_median_favorers": 1.0,
+      "sample_top10_favorers": 647,
+      "recent_90d_in_top_sample": 87,
+      "common_tags": [
+        {
+          "tag": "sunflower wall art",
+          "count": 98
+        },
+        {
+          "tag": "sunflower decor",
+          "count": 25
+        },
+        {
+          "tag": "botanical wall art",
+          "count": 19
+        },
+        {
+          "tag": "sunflower print",
+          "count": 15
+        },
+        {
+          "tag": "floral wall decor",
+          "count": 13
+        },
+        {
+          "tag": "yellow flower art",
+          "count": 13
+        },
+        {
+          "tag": "sunflower painting",
+          "count": 12
+        },
+        {
+          "tag": "sunflower poster",
+          "count": 12
+        },
+        {
+          "tag": "floral wall art",
+          "count": 11
+        },
+        {
+          "tag": "cottagecore decor",
+          "count": 10
+        },
+        {
+          "tag": "nature wall art",
+          "count": 9
+        },
+        {
+          "tag": "flower wall art",
+          "count": 8
+        },
+        {
+          "tag": "sunflower gift",
+          "count": 8
+        },
+        {
+          "tag": "farmhouse wall art",
+          "count": 8
+        },
+        {
+          "tag": "farmhouse decor",
+          "count": 8
+        },
+        {
+          "tag": "kitchen wall art",
+          "count": 7
+        },
+        {
+          "tag": "sunflower artwork",
+          "count": 7
+        },
+        {
+          "tag": "printable wall art",
+          "count": 7
+        },
+        {
+          "tag": "framed wall art",
+          "count": 6
+        },
+        {
+          "tag": "rustic wall decor",
+          "count": 6
+        }
+      ],
+      "common_terms": [
+        {
+          "term": "sunflower",
+          "count": 448
+        },
+        {
+          "term": "floral",
+          "count": 191
+        },
+        {
+          "term": "flower",
+          "count": 132
+        },
+        {
+          "term": "botanical",
+          "count": 96
+        },
+        {
+          "term": "glass",
+          "count": 82
+        },
+        {
+          "term": "canvas",
+          "count": 69
+        },
+        {
+          "term": "painting",
+          "count": 65
+        },
+        {
+          "term": "yellow",
+          "count": 65
+        },
+        {
+          "term": "rustic",
+          "count": 50
+        },
+        {
+          "term": "farmhouse",
+          "count": 50
+        },
+        {
+          "term": "nature",
+          "count": 46
+        },
+        {
+          "term": "room",
+          "count": 43
+        },
+        {
+          "term": "artwork",
+          "count": 39
+        },
+        {
+          "term": "modern",
+          "count": 38
+        },
+        {
+          "term": "sign",
+          "count": 33
+        },
+        {
+          "term": "vintage",
+          "count": 32
+        },
+        {
+          "term": "handmade",
+          "count": 27
+        },
+        {
+          "term": "kitchen",
+          "count": 26
+        },
+        {
+          "term": "living",
+          "count": 25
+        },
+        {
+          "term": "cottagecore",
+          "count": 25
+        }
+      ],
+      "sample_median_price_by_currency": {
+        "GBP": 12.49,
+        "CAD": 18.99,
+        "USD": 90.47,
+        "EUR": 6.5,
+        "AUD": 13.0,
+        "SEK": 1225.0,
+        "HKD": 1992.15,
+        "TRY": 482.0
+      },
+      "opportunity_score": 57.4,
+      "score_basis": "relative Etsy top-result engagement 45% + lower competition 40% + recent top-sample activity 15%"
+    },
+    {
+      "keyword": "bunny wall art",
+      "series": "cozy-animals",
+      "product_type": "wall_art",
+      "competition_count": 141697,
+      "sample_size": 100,
+      "sample_total_favorers": 1065,
+      "sample_median_favorers": 0.0,
+      "sample_top10_favorers": 996,
+      "recent_90d_in_top_sample": 76,
+      "common_tags": [
+        {
+          "tag": "bunny wall art",
+          "count": 85
+        },
+        {
+          "tag": "nursery wall art",
+          "count": 18
+        },
+        {
+          "tag": "kids room decor",
+          "count": 15
+        },
+        {
+          "tag": "rabbit wall art",
+          "count": 15
+        },
+        {
+          "tag": "farmhouse decor",
+          "count": 11
+        },
+        {
+          "tag": "nursery decor",
+          "count": 10
+        },
+        {
+          "tag": "cottagecore decor",
+          "count": 10
+        },
+        {
+          "tag": "rabbit nursery art",
+          "count": 10
+        },
+        {
+          "tag": "whimsical decor",
+          "count": 10
+        },
+        {
+          "tag": "nursery wall decor",
+          "count": 9
+        },
+        {
+          "tag": "woodland nursery",
+          "count": 9
+        },
+        {
+          "tag": "kids room art",
+          "count": 9
+        },
+        {
+          "tag": "vintage bunny art",
+          "count": 8
+        },
+        {
+          "tag": "woodland nursery art",
+          "count": 7
+        },
+        {
+          "tag": "easter wall art",
+          "count": 7
+        },
+        {
+          "tag": "baby shower gift",
+          "count": 7
+        },
+        {
+          "tag": "cute animal print",
+          "count": 7
+        },
+        {
+          "tag": "easter bunny art",
+          "count": 6
+        },
+        {
+          "tag": "nursery bunny art",
+          "count": 6
+        },
+        {
+          "tag": "easter bunny decor",
+          "count": 6
+        }
+      ],
+      "common_terms": [
+        {
+          "term": "bunny",
+          "count": 479
+        },
+        {
+          "term": "nursery",
+          "count": 273
+        },
+        {
+          "term": "rabbit",
+          "count": 199
+        },
+        {
+          "term": "room",
+          "count": 133
+        },
+        {
+          "term": "animal",
+          "count": 114
+        },
+        {
+          "term": "easter",
+          "count": 103
+        },
+        {
+          "term": "kids",
+          "count": 92
+        },
+        {
+          "term": "cute",
+          "count": 79
+        },
+        {
+          "term": "canvas",
+          "count": 78
+        },
+        {
+          "term": "baby",
+          "count": 75
+        },
+        {
+          "term": "vintage",
+          "count": 52
+        },
+        {
+          "term": "spring",
+          "count": 51
+        },
+        {
+          "term": "woodland",
+          "count": 43
+        },
+        {
+          "term": "floral",
+          "count": 39
+        },
+        {
+          "term": "whimsical",
+          "count": 37
+        },
+        {
+          "term": "cottagecore",
+          "count": 36
+        },
+        {
+          "term": "girl",
+          "count": 33
+        },
+        {
+          "term": "prints",
+          "count": 31
+        },
+        {
+          "term": "pink",
+          "count": 28
+        },
+        {
+          "term": "painting",
+          "count": 28
+        }
+      ],
+      "sample_median_price_by_currency": {
+        "USD": 29.99,
+        "GBP": 2.58,
+        "EUR": 5.97,
+        "PHP": 145.0,
+        "CAD": 8.99,
+        "TRY": 366.0,
+        "DKK": 48.0
+      },
+      "opportunity_score": 57.3,
+      "score_basis": "relative Etsy top-result engagement 45% + lower competition 40% + recent top-sample activity 15%"
+    },
+    {
+      "keyword": "forest cabin wall art",
+      "series": "landscapes",
+      "product_type": "wall_art",
+      "competition_count": 85665,
+      "sample_size": 100,
+      "sample_total_favorers": 378,
+      "sample_median_favorers": 0.0,
+      "sample_top10_favorers": 344,
+      "recent_90d_in_top_sample": 86,
+      "common_tags": [
+        {
+          "tag": "cabin wall art",
+          "count": 23
+        },
+        {
+          "tag": "rustic cabin decor",
+          "count": 20
+        },
+        {
+          "tag": "forest cabin art",
+          "count": 19
+        },
+        {
+          "tag": "woodland wall art",
+          "count": 18
+        },
+        {
+          "tag": "cabin wall decor",
+          "count": 17
+        },
+        {
+          "tag": "nature wall art",
+          "count": 16
+        },
+        {
+          "tag": "forest wall art",
+          "count": 15
+        },
+        {
+          "tag": "digital download",
+          "count": 12
+        },
+        {
+          "tag": "woodland decor",
+          "count": 11
+        },
+        {
+          "tag": "nature wall decor",
+          "count": 10
+        },
+        {
+          "tag": "forest cabin",
+          "count": 10
+        },
+        {
+          "tag": "rustic wall art",
+          "count": 9
+        },
+        {
+          "tag": "mountain wall art",
+          "count": 9
+        },
+        {
+          "tag": "rustic cabin art",
+          "count": 8
+        },
+        {
+          "tag": "living room art",
+          "count": 7
+        },
+        {
+          "tag": "cottagecore art",
+          "count": 7
+        },
+        {
+          "tag": "winter landscape",
+          "count": 7
+        },
+        {
+          "tag": "forest cabin print",
+          "count": 7
+        },
+        {
+          "tag": "cottagecore decor",
+          "count": 7
+        },
+        {
+          "tag": "printable wall art",
+          "count": 7
+        }
+      ],
+      "common_terms": [
+        {
+          "term": "cabin",
+          "count": 349
+        },
+        {
+          "term": "forest",
+          "count": 290
+        },
+        {
+          "term": "rustic",
+          "count": 134
+        },
+        {
+          "term": "nature",
+          "count": 121
+        },
+        {
+          "term": "woodland",
+          "count": 117
+        },
+        {
+          "term": "landscape",
+          "count": 111
+        },
+        {
+          "term": "cozy",
+          "count": 76
+        },
+        {
+          "term": "winter",
+          "count": 67
+        },
+        {
+          "term": "canvas",
+          "count": 66
+        },
+        {
+          "term": "mountain",
+          "count": 56
+        },
+        {
+          "term": "moody",
+          "count": 44
+        },
+        {
+          "term": "cottage",
+          "count": 43
+        },
+        {
+          "term": "snowy",
+          "count": 43
+        },
+        {
+          "term": "vintage",
+          "count": 39
+        },
+        {
+          "term": "sign",
+          "count": 37
+        },
+        {
+          "term": "cottagecore",
+          "count": 36
+        },
+        {
+          "term": "metal",
+          "count": 36
+        },
+        {
+          "term": "tree",
+          "count": 35
+        },
+        {
+          "term": "lake",
+          "count": 32
+        },
+        {
+          "term": "pine",
+          "count": 32
+        }
+      ],
+      "sample_median_price_by_currency": {
+        "PHP": 1559.97,
+        "USD": 27.5,
+        "ILS": 69.96,
+        "GBP": 13.99,
+        "INR": 449.0,
+        "EUR": 4.59,
+        "NOK": 497.75,
+        "CAD": 39.99,
+        "AUD": 64.97,
+        "CHF": 5.95
+      },
+      "opportunity_score": 56.9,
+      "score_basis": "relative Etsy top-result engagement 45% + lower competition 40% + recent top-sample activity 15%"
+    },
+    {
+      "keyword": "woodland animal wall art",
+      "series": "cozy-animals",
+      "product_type": "wall_art",
+      "competition_count": 184441,
+      "sample_size": 100,
+      "sample_total_favorers": 1585,
+      "sample_median_favorers": 0.0,
+      "sample_top10_favorers": 1472,
+      "recent_90d_in_top_sample": 88,
+      "common_tags": [
+        {
+          "tag": "woodland animals",
+          "count": 24
+        },
+        {
+          "tag": "woodland decor",
+          "count": 20
+        },
+        {
+          "tag": "nursery wall art",
+          "count": 19
+        },
+        {
+          "tag": "woodland nursery",
+          "count": 19
+        },
+        {
+          "tag": "woodland wall art",
+          "count": 16
+        },
+        {
+          "tag": "nature wall art",
+          "count": 15
+        },
+        {
+          "tag": "forest animal art",
+          "count": 14
+        },
+        {
+          "tag": "woodland animal art",
+          "count": 14
+        },
+        {
+          "tag": "animal wall art",
+          "count": 13
+        },
+        {
+          "tag": "woodland animal",
+          "count": 13
+        },
+        {
+          "tag": "rustic wall art",
+          "count": 11
+        },
+        {
+          "tag": "wildlife art",
+          "count": 9
+        },
+        {
+          "tag": "nursery decor",
+          "count": 9
+        },
+        {
+          "tag": "baby shower gift",
+          "count": 8
+        },
+        {
+          "tag": "wildlife canvas",
+          "count": 8
+        },
+        {
+          "tag": "rustic home decor",
+          "count": 8
+        },
+        {
+          "tag": "kids room decor",
+          "count": 8
+        },
+        {
+          "tag": "nature canvas",
+          "count": 8
+        },
+        {
+          "tag": "forest animal print",
+          "count": 7
+        },
+        {
+          "tag": "deer canvas art",
+          "count": 7
+        }
+      ],
+      "common_terms": [
+        {
+          "term": "animal",
+          "count": 303
+        },
+        {
+          "term": "woodland",
+          "count": 276
+        },
+        {
+          "term": "nursery",
+          "count": 218
+        },
+        {
+          "term": "forest",
+          "count": 145
+        },
+        {
+          "term": "canvas",
+          "count": 115
+        },
+        {
+          "term": "nature",
+          "count": 105
+        },
+        {
+          "term": "wildlife",
+          "count": 88
+        },
+        {
+          "term": "rustic",
+          "count": 85
+        },
+        {
+          "term": "deer",
+          "count": 83
+        },
+        {
+          "term": "room",
+          "count": 79
+        },
+        {
+          "term": "baby",
+          "count": 70
+        },
+        {
+          "term": "fox",
+          "count": 66
+        },
+        {
+          "term": "kids",
+          "count": 62
+        },
+        {
+          "term": "animals",
+          "count": 53
+        },
+        {
+          "term": "squirrel",
+          "count": 48
+        },
+        {
+          "term": "prints",
+          "count": 44
+        },
+        {
+          "term": "painting",
+          "count": 40
+        },
+        {
+          "term": "set",
+          "count": 38
+        },
+        {
+          "term": "vintage",
+          "count": 37
+        },
+        {
+          "term": "bunny",
+          "count": 35
+        }
+      ],
+      "sample_median_price_by_currency": {
+        "CAD": 18.89,
+        "EUR": 9.01,
+        "USD": 60.0,
+        "INR": 799.0,
+        "GBP": 16.49,
+        "AUD": 32.95,
+        "PHP": 13796.0,
+        "DKK": 20.0,
+        "NZD": 6.99,
+        "ZAR": 200.0
+      },
+      "opportunity_score": 56.7,
+      "score_basis": "relative Etsy top-result engagement 45% + lower competition 40% + recent top-sample activity 15%"
+    },
+    {
+      "keyword": "celestial wall art",
+      "series": "celestial",
+      "product_type": "wall_art",
+      "competition_count": 329690,
+      "sample_size": 100,
+      "sample_total_favorers": 5050,
+      "sample_median_favorers": 1.0,
+      "sample_top10_favorers": 4431,
+      "recent_90d_in_top_sample": 82,
+      "common_tags": [
+        {
+          "tag": "celestial wall art",
+          "count": 100
+        },
+        {
+          "tag": "printable wall art",
+          "count": 17
+        },
+        {
+          "tag": "celestial decor",
+          "count": 16
+        },
+        {
+          "tag": "digital download",
+          "count": 13
+        },
+        {
+          "tag": "moon wall art",
+          "count": 12
+        },
+        {
+          "tag": "mystical wall art",
+          "count": 9
+        },
+        {
+          "tag": "boho wall art",
+          "count": 9
+        },
+        {
+          "tag": "moon phase print",
+          "count": 9
+        },
+        {
+          "tag": "retro wall art",
+          "count": 7
+        },
+        {
+          "tag": "moon wall decor",
+          "count": 7
+        },
+        {
+          "tag": "astrology decor",
+          "count": 6
+        },
+        {
+          "tag": "sun moon wall art",
+          "count": 6
+        },
+        {
+          "tag": "sun and moon art",
+          "count": 6
+        },
+        {
+          "tag": "moon lover gift",
+          "count": 5
+        },
+        {
+          "tag": "dark academia art",
+          "count": 5
+        },
+        {
+          "tag": "gothic wall decor",
+          "count": 5
+        },
+        {
+          "tag": "instant download",
+          "count": 5
+        },
+        {
+          "tag": "night sky print",
+          "count": 5
+        },
+        {
+          "tag": "framed wall art",
+          "count": 5
+        },
+        {
+          "tag": "housewarming gift",
+          "count": 5
+        }
+      ],
+      "common_terms": [
+        {
+          "term": "celestial",
+          "count": 304
+        },
+        {
+          "term": "moon",
+          "count": 291
+        },
+        {
+          "term": "sun",
+          "count": 85
+        },
+        {
+          "term": "boho",
+          "count": 75
+        },
+        {
+          "term": "vintage",
+          "count": 43
+        },
+        {
+          "term": "night",
+          "count": 39
+        },
+        {
+          "term": "stars",
+          "count": 39
+        },
+        {
+          "term": "gold",
+          "count": 38
+        },
+        {
+          "term": "room",
+          "count": 37
+        },
+        {
+          "term": "prints",
+          "count": 35
+        },
+        {
+          "term": "set",
+          "count": 35
+        },
+        {
+          "term": "sky",
+          "count": 34
+        },
+        {
+          "term": "metal",
+          "count": 33
+        },
+        {
+          "term": "goddess",
+          "count": 32
+        },
+        {
+          "term": "crescent",
+          "count": 31
+        },
+        {
+          "term": "nursery",
+          "count": 30
+        },
+        {
+          "term": "mystical",
+          "count": 29
+        },
+        {
+          "term": "lunar",
+          "count": 29
+        },
+        {
+          "term": "bedroom",
+          "count": 29
+        },
+        {
+          "term": "astronomy",
+          "count": 28
+        }
+      ],
+      "sample_median_price_by_currency": {
+        "EUR": 9.99,
+        "USD": 21.85,
+        "GBP": 12.99,
+        "AUD": 13.0,
+        "CAD": 6.0,
+        "MYR": 25.9,
+        "SGD": 27.71
+      },
+      "opportunity_score": 56.6,
+      "score_basis": "relative Etsy top-result engagement 45% + lower competition 40% + recent top-sample activity 15%"
+    },
+    {
+      "keyword": "wildflower wall art",
+      "series": "botanical-sun",
+      "product_type": "wall_art",
+      "competition_count": 261709,
+      "sample_size": 100,
+      "sample_total_favorers": 1972,
+      "sample_median_favorers": 1.0,
+      "sample_top10_favorers": 1721,
+      "recent_90d_in_top_sample": 79,
+      "common_tags": [
+        {
+          "tag": "wildflower wall art",
+          "count": 96
+        },
+        {
+          "tag": "botanical wall art",
+          "count": 27
+        },
+        {
+          "tag": "cottagecore decor",
+          "count": 23
+        },
+        {
+          "tag": "printable wall art",
+          "count": 15
+        },
+        {
+          "tag": "nature wall art",
+          "count": 13
+        },
+        {
+          "tag": "floral wall art",
+          "count": 11
+        },
+        {
+          "tag": "digital download",
+          "count": 11
+        },
+        {
+          "tag": "botanical canvas",
+          "count": 9
+        },
+        {
+          "tag": "cottagecore wall art",
+          "count": 9
+        },
+        {
+          "tag": "meadow wall art",
+          "count": 8
+        },
+        {
+          "tag": "botanical wall decor",
+          "count": 8
+        },
+        {
+          "tag": "floral wall decor",
+          "count": 8
+        },
+        {
+          "tag": "neutral wall decor",
+          "count": 7
+        },
+        {
+          "tag": "botanical print",
+          "count": 7
+        },
+        {
+          "tag": "vintage floral art",
+          "count": 7
+        },
+        {
+          "tag": "canvas wall art",
+          "count": 7
+        },
+        {
+          "tag": "meadow flower art",
+          "count": 7
+        },
+        {
+          "tag": "bedroom wall art",
+          "count": 6
+        },
+        {
+          "tag": "large wall art",
+          "count": 6
+        },
+        {
+          "tag": "living room decor",
+          "count": 5
+        }
+      ],
+      "common_terms": [
+        {
+          "term": "floral",
+          "count": 232
+        },
+        {
+          "term": "wildflower",
+          "count": 214
+        },
+        {
+          "term": "botanical",
+          "count": 155
+        },
+        {
+          "term": "flower",
+          "count": 134
+        },
+        {
+          "term": "canvas",
+          "count": 128
+        },
+        {
+          "term": "painting",
+          "count": 89
+        },
+        {
+          "term": "meadow",
+          "count": 86
+        },
+        {
+          "term": "nature",
+          "count": 73
+        },
+        {
+          "term": "nursery",
+          "count": 68
+        },
+        {
+          "term": "cottagecore",
+          "count": 66
+        },
+        {
+          "term": "vintage",
+          "count": 50
+        },
+        {
+          "term": "prints",
+          "count": 47
+        },
+        {
+          "term": "colorful",
+          "count": 44
+        },
+        {
+          "term": "neutral",
+          "count": 44
+        },
+        {
+          "term": "garden",
+          "count": 44
+        },
+        {
+          "term": "room",
+          "count": 43
+        },
+        {
+          "term": "landscape",
+          "count": 42
+        },
+        {
+          "term": "pastel",
+          "count": 32
+        },
+        {
+          "term": "set",
+          "count": 31
+        },
+        {
+          "term": "farmhouse",
+          "count": 31
+        }
+      ],
+      "sample_median_price_by_currency": {
+        "USD": 53.8,
+        "EUR": 8.39,
+        "TRY": 450.0,
+        "CAD": 17.5,
+        "GBP": 70.61,
+        "HKD": 1287.0,
+        "ZAR": 139.4
+      },
+      "opportunity_score": 54.1,
+      "score_basis": "relative Etsy top-result engagement 45% + lower competition 40% + recent top-sample activity 15%"
+    },
+    {
+      "keyword": "cozy cat wall art",
+      "series": "cozy-animals",
+      "product_type": "wall_art",
+      "competition_count": 62051,
+      "sample_size": 100,
+      "sample_total_favorers": 94,
+      "sample_median_favorers": 0.0,
+      "sample_top10_favorers": 80,
+      "recent_90d_in_top_sample": 93,
+      "common_tags": [
+        {
+          "tag": "cat lover gift",
+          "count": 63
+        },
+        {
+          "tag": "cozy cat wall art",
+          "count": 47
+        },
+        {
+          "tag": "cozy home decor",
+          "count": 32
+        },
+        {
+          "tag": "cat wall art",
+          "count": 32
+        },
+        {
+          "tag": "cottagecore decor",
+          "count": 18
+        },
+        {
+          "tag": "reading nook decor",
+          "count": 18
+        },
+        {
+          "tag": "printable wall art",
+          "count": 18
+        },
+        {
+          "tag": "whimsical cat art",
+          "count": 15
+        },
+        {
+          "tag": "digital download",
+          "count": 12
+        },
+        {
+          "tag": "book lover gift",
+          "count": 12
+        },
+        {
+          "tag": "sleeping cat print",
+          "count": 11
+        },
+        {
+          "tag": "living room art",
+          "count": 11
+        },
+        {
+          "tag": "cat lover decor",
+          "count": 10
+        },
+        {
+          "tag": "cat mom gift",
+          "count": 10
+        },
+        {
+          "tag": "bedroom wall art",
+          "count": 10
+        },
+        {
+          "tag": "cozy wall decor",
+          "count": 8
+        },
+        {
+          "tag": "cosy cat wall art",
+          "count": 8
+        },
+        {
+          "tag": "reading nook art",
+          "count": 7
+        },
+        {
+          "tag": "vintage cat art",
+          "count": 7
+        },
+        {
+          "tag": "cat wall decor",
+          "count": 7
+        }
+      ],
+      "common_terms": [
+        {
+          "term": "cat",
+          "count": 822
+        },
+        {
+          "term": "cozy",
+          "count": 245
+        },
+        {
+          "term": "lover",
+          "count": 174
+        },
+        {
+          "term": "reading",
+          "count": 91
+        },
+        {
+          "term": "vintage",
+          "count": 66
+        },
+        {
+          "term": "room",
+          "count": 66
+        },
+        {
+          "term": "cottagecore",
+          "count": 64
+        },
+        {
+          "term": "book",
+          "count": 53
+        },
+        {
+          "term": "bedroom",
+          "count": 51
+        },
+        {
+          "term": "sleeping",
+          "count": 50
+        },
+        {
+          "term": "whimsical",
+          "count": 45
+        },
+        {
+          "term": "animal",
+          "count": 45
+        },
+        {
+          "term": "canvas",
+          "count": 44
+        },
+        {
+          "term": "living",
+          "count": 43
+        },
+        {
+          "term": "cosy",
+          "count": 43
+        },
+        {
+          "term": "nook",
+          "count": 42
+        },
+        {
+          "term": "pet",
+          "count": 39
+        },
+        {
+          "term": "cute",
+          "count": 35
+        },
+        {
+          "term": "artwork",
+          "count": 35
+        },
+        {
+          "term": "tabby",
+          "count": 33
+        }
+      ],
+      "sample_median_price_by_currency": {
+        "TRY": 500.0,
+        "USD": 33.5,
+        "EUR": 9.0,
+        "CAD": 32.0,
+        "GBP": 8.99,
+        "IDR": 80000.0,
+        "INR": 299.0,
+        "ZAR": 130.0,
+        "SEK": 59.0,
+        "MXN": 139.23
+      },
+      "opportunity_score": 52.8,
+      "score_basis": "relative Etsy top-result engagement 45% + lower competition 40% + recent top-sample activity 15%"
+    },
+    {
+      "keyword": "dog lover wall art",
+      "series": "cozy-animals",
+      "product_type": "wall_art",
+      "competition_count": 277056,
+      "sample_size": 100,
+      "sample_total_favorers": 954,
+      "sample_median_favorers": 0.0,
+      "sample_top10_favorers": 848,
+      "recent_90d_in_top_sample": 92,
+      "common_tags": [
+        {
+          "tag": "dog lover wall art",
+          "count": 99
+        },
+        {
+          "tag": "pet lover gift",
+          "count": 27
+        },
+        {
+          "tag": "dog lover gift",
+          "count": 27
+        },
+        {
+          "tag": "dog owner gift",
+          "count": 19
+        },
+        {
+          "tag": "dog mom gift",
+          "count": 16
+        },
+        {
+          "tag": "dog dad gift",
+          "count": 14
+        },
+        {
+          "tag": "dog wall decor",
+          "count": 13
+        },
+        {
+          "tag": "dog home decor",
+          "count": 13
+        },
+        {
+          "tag": "printable wall art",
+          "count": 10
+        },
+        {
+          "tag": "dog quote print",
+          "count": 10
+        },
+        {
+          "tag": "animal lover gift",
+          "count": 9
+        },
+        {
+          "tag": "funny dog print",
+          "count": 9
+        },
+        {
+          "tag": "dog mum gift",
+          "count": 8
+        },
+        {
+          "tag": "digital download",
+          "count": 8
+        },
+        {
+          "tag": "dog mom decor",
+          "count": 7
+        },
+        {
+          "tag": "pet lover decor",
+          "count": 7
+        },
+        {
+          "tag": "dog quote poster",
+          "count": 7
+        },
+        {
+          "tag": "neutral wall art",
+          "count": 7
+        },
+        {
+          "tag": "minimalist dog art",
+          "count": 6
+        },
+        {
+          "tag": "pet wall art",
+          "count": 6
+        }
+      ],
+      "common_terms": [
+        {
+          "term": "dog",
+          "count": 790
+        },
+        {
+          "term": "lover",
+          "count": 334
+        },
+        {
+          "term": "pet",
+          "count": 163
+        },
+        {
+          "term": "mom",
+          "count": 66
+        },
+        {
+          "term": "quote",
+          "count": 59
+        },
+        {
+          "term": "funny",
+          "count": 53
+        },
+        {
+          "term": "animal",
+          "count": 38
+        },
+        {
+          "term": "owner",
+          "count": 37
+        },
+        {
+          "term": "minimalist",
+          "count": 32
+        },
+        {
+          "term": "bulldog",
+          "count": 27
+        },
+        {
+          "term": "sign",
+          "count": 26
+        },
+        {
+          "term": "canvas",
+          "count": 25
+        },
+        {
+          "term": "room",
+          "count": 24
+        },
+        {
+          "term": "dogs",
+          "count": 23
+        },
+        {
+          "term": "neutral",
+          "count": 21
+        },
+        {
+          "term": "portrait",
+          "count": 20
+        },
+        {
+          "term": "cute",
+          "count": 19
+        },
+        {
+          "term": "mum",
+          "count": 19
+        },
+        {
+          "term": "modern",
+          "count": 18
+        },
+        {
+          "term": "puppy",
+          "count": 18
+        }
+      ],
+      "sample_median_price_by_currency": {
+        "EUR": 8.88,
+        "USD": 10.0,
+        "CAD": 37.22,
+        "GBP": 13.99,
+        "PHP": 270.0,
+        "NOK": 25.0,
+        "AUD": 18.62,
+        "INR": 400.0
+      },
+      "opportunity_score": 50.1,
+      "score_basis": "relative Etsy top-result engagement 45% + lower competition 40% + recent top-sample activity 15%"
+    },
+    {
+      "keyword": "mediterranean wall art",
+      "series": "landscapes",
+      "product_type": "wall_art",
+      "competition_count": 194999,
+      "sample_size": 100,
+      "sample_total_favorers": 327,
+      "sample_median_favorers": 0.0,
+      "sample_top10_favorers": 264,
+      "recent_90d_in_top_sample": 81,
+      "common_tags": [
+        {
+          "tag": "mediterranean wall art",
+          "count": 52
+        },
+        {
+          "tag": "mediterranean art",
+          "count": 26
+        },
+        {
+          "tag": "mediterranean decor",
+          "count": 25
+        },
+        {
+          "tag": "printable wall art",
+          "count": 20
+        },
+        {
+          "tag": "coastal wall art",
+          "count": 15
+        },
+        {
+          "tag": "italian wall art",
+          "count": 14
+        },
+        {
+          "tag": "coastal wall decor",
+          "count": 13
+        },
+        {
+          "tag": "beach house decor",
+          "count": 10
+        },
+        {
+          "tag": "digital download",
+          "count": 9
+        },
+        {
+          "tag": "boho wall decor",
+          "count": 8
+        },
+        {
+          "tag": "mediterrane wandkunst",
+          "count": 7
+        },
+        {
+          "tag": "travel wall art",
+          "count": 7
+        },
+        {
+          "tag": "gallery wall set",
+          "count": 6
+        },
+        {
+          "tag": "mediterranean print",
+          "count": 6
+        },
+        {
+          "tag": "summer wall decor",
+          "count": 5
+        },
+        {
+          "tag": "living room art",
+          "count": 5
+        },
+        {
+          "tag": "boho wall art",
+          "count": 5
+        },
+        {
+          "tag": "digital wall art",
+          "count": 5
+        },
+        {
+          "tag": "summer wall art",
+          "count": 5
+        },
+        {
+          "tag": "coastal decor",
+          "count": 4
+        }
+      ],
+      "common_terms": [
+        {
+          "term": "mediterranean",
+          "count": 230
+        },
+        {
+          "term": "coastal",
+          "count": 123
+        },
+        {
+          "term": "italian",
+          "count": 69
+        },
+        {
+          "term": "set",
+          "count": 56
+        },
+        {
+          "term": "travel",
+          "count": 53
+        },
+        {
+          "term": "canvas",
+          "count": 47
+        },
+        {
+          "term": "vintage",
+          "count": 43
+        },
+        {
+          "term": "blue",
+          "count": 38
+        },
+        {
+          "term": "prints",
+          "count": 38
+        },
+        {
+          "term": "landscape",
+          "count": 38
+        },
+        {
+          "term": "painting",
+          "count": 37
+        },
+        {
+          "term": "summer",
+          "count": 33
+        },
+        {
+          "term": "village",
+          "count": 31
+        },
+        {
+          "term": "beach",
+          "count": 29
+        },
+        {
+          "term": "artwork",
+          "count": 28
+        },
+        {
+          "term": "kitchen",
+          "count": 28
+        },
+        {
+          "term": "room",
+          "count": 27
+        },
+        {
+          "term": "boho",
+          "count": 26
+        },
+        {
+          "term": "mediterrane",
+          "count": 24
+        },
+        {
+          "term": "european",
+          "count": 23
+        }
+      ],
+      "sample_median_price_by_currency": {
+        "EUR": 8.5,
+        "CAD": 27.97,
+        "USD": 50.0,
+        "MAD": 65.0,
+        "CHF": 17.2,
+        "GBP": 13.99,
+        "AUD": 39.5
+      },
+      "opportunity_score": 47.7,
+      "score_basis": "relative Etsy top-result engagement 45% + lower competition 40% + recent top-sample activity 15%"
+    }
+  ]
+}
