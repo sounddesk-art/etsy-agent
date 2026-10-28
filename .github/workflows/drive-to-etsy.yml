@@ -2,8 +2,6 @@ name: Drive inbox to Etsy drafts
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: "17 * * * *"
 
 permissions:
   contents: read
@@ -15,7 +13,7 @@ concurrency:
 jobs:
   process:
     runs-on: ubuntu-latest
-    timeout-minutes: 60
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v5
       - uses: actions/setup-python@v6
