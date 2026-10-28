@@ -1,10 +1,7 @@
-name: Bulk create 10 Etsy drafts
+name: Bulk create 10 Etsy drafts — legacy manual only
 
 on:
   workflow_dispatch:
-  push:
-    paths:
-      - "data/bulk_run_token.txt"
 
 permissions:
   contents: read
