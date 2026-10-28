@@ -1,12 +1,11 @@
 name: Repurpose approved art and create Etsy drafts
+
 on:
   workflow_dispatch:
-  push:
-    paths:
-      - "assets/generated/**"
-      - "data/generated_manifest.json"
+
 permissions:
   contents: read
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -17,9 +16,11 @@ jobs:
         with:
           python-version: "3.12"
       - run: pip install requests pillow
-      - name: Repurpose approved images
+      - name: Test mandatory per-design human review gate
+        run: python -m unittest discover -s scripts -p "test_review_gate.py" -v
+      - name: Repurpose reviewed images only
         run: python scripts/repurpose_products.py
-      - name: Create Etsy drafts
+      - name: Create Etsy drafts only for reviewed products
         env:
           ETSY_KEYSTRING: ${{ secrets.ETSY_KEYSTRING }}
           ETSY_SHARED_SECRET: ${{ secrets.ETSY_SHARED_SECRET }}
