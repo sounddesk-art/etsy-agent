@@ -142,7 +142,38 @@ def score_rows(rows):
 
 def clean_tag(tag):
     tag=" ".join(re.sub(r"[^a-zA-Z0-9 '\-]"," ",tag).lower().split())
-    return tag[:20].rstrip()
+    if len(tag) <= 20:
+        return tag
+    words=tag.split()
+    while words and len(" ".join(words)) > 20:
+        words.pop()
+    return " ".join(words)
+
+def listing_description(row, variant):
+    keyword=row["keyword"].title()
+    angle="a focused series anchor" if variant==1 else "a complementary long-tail variation"
+    series=row["series"].replace("-"," ")
+    return f"""${keyword} — Original Digital Wall Art
+
+A high-resolution printable artwork concept developed from current Etsy market research. This candidate is ${angle} within the ${series} collection.
+
+WHAT THE FINAL LISTING WILL INCLUDE
+• High-resolution digital artwork
+• Print-ready download package
+• Clear size/ratio information in the final approved product
+• No physical item will be shipped
+
+RESEARCH BASIS
+This concept was selected using current Etsy active-listing competition, engagement among top search results, and recent listing activity. Research score: ${row['opportunity_score']} / 100.
+
+CREATIVE PROCESS
+This is a research-stage concept only. Before any Etsy upload, the final design must receive direct individual human creative input and review. If AI-assisted tools are used in the final artwork, the final Etsy description will disclose that use.
+
+LICENSE
+The final approved download will include personal-use terms and any applicable small-commercial-use terms stated in the final listing.
+
+Digital product. No physical item will be shipped.
+"""
 
 def make_candidate(row, variant):
     base=row["keyword"]
@@ -168,6 +199,7 @@ def make_candidate(row, variant):
         "research_score":row["opportunity_score"],
         "concept_angle":angle,
         "title_draft":title[:140],
+        "description_draft":listing_description(row,variant),
         "tags":chosen,
         "suggested_price":"4.90",
         "research_evidence":{
