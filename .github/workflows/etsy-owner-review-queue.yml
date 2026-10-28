@@ -1,0 +1,48 @@
+name: Build Etsy owner review queue
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "data/researched_listing_candidates.json"
+      - "scripts/build_owner_review_queue.py"
+      - ".github/workflows/etsy-owner-review-queue.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+          persist-credentials: true
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - name: Build exactly 50 item-specific review prompts
+        run: python scripts/build_owner_review_queue.py
+      - name: Validate no item is auto-approved
+        run: |
+          python - <<'PY'
+          import json
+          x=json.load(open("data/etsy_owner_review_queue.json"))
+          assert len(x["items"])==50
+          assert all(i["status"]=="needs_human_creative_input" for i in x["items"])
+          assert all(not i["generation_allowed"] and not i["etsy_upload_allowed"] for i in x["items"])
+          assert all(i["human_prompt_or_notes"] is None for i in x["items"])
+          print("50/50 review items are safely blocked pending individual creative input.")
+          PY
+      - name: Save review queue
+        run: |
+          git config user.name "sounddesk-etsy-review-queue"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/etsy_owner_review_queue.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "data: refresh 50-item Etsy owner review queue"
+          git pull --rebase origin main
+          git push origin HEAD:main
