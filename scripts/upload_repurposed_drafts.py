@@ -2,6 +2,7 @@
 import json, time
 from pathlib import Path
 from etsy_api import refresh_access_token,get_owner_shop,find_taxonomy_id,create_draft,upload_image,upload_file
+from review_gate import require_reviewed
 
 TEMPLATES=json.loads(Path("data/product_templates.json").read_text())
 M=json.loads(Path("output/repurposed_manifest.json").read_text())
@@ -25,6 +26,9 @@ Created with AI-assisted creative tools and curated, selected and prepared by Ni
 """
 
 def main():
+    # Fail before touching Etsy if even one product lacks explicit per-design review.
+    for item in M.get("items",[]):
+        require_reviewed(item, item.get("id"))
     token=refresh_access_token()["access_token"]
     shop=get_owner_shop(token); sid=shop["shop_id"]
     tax=find_taxonomy_id(token,"Digital Prints")[0]
