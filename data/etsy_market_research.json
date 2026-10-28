@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-10-28T13:20:35.584148+00:00",
+  "generated_at_utc": "2026-10-28T13:25:04.755864+00:00",
   "source": "Etsy Open API findAllListingsActive",
   "method_note": "No claimed search-volume data. Score uses only current Etsy competition and top-result engagement/freshness proxies.",
   "niches": [
@@ -4686,7 +4686,7 @@
       "keyword": "celestial wall art",
       "series": "celestial",
       "product_type": "wall_art",
-      "competition_count": 329690,
+      "competition_count": 329708,
       "sample_size": 100,
       "sample_total_favorers": 5050,
       "sample_median_favorers": 1.0,
@@ -4711,7 +4711,7 @@
         },
         {
           "tag": "moon wall art",
-          "count": 12
+          "count": 13
         },
         {
           "tag": "mystical wall art",
@@ -4777,11 +4777,11 @@
       "common_terms": [
         {
           "term": "celestial",
-          "count": 304
+          "count": 302
         },
         {
           "term": "moon",
-          "count": 291
+          "count": 296
         },
         {
           "term": "sun",
@@ -4793,7 +4793,7 @@
         },
         {
           "term": "vintage",
-          "count": 43
+          "count": 42
         },
         {
           "term": "night",
@@ -4852,7 +4852,7 @@
           "count": 29
         },
         {
-          "term": "astronomy",
+          "term": "blue",
           "count": 28
         }
       ],
