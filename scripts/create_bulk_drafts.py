@@ -1,11 +1,16 @@
 #!/usr/bin/env python3
 import json,sys,time
 from etsy_api import refresh_access_token,get_owner_shop,find_taxonomy_id,create_draft,upload_image,upload_file
+from review_gate import require_reviewed
 
 def main():
     if len(sys.argv)!=2:
         raise SystemExit("Usage: python scripts/create_bulk_drafts.py <manifest.json>")
     items=json.load(open(sys.argv[1],encoding="utf-8"))
+    if isinstance(items,dict):
+        items=items.get("items",[])
+    for item in items:
+        require_reviewed(item)
     token=refresh_access_token()["access_token"]
     shop=get_owner_shop(token); shop_id=shop["shop_id"]
     taxonomy_cache={}
