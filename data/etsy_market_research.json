@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-10-28T13:26:09.035650+00:00",
+  "generated_at_utc": "2026-10-28T13:41:19.301686+00:00",
   "source": "Etsy Open API findAllListingsActive",
   "method_note": "No claimed search-volume data. Score uses only current Etsy competition and top-result engagement/freshness proxies.",
   "niches": [
@@ -7,7 +7,7 @@
       "keyword": "eucalyptus wall art",
       "series": "botanical-sun",
       "product_type": "wall_art",
-      "competition_count": 20828,
+      "competition_count": 20815,
       "sample_size": 100,
       "sample_total_favorers": 4276,
       "sample_median_favorers": 0.0,
@@ -197,11 +197,11 @@
       "keyword": "sun and moon wall art",
       "series": "celestial",
       "product_type": "wall_art",
-      "competition_count": 29073,
+      "competition_count": 29066,
       "sample_size": 100,
-      "sample_total_favorers": 7610,
+      "sample_total_favorers": 7611,
       "sample_median_favorers": 1.0,
-      "sample_top10_favorers": 6827,
+      "sample_top10_favorers": 6828,
       "recent_90d_in_top_sample": 89,
       "common_tags": [
         {
@@ -383,7 +383,7 @@
       "product_type": "wall_art",
       "competition_count": 5042,
       "sample_size": 100,
-      "sample_total_favorers": 269,
+      "sample_total_favorers": 271,
       "sample_median_favorers": 0.0,
       "sample_top10_favorers": 225,
       "recent_90d_in_top_sample": 88,
@@ -397,11 +397,11 @@
           "count": 22
         },
         {
-          "tag": "celestial wall art",
-          "count": 11
+          "tag": "crescent moon decor",
+          "count": 12
         },
         {
-          "tag": "crescent moon decor",
+          "tag": "celestial wall art",
           "count": 11
         },
         {
@@ -472,7 +472,7 @@
       "common_terms": [
         {
           "term": "moon",
-          "count": 345
+          "count": 343
         },
         {
           "term": "botanical",
@@ -484,7 +484,7 @@
         },
         {
           "term": "floral",
-          "count": 136
+          "count": 138
         },
         {
           "term": "metal",
@@ -496,11 +496,11 @@
         },
         {
           "term": "canvas",
-          "count": 104
+          "count": 107
         },
         {
           "term": "nature",
-          "count": 71
+          "count": 72
         },
         {
           "term": "boho",
@@ -516,7 +516,7 @@
         },
         {
           "term": "garden",
-          "count": 44
+          "count": 45
         },
         {
           "term": "shirt",
@@ -536,7 +536,7 @@
         },
         {
           "term": "vintage",
-          "count": 36
+          "count": 38
         },
         {
           "term": "tee",
@@ -554,7 +554,7 @@
       "sample_median_price_by_currency": {
         "EUR": 10.43,
         "TRY": 175.0,
-        "USD": 79.0,
+        "USD": 79.5,
         "GBP": 12.49,
         "VND": 145000.0,
         "CHF": 28.25,
@@ -567,7 +567,7 @@
       "keyword": "eclipse wall art",
       "series": "celestial",
       "product_type": "wall_art",
-      "competition_count": 7229,
+      "competition_count": 7228,
       "sample_size": 100,
       "sample_total_favorers": 540,
       "sample_median_favorers": 0.0,
@@ -753,7 +753,7 @@
       "keyword": "moon phase wall art",
       "series": "celestial",
       "product_type": "wall_art",
-      "competition_count": 23626,
+      "competition_count": 23623,
       "sample_size": 100,
       "sample_total_favorers": 4287,
       "sample_median_favorers": 0.5,
@@ -939,7 +939,7 @@
       "keyword": "fjord wall art",
       "series": "landscapes",
       "product_type": "wall_art",
-      "competition_count": 7703,
+      "competition_count": 7699,
       "sample_size": 100,
       "sample_total_favorers": 286,
       "sample_median_favorers": 0.0,
@@ -1128,7 +1128,7 @@
       "keyword": "constellation wall art",
       "series": "celestial",
       "product_type": "wall_art",
-      "competition_count": 26651,
+      "competition_count": 26652,
       "sample_size": 100,
       "sample_total_favorers": 2790,
       "sample_median_favorers": 0.0,
@@ -1313,7 +1313,7 @@
       "keyword": "boho sun wall art",
       "series": "botanical-sun",
       "product_type": "wall_art",
-      "competition_count": 44678,
+      "competition_count": 44669,
       "sample_size": 100,
       "sample_total_favorers": 8019,
       "sample_median_favorers": 3.0,
@@ -1502,7 +1502,7 @@
       "keyword": "lavender field wall art",
       "series": "landscapes",
       "product_type": "wall_art",
-      "competition_count": 10226,
+      "competition_count": 10207,
       "sample_size": 100,
       "sample_total_favorers": 198,
       "sample_median_favorers": 0.0,
@@ -1511,7 +1511,7 @@
       "common_tags": [
         {
           "tag": "lavender field art",
-          "count": 36
+          "count": 37
         },
         {
           "tag": "lavender field",
@@ -1526,19 +1526,19 @@
           "count": 18
         },
         {
-          "tag": "countryside art",
-          "count": 14
-        },
-        {
           "tag": "nature wall art",
           "count": 13
         },
         {
-          "tag": "living room art",
-          "count": 11
+          "tag": "countryside art",
+          "count": 13
         },
         {
           "tag": "farmhouse wall art",
+          "count": 10
+        },
+        {
+          "tag": "living room art",
           "count": 10
         },
         {
@@ -1566,10 +1566,6 @@
           "count": 9
         },
         {
-          "tag": "lavender field print",
-          "count": 9
-        },
-        {
           "tag": "purple wall art",
           "count": 9
         },
@@ -1582,11 +1578,15 @@
           "count": 8
         },
         {
-          "tag": "vintage landscape",
+          "tag": "lavender field print",
           "count": 8
         },
         {
           "tag": "countryside wall art",
+          "count": 7
+        },
+        {
+          "tag": "vintage landscape",
           "count": 7
         }
       ],
@@ -1597,7 +1597,7 @@
         },
         {
           "term": "landscape",
-          "count": 207
+          "count": 205
         },
         {
           "term": "field",
@@ -1609,7 +1609,7 @@
         },
         {
           "term": "countryside",
-          "count": 98
+          "count": 96
         },
         {
           "term": "nature",
@@ -1621,15 +1621,15 @@
         },
         {
           "term": "floral",
-          "count": 79
+          "count": 77
         },
         {
           "term": "provence",
-          "count": 66
+          "count": 67
         },
         {
           "term": "farmhouse",
-          "count": 64
+          "count": 63
         },
         {
           "term": "sunset",
@@ -1637,22 +1637,22 @@
         },
         {
           "term": "painting",
-          "count": 55
+          "count": 53
         },
         {
           "term": "french",
-          "count": 49
+          "count": 52
         },
         {
           "term": "rustic",
           "count": 49
         },
         {
-          "term": "vintage",
+          "term": "country",
           "count": 44
         },
         {
-          "term": "country",
+          "term": "vintage",
           "count": 42
         },
         {
@@ -1690,7 +1690,7 @@
       "keyword": "olive branch wall art",
       "series": "botanical-sun",
       "product_type": "wall_art",
-      "competition_count": 18047,
+      "competition_count": 17968,
       "sample_size": 100,
       "sample_total_favorers": 496,
       "sample_median_favorers": 0.0,
@@ -1699,7 +1699,7 @@
       "common_tags": [
         {
           "tag": "olive branch art",
-          "count": 62
+          "count": 61
         },
         {
           "tag": "botanical wall art",
@@ -1755,7 +1755,7 @@
         },
         {
           "tag": "dining room art",
-          "count": 12
+          "count": 11
         },
         {
           "tag": "canvas wall art",
@@ -1767,7 +1767,7 @@
         },
         {
           "tag": "olive branch decor",
-          "count": 9
+          "count": 10
         },
         {
           "tag": "olive wall art",
@@ -1785,11 +1785,11 @@
         },
         {
           "term": "branch",
-          "count": 236
+          "count": 233
         },
         {
           "term": "botanical",
-          "count": 210
+          "count": 213
         },
         {
           "term": "canvas",
@@ -1805,15 +1805,15 @@
         },
         {
           "term": "rustic",
-          "count": 93
+          "count": 94
         },
         {
           "term": "nature",
-          "count": 85
+          "count": 86
         },
         {
           "term": "room",
-          "count": 83
+          "count": 81
         },
         {
           "term": "neutral",
@@ -1821,7 +1821,7 @@
         },
         {
           "term": "green",
-          "count": 60
+          "count": 59
         },
         {
           "term": "vintage",
@@ -1832,11 +1832,11 @@
           "count": 49
         },
         {
-          "term": "tree",
-          "count": 48
+          "term": "living",
+          "count": 47
         },
         {
-          "term": "living",
+          "term": "tree",
           "count": 47
         },
         {
@@ -1848,16 +1848,16 @@
           "count": 40
         },
         {
-          "term": "dining",
-          "count": 37
-        },
-        {
           "term": "vase",
           "count": 35
         },
         {
+          "term": "dining",
+          "count": 35
+        },
+        {
           "term": "style",
-          "count": 29
+          "count": 30
         }
       ],
       "sample_median_price_by_currency": {
@@ -1878,16 +1878,16 @@
       "keyword": "daisy wall art",
       "series": "botanical-sun",
       "product_type": "wall_art",
-      "competition_count": 91963,
+      "competition_count": 91959,
       "sample_size": 100,
-      "sample_total_favorers": 8883,
+      "sample_total_favorers": 8882,
       "sample_median_favorers": 0.0,
       "sample_top10_favorers": 8785,
       "recent_90d_in_top_sample": 88,
       "common_tags": [
         {
           "tag": "daisy wall art",
-          "count": 91
+          "count": 90
         },
         {
           "tag": "floral wall art",
@@ -1903,7 +1903,7 @@
         },
         {
           "tag": "nursery wall art",
-          "count": 16
+          "count": 15
         },
         {
           "tag": "canvas wall art",
@@ -1922,6 +1922,10 @@
           "count": 9
         },
         {
+          "tag": "botanical wall art",
+          "count": 8
+        },
+        {
           "tag": "daisy print",
           "count": 8
         },
@@ -1931,10 +1935,6 @@
         },
         {
           "tag": "daisy wall decor",
-          "count": 7
-        },
-        {
-          "tag": "botanical wall art",
           "count": 7
         },
         {
@@ -1969,15 +1969,15 @@
       "common_terms": [
         {
           "term": "daisy",
-          "count": 353
+          "count": 349
         },
         {
           "term": "floral",
-          "count": 246
+          "count": 249
         },
         {
           "term": "flower",
-          "count": 207
+          "count": 210
         },
         {
           "term": "canvas",
@@ -1985,15 +1985,15 @@
         },
         {
           "term": "room",
-          "count": 103
-        },
-        {
-          "term": "nursery",
-          "count": 95
+          "count": 100
         },
         {
           "term": "botanical",
-          "count": 93
+          "count": 95
+        },
+        {
+          "term": "nursery",
+          "count": 90
         },
         {
           "term": "nature",
@@ -2005,14 +2005,14 @@
         },
         {
           "term": "vintage",
-          "count": 41
-        },
-        {
-          "term": "white",
-          "count": 38
+          "count": 43
         },
         {
           "term": "bedroom",
+          "count": 40
+        },
+        {
+          "term": "white",
           "count": 38
         },
         {
@@ -2028,12 +2028,12 @@
           "count": 37
         },
         {
-          "term": "name",
+          "term": "cottagecore",
           "count": 35
         },
         {
-          "term": "cottagecore",
-          "count": 34
+          "term": "name",
+          "count": 32
         },
         {
           "term": "wildflower",
@@ -2051,7 +2051,7 @@
       "sample_median_price_by_currency": {
         "EUR": 6.49,
         "USD": 49.0,
-        "GBP": 15.99,
+        "GBP": 14.99,
         "TRY": 482.0,
         "ZAR": 100.0,
         "AUD": 2.99,
@@ -2064,32 +2064,32 @@
       "keyword": "lemon kitchen wall art",
       "series": "botanical-sun",
       "product_type": "wall_art",
-      "competition_count": 43545,
+      "competition_count": 43489,
       "sample_size": 100,
-      "sample_total_favorers": 679,
+      "sample_total_favorers": 678,
       "sample_median_favorers": 0.0,
       "sample_top10_favorers": 584,
       "recent_90d_in_top_sample": 84,
       "common_tags": [
         {
           "tag": "lemon wall art",
-          "count": 64
+          "count": 65
         },
         {
           "tag": "kitchen wall art",
           "count": 37
         },
         {
-          "tag": "lemon kitchen art",
-          "count": 29
+          "tag": "citrus wall art",
+          "count": 28
         },
         {
-          "tag": "citrus wall art",
-          "count": 27
+          "tag": "lemon kitchen art",
+          "count": 28
         },
         {
           "tag": "kitchen wall decor",
-          "count": 24
+          "count": 23
         },
         {
           "tag": "mediterranean art",
@@ -2097,7 +2097,7 @@
         },
         {
           "tag": "mediterranean decor",
-          "count": 19
+          "count": 20
         },
         {
           "tag": "fruit wall art",
@@ -2109,7 +2109,7 @@
         },
         {
           "tag": "italian kitchen art",
-          "count": 15
+          "count": 16
         },
         {
           "tag": "lemon kitchen decor",
@@ -2136,30 +2136,30 @@
           "count": 12
         },
         {
-          "tag": "lemon poster",
-          "count": 10
-        },
-        {
           "tag": "farmhouse kitchen",
           "count": 10
         },
         {
-          "tag": "lemon art print",
-          "count": 10
+          "tag": "lemon poster",
+          "count": 9
         },
         {
           "tag": "fruit wall decor",
+          "count": 9
+        },
+        {
+          "tag": "lemon art print",
           "count": 9
         }
       ],
       "common_terms": [
         {
           "term": "kitchen",
-          "count": 492
+          "count": 489
         },
         {
           "term": "lemon",
-          "count": 350
+          "count": 346
         },
         {
           "term": "fruit",
@@ -2167,15 +2167,15 @@
         },
         {
           "term": "citrus",
-          "count": 103
+          "count": 105
         },
         {
           "term": "mediterranean",
-          "count": 88
+          "count": 90
         },
         {
           "term": "yellow",
-          "count": 70
+          "count": 72
         },
         {
           "term": "life",
@@ -2183,7 +2183,7 @@
         },
         {
           "term": "italian",
-          "count": 53
+          "count": 54
         },
         {
           "term": "still",
@@ -2191,19 +2191,19 @@
         },
         {
           "term": "food",
-          "count": 49
+          "count": 52
         },
         {
           "term": "blue",
-          "count": 46
+          "count": 47
+        },
+        {
+          "term": "botanical",
+          "count": 43
         },
         {
           "term": "dining",
           "count": 43
-        },
-        {
-          "term": "botanical",
-          "count": 41
         },
         {
           "term": "room",
@@ -2211,11 +2211,15 @@
         },
         {
           "term": "farmhouse",
-          "count": 37
+          "count": 36
         },
         {
           "term": "summer",
-          "count": 35
+          "count": 34
+        },
+        {
+          "term": "retro",
+          "count": 30
         },
         {
           "term": "painting",
@@ -2224,10 +2228,6 @@
         {
           "term": "lemons",
           "count": 30
-        },
-        {
-          "term": "retro",
-          "count": 29
         },
         {
           "term": "framed",
@@ -2245,31 +2245,31 @@
         "ILS": 25.0,
         "NOK": 189.0
       },
-      "opportunity_score": 65.9,
+      "opportunity_score": 66.0,
       "score_basis": "relative Etsy top-result engagement 45% + lower competition 40% + recent top-sample activity 15%"
     },
     {
       "keyword": "fox wall art",
       "series": "cozy-animals",
       "product_type": "wall_art",
-      "competition_count": 101888,
+      "competition_count": 101852,
       "sample_size": 100,
-      "sample_total_favorers": 2796,
+      "sample_total_favorers": 2807,
       "sample_median_favorers": 0.0,
       "sample_top10_favorers": 2724,
       "recent_90d_in_top_sample": 87,
       "common_tags": [
         {
           "tag": "fox wall art",
-          "count": 92
-        },
-        {
-          "tag": "fox lover gift",
-          "count": 22
+          "count": 93
         },
         {
           "tag": "living room art",
           "count": 22
+        },
+        {
+          "tag": "fox lover gift",
+          "count": 21
         },
         {
           "tag": "woodland decor",
@@ -2324,38 +2324,38 @@
           "count": 8
         },
         {
+          "tag": "fox decor",
+          "count": 8
+        },
+        {
           "tag": "nature wall art",
           "count": 8
         },
         {
-          "tag": "fox decor",
+          "tag": "bedroom wall art",
           "count": 7
         },
         {
-          "tag": "fox poster",
-          "count": 7
-        },
-        {
-          "tag": "nature lover gift",
+          "tag": "forest wall art",
           "count": 7
         }
       ],
       "common_terms": [
         {
           "term": "fox",
-          "count": 473
+          "count": 469
         },
         {
           "term": "animal",
-          "count": 222
+          "count": 221
         },
         {
           "term": "canvas",
-          "count": 126
+          "count": 124
         },
         {
           "term": "woodland",
-          "count": 109
+          "count": 107
         },
         {
           "term": "nature",
@@ -2363,27 +2363,27 @@
         },
         {
           "term": "room",
-          "count": 84
+          "count": 82
         },
         {
           "term": "forest",
+          "count": 66
+        },
+        {
+          "term": "nursery",
           "count": 62
         },
         {
           "term": "lover",
-          "count": 60
-        },
-        {
-          "term": "rustic",
-          "count": 57
-        },
-        {
-          "term": "nursery",
-          "count": 57
+          "count": 59
         },
         {
           "term": "wildlife",
-          "count": 57
+          "count": 59
+        },
+        {
+          "term": "rustic",
+          "count": 55
         },
         {
           "term": "living",
@@ -2391,11 +2391,11 @@
         },
         {
           "term": "artwork",
-          "count": 40
+          "count": 41
         },
         {
           "term": "vintage",
-          "count": 37
+          "count": 38
         },
         {
           "term": "kids",
@@ -2407,26 +2407,26 @@
         },
         {
           "term": "painting",
-          "count": 33
+          "count": 34
         },
         {
           "term": "whimsical",
-          "count": 31
+          "count": 32
         },
         {
           "term": "cottagecore",
           "count": 28
         },
         {
-          "term": "winter",
-          "count": 27
+          "term": "autumn",
+          "count": 26
         }
       ],
       "sample_median_price_by_currency": {
         "GBP": 19.99,
         "USD": 65.0,
         "AUD": 59.95,
-        "EUR": 5.1,
+        "EUR": 5.8,
         "TRY": 450.0,
         "HKD": 1540.0
       },
@@ -2437,7 +2437,7 @@
       "keyword": "alpine lake wall art",
       "series": "landscapes",
       "product_type": "wall_art",
-      "competition_count": 16521,
+      "competition_count": 16509,
       "sample_size": 100,
       "sample_total_favorers": 85,
       "sample_median_favorers": 0.0,
@@ -2625,7 +2625,7 @@
       "keyword": "mountain printable wall art",
       "series": "landscapes",
       "product_type": "wall_art",
-      "competition_count": 66395,
+      "competition_count": 66375,
       "sample_size": 100,
       "sample_total_favorers": 922,
       "sample_median_favorers": 0.0,
@@ -2811,7 +2811,7 @@
       "keyword": "book lover wall art",
       "series": "cozy-animals",
       "product_type": "wall_art",
-      "competition_count": 174569,
+      "competition_count": 174524,
       "sample_size": 100,
       "sample_total_favorers": 5000,
       "sample_median_favorers": 0.0,
@@ -2887,15 +2887,15 @@
           "count": 9
         },
         {
-          "tag": "bibliophile gift",
-          "count": 8
-        },
-        {
           "tag": "reading nook art",
           "count": 8
         },
         {
           "tag": "bedroom wall art",
+          "count": 8
+        },
+        {
+          "tag": "bibliophile gift",
           "count": 8
         }
       ],
@@ -2982,9 +2982,9 @@
         }
       ],
       "sample_median_price_by_currency": {
-        "USD": 30.0,
         "EUR": 10.0,
         "MYR": 19.9,
+        "USD": 30.0,
         "GBP": 12.5,
         "AUD": 15.5,
         "CAD": 104.36,
@@ -2999,9 +2999,9 @@
       "keyword": "owl wall art",
       "series": "cozy-animals",
       "product_type": "wall_art",
-      "competition_count": 85005,
+      "competition_count": 84975,
       "sample_size": 100,
-      "sample_total_favorers": 1115,
+      "sample_total_favorers": 1114,
       "sample_median_favorers": 0.0,
       "sample_top10_favorers": 953,
       "recent_90d_in_top_sample": 90,
@@ -3012,7 +3012,7 @@
         },
         {
           "tag": "owl lover gift",
-          "count": 23
+          "count": 25
         },
         {
           "tag": "bird lover gift",
@@ -3031,15 +3031,15 @@
           "count": 12
         },
         {
-          "tag": "bird wall art",
-          "count": 11
-        },
-        {
           "tag": "living room art",
           "count": 10
         },
         {
           "tag": "bird wall decor",
+          "count": 10
+        },
+        {
+          "tag": "bird wall art",
           "count": 10
         },
         {
@@ -3090,39 +3090,39 @@
       "common_terms": [
         {
           "term": "owl",
-          "count": 567
+          "count": 579
         },
         {
           "term": "bird",
-          "count": 121
+          "count": 120
+        },
+        {
+          "term": "nature",
+          "count": 79
         },
         {
           "term": "canvas",
           "count": 77
         },
         {
-          "term": "nature",
-          "count": 77
-        },
-        {
           "term": "animal",
-          "count": 68
+          "count": 67
         },
         {
           "term": "woodland",
-          "count": 62
+          "count": 61
         },
         {
           "term": "lover",
-          "count": 59
+          "count": 60
         },
         {
           "term": "wildlife",
-          "count": 57
+          "count": 58
         },
         {
           "term": "room",
-          "count": 52
+          "count": 50
         },
         {
           "term": "glass",
@@ -3130,7 +3130,7 @@
         },
         {
           "term": "rustic",
-          "count": 48
+          "count": 47
         },
         {
           "term": "artwork",
@@ -3142,15 +3142,15 @@
         },
         {
           "term": "forest",
-          "count": 40
-        },
-        {
-          "term": "barn",
-          "count": 35
+          "count": 38
         },
         {
           "term": "vintage",
           "count": 34
+        },
+        {
+          "term": "barn",
+          "count": 33
         },
         {
           "term": "framed",
@@ -3170,13 +3170,13 @@
         }
       ],
       "sample_median_price_by_currency": {
-        "USD": 50.5,
+        "USD": 50.0,
         "INR": 7000.0,
         "AUD": 114.47,
-        "GBP": 13.99,
         "PLN": 139.0,
-        "EUR": 8.0,
+        "GBP": 13.99,
         "TRY": 7486.16,
+        "EUR": 8.49,
         "CAD": 120.0
       },
       "opportunity_score": 62.0,
@@ -3186,48 +3186,48 @@
       "keyword": "highland cow wall art",
       "series": "cozy-animals",
       "product_type": "wall_art",
-      "competition_count": 72437,
+      "competition_count": 72441,
       "sample_size": 100,
-      "sample_total_favorers": 699,
+      "sample_total_favorers": 701,
       "sample_median_favorers": 0.0,
       "sample_top10_favorers": 630,
       "recent_90d_in_top_sample": 92,
       "common_tags": [
         {
           "tag": "highland cow art",
-          "count": 69
+          "count": 70
+        },
+        {
+          "tag": "farmhouse wall art",
+          "count": 30
         },
         {
           "tag": "farmhouse decor",
           "count": 30
         },
         {
-          "tag": "farmhouse wall art",
-          "count": 29
-        },
-        {
           "tag": "rustic wall art",
-          "count": 24
+          "count": 25
         },
         {
           "tag": "cow lover gift",
-          "count": 23
+          "count": 22
         },
         {
           "tag": "cow wall art",
-          "count": 20
+          "count": 21
         },
         {
           "tag": "living room decor",
-          "count": 19
-        },
-        {
-          "tag": "highland cow print",
           "count": 18
         },
         {
+          "tag": "highland cow print",
+          "count": 17
+        },
+        {
           "tag": "animal wall art",
-          "count": 14
+          "count": 15
         },
         {
           "tag": "canvas wall art",
@@ -3246,15 +3246,15 @@
           "count": 12
         },
         {
+          "tag": "highland cow",
+          "count": 12
+        },
+        {
           "tag": "highland cow wall art",
           "count": 11
         },
         {
           "tag": "rustic home decor",
-          "count": 11
-        },
-        {
-          "tag": "highland cow",
           "count": 11
         },
         {
@@ -3277,39 +3277,39 @@
       "common_terms": [
         {
           "term": "cow",
-          "count": 521
+          "count": 523
         },
         {
           "term": "highland",
-          "count": 294
+          "count": 295
         },
         {
           "term": "animal",
-          "count": 197
+          "count": 196
         },
         {
           "term": "farmhouse",
-          "count": 174
+          "count": 176
         },
         {
           "term": "rustic",
-          "count": 157
+          "count": 159
         },
         {
           "term": "canvas",
-          "count": 131
+          "count": 132
         },
         {
           "term": "country",
-          "count": 77
+          "count": 78
         },
         {
           "term": "room",
-          "count": 77
+          "count": 76
         },
         {
           "term": "living",
-          "count": 72
+          "count": 71
         },
         {
           "term": "scottish",
@@ -3325,7 +3325,7 @@
         },
         {
           "term": "lover",
-          "count": 47
+          "count": 46
         },
         {
           "term": "nature",
@@ -3341,7 +3341,7 @@
         },
         {
           "term": "floral",
-          "count": 28
+          "count": 26
         },
         {
           "term": "painting",
@@ -3357,7 +3357,7 @@
         }
       ],
       "sample_median_price_by_currency": {
-        "EUR": 8.11,
+        "EUR": 45.61,
         "USD": 65.0,
         "CHF": 3.5,
         "GBP": 9.0,
@@ -3367,14 +3367,14 @@
         "AUD": 10.98,
         "CAD": 4.99
       },
-      "opportunity_score": 61.5,
+      "opportunity_score": 61.4,
       "score_basis": "relative Etsy top-result engagement 45% + lower competition 40% + recent top-sample activity 15%"
     },
     {
       "keyword": "zodiac wall art",
       "series": "celestial",
       "product_type": "wall_art",
-      "competition_count": 103203,
+      "competition_count": 103202,
       "sample_size": 100,
       "sample_total_favorers": 1327,
       "sample_median_favorers": 1.0,
@@ -3418,15 +3418,15 @@
           "count": 11
         },
         {
+          "tag": "zodiac poster",
+          "count": 10
+        },
+        {
           "tag": "astrology poster",
           "count": 10
         },
         {
           "tag": "zodiac print",
-          "count": 10
-        },
-        {
-          "tag": "zodiac poster",
           "count": 10
         },
         {
@@ -3484,16 +3484,16 @@
           "count": 70
         },
         {
-          "term": "gemini",
-          "count": 63
-        },
-        {
           "term": "celestial",
           "count": 61
         },
         {
           "term": "birthday",
           "count": 60
+        },
+        {
+          "term": "gemini",
+          "count": 59
         },
         {
           "term": "libra",
@@ -3512,12 +3512,12 @@
           "count": 43
         },
         {
-          "term": "sagittarius",
-          "count": 39
+          "term": "scorpio",
+          "count": 42
         },
         {
-          "term": "scorpio",
-          "count": 38
+          "term": "sagittarius",
+          "count": 39
         },
         {
           "term": "aquarius",
@@ -3546,8 +3546,8 @@
       ],
       "sample_median_price_by_currency": {
         "CAD": 7.01,
-        "USD": 6.0,
         "GBP": 10.0,
+        "USD": 6.0,
         "EUR": 7.9,
         "MAD": 29.0,
         "AUD": 48.0,
@@ -3560,7 +3560,7 @@
       "keyword": "coastal sunset wall art",
       "series": "landscapes",
       "product_type": "wall_art",
-      "competition_count": 101282,
+      "competition_count": 101273,
       "sample_size": 100,
       "sample_total_favorers": 993,
       "sample_median_favorers": 0.0,
@@ -3748,7 +3748,7 @@
       "keyword": "waterfall wall art",
       "series": "landscapes",
       "product_type": "wall_art",
-      "competition_count": 55762,
+      "competition_count": 55733,
       "sample_size": 100,
       "sample_total_favorers": 267,
       "sample_median_favorers": 0.0,
@@ -3935,7 +3935,7 @@
       "keyword": "sunflower wall art",
       "series": "botanical-sun",
       "product_type": "wall_art",
-      "competition_count": 112061,
+      "competition_count": 112050,
       "sample_size": 100,
       "sample_total_favorers": 807,
       "sample_median_favorers": 1.0,
@@ -4011,12 +4011,12 @@
           "count": 7
         },
         {
-          "tag": "printable wall art",
+          "tag": "bedroom wall art",
           "count": 7
         },
         {
-          "tag": "framed wall art",
-          "count": 6
+          "tag": "printable wall art",
+          "count": 7
         },
         {
           "tag": "rustic wall decor",
@@ -4026,15 +4026,15 @@
       "common_terms": [
         {
           "term": "sunflower",
-          "count": 448
+          "count": 447
         },
         {
           "term": "floral",
-          "count": 191
+          "count": 193
         },
         {
           "term": "flower",
-          "count": 132
+          "count": 131
         },
         {
           "term": "botanical",
@@ -4042,18 +4042,18 @@
         },
         {
           "term": "glass",
-          "count": 82
-        },
-        {
-          "term": "canvas",
-          "count": 69
-        },
-        {
-          "term": "painting",
-          "count": 65
+          "count": 75
         },
         {
           "term": "yellow",
+          "count": 67
+        },
+        {
+          "term": "canvas",
+          "count": 66
+        },
+        {
+          "term": "painting",
           "count": 65
         },
         {
@@ -4070,7 +4070,7 @@
         },
         {
           "term": "room",
-          "count": 43
+          "count": 44
         },
         {
           "term": "artwork",
@@ -4106,9 +4106,9 @@
         }
       ],
       "sample_median_price_by_currency": {
-        "GBP": 12.49,
+        "GBP": 13.99,
         "CAD": 18.99,
-        "USD": 90.47,
+        "USD": 90.93,
         "EUR": 6.5,
         "AUD": 13.0,
         "SEK": 1225.0,
@@ -4122,7 +4122,7 @@
       "keyword": "bunny wall art",
       "series": "cozy-animals",
       "product_type": "wall_art",
-      "competition_count": 141697,
+      "competition_count": 141663,
       "sample_size": 100,
       "sample_total_favorers": 1065,
       "sample_median_favorers": 0.0,
@@ -4297,8 +4297,8 @@
         "GBP": 2.58,
         "EUR": 5.97,
         "PHP": 145.0,
-        "CAD": 8.99,
         "TRY": 366.0,
+        "CAD": 8.99,
         "DKK": 48.0
       },
       "opportunity_score": 57.3,
@@ -4308,7 +4308,7 @@
       "keyword": "forest cabin wall art",
       "series": "landscapes",
       "product_type": "wall_art",
-      "competition_count": 85665,
+      "competition_count": 85625,
       "sample_size": 100,
       "sample_total_favorers": 378,
       "sample_median_favorers": 0.0,
@@ -4497,7 +4497,7 @@
       "keyword": "woodland animal wall art",
       "series": "cozy-animals",
       "product_type": "wall_art",
-      "competition_count": 184441,
+      "competition_count": 184422,
       "sample_size": 100,
       "sample_total_favorers": 1585,
       "sample_median_favorers": 0.0,
@@ -4522,7 +4522,7 @@
         },
         {
           "tag": "woodland wall art",
-          "count": 16
+          "count": 17
         },
         {
           "tag": "nature wall art",
@@ -4542,7 +4542,7 @@
         },
         {
           "tag": "woodland animal",
-          "count": 13
+          "count": 12
         },
         {
           "tag": "rustic wall art",
@@ -4588,11 +4588,11 @@
       "common_terms": [
         {
           "term": "animal",
-          "count": 303
+          "count": 302
         },
         {
           "term": "woodland",
-          "count": 276
+          "count": 275
         },
         {
           "term": "nursery",
@@ -4632,7 +4632,7 @@
         },
         {
           "term": "fox",
-          "count": 66
+          "count": 64
         },
         {
           "term": "kids",
@@ -4686,7 +4686,7 @@
       "keyword": "celestial wall art",
       "series": "celestial",
       "product_type": "wall_art",
-      "competition_count": 329708,
+      "competition_count": 329680,
       "sample_size": 100,
       "sample_total_favorers": 5050,
       "sample_median_favorers": 1.0,
@@ -4872,9 +4872,9 @@
       "keyword": "wildflower wall art",
       "series": "botanical-sun",
       "product_type": "wall_art",
-      "competition_count": 261709,
+      "competition_count": 261651,
       "sample_size": 100,
-      "sample_total_favorers": 1972,
+      "sample_total_favorers": 1961,
       "sample_median_favorers": 1.0,
       "sample_top10_favorers": 1721,
       "recent_90d_in_top_sample": 79,
@@ -4916,15 +4916,15 @@
           "count": 9
         },
         {
+          "tag": "floral wall decor",
+          "count": 9
+        },
+        {
           "tag": "meadow wall art",
           "count": 8
         },
         {
           "tag": "botanical wall decor",
-          "count": 8
-        },
-        {
-          "tag": "floral wall decor",
           "count": 8
         },
         {
@@ -4963,19 +4963,19 @@
       "common_terms": [
         {
           "term": "floral",
-          "count": 232
+          "count": 235
         },
         {
           "term": "wildflower",
-          "count": 214
+          "count": 215
         },
         {
           "term": "botanical",
-          "count": 155
+          "count": 156
         },
         {
           "term": "flower",
-          "count": 134
+          "count": 136
         },
         {
           "term": "canvas",
@@ -4994,16 +4994,16 @@
           "count": 73
         },
         {
-          "term": "nursery",
-          "count": 68
-        },
-        {
           "term": "cottagecore",
           "count": 66
         },
         {
+          "term": "nursery",
+          "count": 66
+        },
+        {
           "term": "vintage",
-          "count": 50
+          "count": 51
         },
         {
           "term": "prints",
@@ -5023,7 +5023,7 @@
         },
         {
           "term": "room",
-          "count": 43
+          "count": 44
         },
         {
           "term": "landscape",
@@ -5035,10 +5035,10 @@
         },
         {
           "term": "set",
-          "count": 31
+          "count": 32
         },
         {
-          "term": "farmhouse",
+          "term": "flowers",
           "count": 31
         }
       ],
@@ -5058,7 +5058,7 @@
       "keyword": "cozy cat wall art",
       "series": "cozy-animals",
       "product_type": "wall_art",
-      "competition_count": 62051,
+      "competition_count": 62040,
       "sample_size": 100,
       "sample_total_favorers": 94,
       "sample_median_favorers": 0.0,
@@ -5247,7 +5247,7 @@
       "keyword": "dog lover wall art",
       "series": "cozy-animals",
       "product_type": "wall_art",
-      "competition_count": 277056,
+      "competition_count": 277049,
       "sample_size": 100,
       "sample_total_favorers": 954,
       "sample_median_favorers": 0.0,
@@ -5434,7 +5434,7 @@
       "keyword": "mediterranean wall art",
       "series": "landscapes",
       "product_type": "wall_art",
-      "competition_count": 194999,
+      "competition_count": 194566,
       "sample_size": 100,
       "sample_total_favorers": 327,
       "sample_median_favorers": 0.0,
