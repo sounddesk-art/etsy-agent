@@ -195,7 +195,9 @@ def make(spec,idx):
     cairosvg.svg2png(bytestring=svg.encode(),write_to=str(pp),output_width=3000,output_height=4500)
     products=["wall_art","greeting_card","postcard"]
     if series in ("celestial","botanical-sun"): products.append("bookmark")
-    return {"id":id_,"display_name":name,"series":series,"file":pp.name,"products":products,"tags":tags,"status":"approved"}
+    return {"id":id_,"display_name":name,"series":series,"file":pp.name,"products":products,"tags":tags,
+            "status":"needs_human_review","human_reviewed_at":None,
+            "human_reviewed_by":None,"human_prompt_or_notes":None}
 
 items=[make(s,i+1) for i,s in enumerate(SPECS)]
 Path("data/generated_manifest.json").write_text(json.dumps({"version":2,"items":items},indent=2),encoding="utf-8")
