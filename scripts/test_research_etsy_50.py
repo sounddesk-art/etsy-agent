@@ -18,6 +18,20 @@ class EtsyResearchTests(unittest.TestCase):
         self.assertLessEqual(len(c["tags"]),13)
         self.assertTrue(all(len(x)<=20 for x in c["tags"]))
 
+    def test_long_tags_are_shortened_on_word_boundaries(self):
+        tag=r.clean_tag("sun and moon wall art")
+        self.assertLessEqual(len(tag),20)
+        self.assertNotEqual(tag,"sun and moon wall ar")
+
+    def test_candidate_has_complete_description(self):
+        row={"keyword":"eucalyptus wall art","series":"botanical-sun","product_type":"wall_art",
+             "opportunity_score":82.5,"common_tags":[],"common_terms":[],
+             "competition_count":1000,"sample_top10_favorers":50,
+             "recent_90d_in_top_sample":5,"score_basis":"test"}
+        item=r.make_candidate(row,1)
+        self.assertIn("WHAT THE FINAL LISTING WILL INCLUDE",item["description_draft"])
+        self.assertIn("CREATIVE PROCESS",item["description_draft"])
+
     def test_score_is_bounded(self):
         rows=[
           {"competition_count":10,"sample_top10_favorers":100,"recent_90d_in_top_sample":5},
