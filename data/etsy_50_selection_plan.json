@@ -1,0 +1,865 @@
+{
+  "version": 1,
+  "target_slots": 50,
+  "existing_drafts_total": 115,
+  "existing_research_matched_slots": 27,
+  "new_research_slots": 23,
+  "existing_drafts_hold_only_no_delete": 88,
+  "rules": {
+    "existing_keep_threshold": "wall-art only and token similarity >= 0.45 to a current live-researched niche",
+    "new_slots": "highest research scores, preferring niches not already represented",
+    "publishing": "disabled",
+    "deletion": "disabled",
+    "human_review": "required per item before final activation"
+  },
+  "existing_review_candidates": [
+    {
+      "listing_id": 4603592722,
+      "title": "Botanical Crescent Moon | Printable Wall Art | Digital Download",
+      "matched_keyword": "crescent moon botanical art",
+      "research_score": 81.9,
+      "similarity": 1.0,
+      "fit_score": 81.9,
+      "status": "needs_human_review"
+    },
+    {
+      "listing_id": 4603571149,
+      "title": "Sun and Moon Harmony | Printable Wall Art | Digital Download",
+      "matched_keyword": "sun and moon wall art",
+      "research_score": 82.0,
+      "similarity": 0.967,
+      "fit_score": 79.27,
+      "status": "needs_human_review"
+    },
+    {
+      "listing_id": 4603573145,
+      "title": "Boho Sun Garden | Printable Wall Art | Digital Download",
+      "matched_keyword": "boho sun wall art",
+      "research_score": 77.6,
+      "similarity": 0.967,
+      "fit_score": 75.01,
+      "status": "needs_human_review"
+    },
+    {
+      "listing_id": 4603572737,
+      "title": "Olive Branch Sun | Printable Wall Art | Digital Download",
+      "matched_keyword": "olive branch wall art",
+      "research_score": 73.2,
+      "similarity": 0.967,
+      "fit_score": 70.76,
+      "status": "needs_human_review"
+    },
+    {
+      "listing_id": 4603491575,
+      "title": "Trust The Process Moon Phase Printable | Celestial Wall Art | Boho Digital Download",
+      "matched_keyword": "moon phase wall art",
+      "research_score": 81.1,
+      "similarity": 0.8,
+      "fit_score": 64.88,
+      "status": "needs_human_review"
+    },
+    {
+      "listing_id": 4603591106,
+      "title": "Alpine Lake Sunrise | Printable Wall Art | Digital Download",
+      "matched_keyword": "alpine lake wall art",
+      "research_score": 64.4,
+      "similarity": 0.967,
+      "fit_score": 62.25,
+      "status": "needs_human_review"
+    },
+    {
+      "listing_id": 4603491287,
+      "title": "Highland Cow Coffee Printable Wall Art | Coffee First Funny Kitchen Decor | Digital Download",
+      "matched_keyword": "highland cow wall art",
+      "research_score": 61.5,
+      "similarity": 0.967,
+      "fit_score": 59.45,
+      "status": "needs_human_review"
+    },
+    {
+      "listing_id": 4603590576,
+      "title": "Highland Cow in Wildflowers | Printable Wall Art | Digital Download",
+      "matched_keyword": "highland cow wall art",
+      "research_score": 61.5,
+      "similarity": 0.967,
+      "fit_score": 59.45,
+      "status": "needs_human_review"
+    },
+    {
+      "listing_id": 4603591474,
+      "title": "Forest Cabin by the Lake | Printable Wall Art | Digital Download",
+      "matched_keyword": "forest cabin wall art",
+      "research_score": 56.9,
+      "similarity": 0.967,
+      "fit_score": 55.0,
+      "status": "needs_human_review"
+    },
+    {
+      "listing_id": 4603572441,
+      "title": "Eucalyptus Sun | Printable Wall Art | Digital Download",
+      "matched_keyword": "eucalyptus wall art",
+      "research_score": 82.5,
+      "similarity": 0.65,
+      "fit_score": 53.62,
+      "status": "needs_human_review"
+    },
+    {
+      "listing_id": 4603571945,
+      "title": "Golden Eclipse | Printable Wall Art | Digital Download",
+      "matched_keyword": "eclipse wall art",
+      "research_score": 81.6,
+      "similarity": 0.65,
+      "fit_score": 53.04,
+      "status": "needs_human_review"
+    },
+    {
+      "listing_id": 4603571757,
+      "title": "Constellation Garden | Printable Wall Art | Digital Download",
+      "matched_keyword": "constellation wall art",
+      "research_score": 77.9,
+      "similarity": 0.65,
+      "fit_score": 50.64,
+      "status": "needs_human_review"
+    },
+    {
+      "listing_id": 4603594130,
+      "title": "Daisy Bouquet | Printable Wall Art | Digital Download",
+      "matched_keyword": "daisy wall art",
+      "research_score": 72.2,
+      "similarity": 0.65,
+      "fit_score": 46.93,
+      "status": "needs_human_review"
+    },
+    {
+      "listing_id": 4603570985,
+      "title": "Golden Moon Phases | Printable Wall Art | Digital Download",
+      "matched_keyword": "moon phase wall art",
+      "research_score": 81.1,
+      "similarity": 0.55,
+      "fit_score": 44.61,
+      "status": "needs_human_review"
+    },
+    {
+      "listing_id": 4603570727,
+      "title": "Autumn Waterfall | Printable Wall Art | Digital Download",
+      "matched_keyword": "waterfall wall art",
+      "research_score": 58.2,
+      "similarity": 0.65,
+      "fit_score": 37.83,
+      "status": "needs_human_review"
+    },
+    {
+      "listing_id": 4603591852,
+      "title": "Nordic Fjord Morning | Printable Wall Art | Digital Download",
+      "matched_keyword": "fjord wall art",
+      "research_score": 78.1,
+      "similarity": 0.483,
+      "fit_score": 37.75,
+      "status": "needs_human_review"
+    },
+    {
+      "listing_id": 4603572265,
+      "title": "Wildflower Meadow | Printable Wall Art | Digital Download",
+      "matched_keyword": "wildflower wall art",
+      "research_score": 54.1,
+      "similarity": 0.65,
+      "fit_score": 35.16,
+      "status": "needs_human_review"
+    },
+    {
+      "listing_id": 4603590474,
+      "title": "Daisy Meadow Bunny | Printable Wall Art | Digital Download",
+      "matched_keyword": "daisy wall art",
+      "research_score": 72.2,
+      "similarity": 0.483,
+      "fit_score": 34.9,
+      "status": "needs_human_review"
+    },
+    {
+      "listing_id": 4603569977,
+      "title": "Mediterranean Coast Sunset | Printable Wall Art | Digital Download",
+      "matched_keyword": "coastal sunset wall art",
+      "research_score": 59.3,
+      "similarity": 0.55,
+      "fit_score": 32.62,
+      "status": "needs_human_review"
+    },
+    {
+      "listing_id": 4603593780,
+      "title": "Lemon Grove | Printable Wall Art | Digital Download",
+      "matched_keyword": "lemon kitchen wall art",
+      "research_score": 65.9,
+      "similarity": 0.483,
+      "fit_score": 31.85,
+      "status": "needs_human_review"
+    },
+    {
+      "listing_id": 4603590694,
+      "title": "Sleepy Fox in Autumn | Printable Wall Art | Digital Download",
+      "matched_keyword": "fox wall art",
+      "research_score": 65.4,
+      "similarity": 0.483,
+      "fit_score": 31.61,
+      "status": "needs_human_review"
+    },
+    {
+      "listing_id": 4603512982,
+      "title": "Adventure Awaits Mountain Printable | Alpine Lake Wall Art | Travel Quote Digital Download",
+      "matched_keyword": "mountain printable wall art",
+      "research_score": 63.5,
+      "similarity": 0.483,
+      "fit_score": 30.69,
+      "status": "needs_human_review"
+    },
+    {
+      "listing_id": 4603592880,
+      "title": "Lunar Mountain Reflection | Printable Wall Art | Digital Download",
+      "matched_keyword": "mountain printable wall art",
+      "research_score": 63.5,
+      "similarity": 0.483,
+      "fit_score": 30.69,
+      "status": "needs_human_review"
+    },
+    {
+      "listing_id": 4603590896,
+      "title": "Little Owl and Flowers | Printable Wall Art | Digital Download",
+      "matched_keyword": "owl wall art",
+      "research_score": 62.0,
+      "similarity": 0.483,
+      "fit_score": 29.97,
+      "status": "needs_human_review"
+    },
+    {
+      "listing_id": 4603571285,
+      "title": "Golden Zodiac Wheel | Printable Wall Art | Digital Download",
+      "matched_keyword": "zodiac wall art",
+      "research_score": 59.8,
+      "similarity": 0.483,
+      "fit_score": 28.9,
+      "status": "needs_human_review"
+    },
+    {
+      "listing_id": 4603572111,
+      "title": "Sunflower Golden Hour | Printable Wall Art | Digital Download",
+      "matched_keyword": "sunflower wall art",
+      "research_score": 57.4,
+      "similarity": 0.483,
+      "fit_score": 27.74,
+      "status": "needs_human_review"
+    },
+    {
+      "listing_id": 4603491485,
+      "title": "Stay Kind Wildflower Printable | Botanical Wall Art | Positive Quote Digital Download",
+      "matched_keyword": "wildflower wall art",
+      "research_score": 54.1,
+      "similarity": 0.483,
+      "fit_score": 26.15,
+      "status": "needs_human_review"
+    }
+  ],
+  "new_review_candidates": [
+    {
+      "id": "lavender-field-wall-art-v1",
+      "title_draft": "Lavender Field Wall Art | Original Landscapes Digital Download",
+      "source_keyword": "lavender field wall art",
+      "research_score": 73.9,
+      "status": "needs_human_creative_input"
+    },
+    {
+      "id": "book-lover-wall-art-v1",
+      "title_draft": "Book Lover Wall Art | Original Cozy Animals Digital Download",
+      "source_keyword": "book lover wall art",
+      "research_score": 63.1,
+      "status": "needs_human_creative_input"
+    },
+    {
+      "id": "bunny-wall-art-v1",
+      "title_draft": "Bunny Wall Art | Original Cozy Animals Digital Download",
+      "source_keyword": "bunny wall art",
+      "research_score": 57.3,
+      "status": "needs_human_creative_input"
+    },
+    {
+      "id": "woodland-animal-wall-art-v1",
+      "title_draft": "Woodland Animal Wall Art | Original Cozy Animals Digital Download",
+      "source_keyword": "woodland animal wall art",
+      "research_score": 56.7,
+      "status": "needs_human_creative_input"
+    },
+    {
+      "id": "eucalyptus-wall-art-v1",
+      "title_draft": "Eucalyptus Wall Art | Original Botanical Sun Digital Download",
+      "source_keyword": "eucalyptus wall art",
+      "research_score": 82.5,
+      "status": "needs_human_creative_input"
+    },
+    {
+      "id": "eucalyptus-wall-art-v2",
+      "title_draft": "Botanical Green Eucalyptus Wall Art | Original Digital Download",
+      "source_keyword": "eucalyptus wall art",
+      "research_score": 82.5,
+      "status": "needs_human_creative_input"
+    },
+    {
+      "id": "sun-and-moon-wall-art-v1",
+      "title_draft": "Sun And Moon Wall Art | Original Celestial Digital Download",
+      "source_keyword": "sun and moon wall art",
+      "research_score": 82.0,
+      "status": "needs_human_creative_input"
+    },
+    {
+      "id": "sun-and-moon-wall-art-v2",
+      "title_draft": "Celestial Boho Sun And Moon Wall Art | Original Digital Download",
+      "source_keyword": "sun and moon wall art",
+      "research_score": 82.0,
+      "status": "needs_human_creative_input"
+    },
+    {
+      "id": "crescent-moon-botanical-art-v1",
+      "title_draft": "Crescent Moon Botanical Art | Original Celestial Digital Download",
+      "source_keyword": "crescent moon botanical art",
+      "research_score": 81.9,
+      "status": "needs_human_creative_input"
+    },
+    {
+      "id": "crescent-moon-botanical-art-v2",
+      "title_draft": "Floral Metal Crescent Moon Botanical Art | Original Digital Download",
+      "source_keyword": "crescent moon botanical art",
+      "research_score": 81.9,
+      "status": "needs_human_creative_input"
+    },
+    {
+      "id": "eclipse-wall-art-v1",
+      "title_draft": "Eclipse Wall Art | Original Celestial Digital Download",
+      "source_keyword": "eclipse wall art",
+      "research_score": 81.6,
+      "status": "needs_human_creative_input"
+    },
+    {
+      "id": "eclipse-wall-art-v2",
+      "title_draft": "Solar Celestial Eclipse Wall Art | Original Digital Download",
+      "source_keyword": "eclipse wall art",
+      "research_score": 81.6,
+      "status": "needs_human_creative_input"
+    },
+    {
+      "id": "moon-phase-wall-art-v1",
+      "title_draft": "Moon Phase Wall Art | Original Celestial Digital Download",
+      "source_keyword": "moon phase wall art",
+      "research_score": 81.1,
+      "status": "needs_human_creative_input"
+    },
+    {
+      "id": "moon-phase-wall-art-v2",
+      "title_draft": "Phases Celestial Moon Phase Wall Art | Original Digital Download",
+      "source_keyword": "moon phase wall art",
+      "research_score": 81.1,
+      "status": "needs_human_creative_input"
+    },
+    {
+      "id": "fjord-wall-art-v1",
+      "title_draft": "Fjord Wall Art | Original Landscapes Digital Download",
+      "source_keyword": "fjord wall art",
+      "research_score": 78.1,
+      "status": "needs_human_creative_input"
+    },
+    {
+      "id": "fjord-wall-art-v2",
+      "title_draft": "Norway Landscape Fjord Wall Art | Original Digital Download",
+      "source_keyword": "fjord wall art",
+      "research_score": 78.1,
+      "status": "needs_human_creative_input"
+    },
+    {
+      "id": "constellation-wall-art-v1",
+      "title_draft": "Constellation Wall Art | Original Celestial Digital Download",
+      "source_keyword": "constellation wall art",
+      "research_score": 77.9,
+      "status": "needs_human_creative_input"
+    },
+    {
+      "id": "constellation-wall-art-v2",
+      "title_draft": "Celestial Zodiac Constellation Wall Art | Original Digital Download",
+      "source_keyword": "constellation wall art",
+      "research_score": 77.9,
+      "status": "needs_human_creative_input"
+    },
+    {
+      "id": "boho-sun-wall-art-v1",
+      "title_draft": "Boho Sun Wall Art | Original Botanical Sun Digital Download",
+      "source_keyword": "boho sun wall art",
+      "research_score": 77.6,
+      "status": "needs_human_creative_input"
+    },
+    {
+      "id": "boho-sun-wall-art-v2",
+      "title_draft": "Abstract Modern Boho Sun Wall Art | Original Digital Download",
+      "source_keyword": "boho sun wall art",
+      "research_score": 77.6,
+      "status": "needs_human_creative_input"
+    },
+    {
+      "id": "lavender-field-wall-art-v2",
+      "title_draft": "Landscape Canvas Lavender Field Wall Art | Original Digital Download",
+      "source_keyword": "lavender field wall art",
+      "research_score": 73.9,
+      "status": "needs_human_creative_input"
+    },
+    {
+      "id": "olive-branch-wall-art-v1",
+      "title_draft": "Olive Branch Wall Art | Original Botanical Sun Digital Download",
+      "source_keyword": "olive branch wall art",
+      "research_score": 73.2,
+      "status": "needs_human_creative_input"
+    },
+    {
+      "id": "olive-branch-wall-art-v2",
+      "title_draft": "Botanical Canvas Olive Branch Wall Art | Original Digital Download",
+      "source_keyword": "olive branch wall art",
+      "research_score": 73.2,
+      "status": "needs_human_creative_input"
+    }
+  ],
+  "hold_existing_drafts": [
+    {
+      "listing_id": 4603573297,
+      "title": "Boho Sun Garden | Printable Bookmark | Digital Download",
+      "state": "draft"
+    },
+    {
+      "listing_id": 4603594438,
+      "title": "Boho Sun Garden | Printable Postcard | Digital Download",
+      "state": "draft"
+    },
+    {
+      "listing_id": 4603573215,
+      "title": "Boho Sun Garden | Printable Greeting Card | Digital Download",
+      "state": "draft"
+    },
+    {
+      "listing_id": 4603573101,
+      "title": "Daisy Bouquet | Printable Bookmark | Digital Download",
+      "state": "draft"
+    },
+    {
+      "listing_id": 4603573065,
+      "title": "Daisy Bouquet | Printable Postcard | Digital Download",
+      "state": "draft"
+    },
+    {
+      "listing_id": 4603573031,
+      "title": "Daisy Bouquet | Printable Greeting Card | Digital Download",
+      "state": "draft"
+    },
+    {
+      "listing_id": 4603572923,
+      "title": "Olive Branch Sun | Printable Bookmark | Digital Download",
+      "state": "draft"
+    },
+    {
+      "listing_id": 4603594048,
+      "title": "Olive Branch Sun | Printable Postcard | Digital Download",
+      "state": "draft"
+    },
+    {
+      "listing_id": 4603572855,
+      "title": "Olive Branch Sun | Printable Greeting Card | Digital Download",
+      "state": "draft"
+    },
+    {
+      "listing_id": 4603572707,
+      "title": "Lemon Grove | Printable Bookmark | Digital Download",
+      "state": "draft"
+    },
+    {
+      "listing_id": 4603593864,
+      "title": "Lemon Grove | Printable Postcard | Digital Download",
+      "state": "draft"
+    },
+    {
+      "listing_id": 4603572651,
+      "title": "Lemon Grove | Printable Greeting Card | Digital Download",
+      "state": "draft"
+    },
+    {
+      "listing_id": 4603593746,
+      "title": "Eucalyptus Sun | Printable Bookmark | Digital Download",
+      "state": "draft"
+    },
+    {
+      "listing_id": 4603593718,
+      "title": "Eucalyptus Sun | Printable Postcard | Digital Download",
+      "state": "draft"
+    },
+    {
+      "listing_id": 4603593696,
+      "title": "Eucalyptus Sun | Printable Greeting Card | Digital Download",
+      "state": "draft"
+    },
+    {
+      "listing_id": 4603572417,
+      "title": "Wildflower Meadow | Printable Bookmark | Digital Download",
+      "state": "draft"
+    },
+    {
+      "listing_id": 4603572377,
+      "title": "Wildflower Meadow | Printable Postcard | Digital Download",
+      "state": "draft"
+    },
+    {
+      "listing_id": 4603572333,
+      "title": "Wildflower Meadow | Printable Greeting Card | Digital Download",
+      "state": "draft"
+    },
+    {
+      "listing_id": 4603593444,
+      "title": "Sunflower Golden Hour | Printable Bookmark | Digital Download",
+      "state": "draft"
+    },
+    {
+      "listing_id": 4603572205,
+      "title": "Sunflower Golden Hour | Printable Postcard | Digital Download",
+      "state": "draft"
+    },
+    {
+      "listing_id": 4603572171,
+      "title": "Sunflower Golden Hour | Printable Greeting Card | Digital Download",
+      "state": "draft"
+    },
+    {
+      "listing_id": 4603572087,
+      "title": "Golden Eclipse | Printable Bookmark | Digital Download",
+      "state": "draft"
+    },
+    {
+      "listing_id": 4603572061,
+      "title": "Golden Eclipse | Printable Postcard | Digital Download",
+      "state": "draft"
+    },
+    {
+      "listing_id": 4603593228,
+      "title": "Golden Eclipse | Printable Greeting Card | Digital Download",
+      "state": "draft"
+    },
+    {
+      "listing_id": 4603571893,
+      "title": "Constellation Garden | Printable Bookmark | Digital Download",
+      "state": "draft"
+    },
+    {
+      "listing_id": 4603571863,
+      "title": "Constellation Garden | Printable Postcard | Digital Download",
+      "state": "draft"
+    },
+    {
+      "listing_id": 4603571825,
+      "title": "Constellation Garden | Printable Greeting Card | Digital Download",
+      "state": "draft"
+    },
+    {
+      "listing_id": 4603571725,
+      "title": "Lunar Mountain Reflection | Printable Bookmark | Digital Download",
+      "state": "draft"
+    },
+    {
+      "listing_id": 4603571689,
+      "title": "Lunar Mountain Reflection | Printable Postcard | Digital Download",
+      "state": "draft"
+    },
+    {
+      "listing_id": 4603592918,
+      "title": "Lunar Mountain Reflection | Printable Greeting Card | Digital Download",
+      "state": "draft"
+    },
+    {
+      "listing_id": 4603592844,
+      "title": "Botanical Crescent Moon | Printable Bookmark | Digital Download",
+      "state": "draft"
+    },
+    {
+      "listing_id": 4603592812,
+      "title": "Botanical Crescent Moon | Printable Postcard | Digital Download",
+      "state": "draft"
+    },
+    {
+      "listing_id": 4603571529,
+      "title": "Botanical Crescent Moon | Printable Greeting Card | Digital Download",
+      "state": "draft"
+    },
+    {
+      "listing_id": 4603571437,
+      "title": "Golden Zodiac Wheel | Printable Bookmark | Digital Download",
+      "state": "draft"
+    },
+    {
+      "listing_id": 4603592608,
+      "title": "Golden Zodiac Wheel | Printable Postcard | Digital Download",
+      "state": "draft"
+    },
+    {
+      "listing_id": 4603571321,
+      "title": "Golden Zodiac Wheel | Printable Greeting Card | Digital Download",
+      "state": "draft"
+    },
+    {
+      "listing_id": 4603592506,
+      "title": "Sun and Moon Harmony | Printable Bookmark | Digital Download",
+      "state": "draft"
+    },
+    {
+      "listing_id": 4603592480,
+      "title": "Sun and Moon Harmony | Printable Postcard | Digital Download",
+      "state": "draft"
+    },
+    {
+      "listing_id": 4603571185,
+      "title": "Sun and Moon Harmony | Printable Greeting Card | Digital Download",
+      "state": "draft"
+    },
+    {
+      "listing_id": 4603571123,
+      "title": "Golden Moon Phases | Printable Bookmark | Digital Download",
+      "state": "draft"
+    },
+    {
+      "listing_id": 4603571091,
+      "title": "Golden Moon Phases | Printable Postcard | Digital Download",
+      "state": "draft"
+    },
+    {
+      "listing_id": 4603571067,
+      "title": "Golden Moon Phases | Printable Greeting Card | Digital Download",
+      "state": "draft"
+    },
+    {
+      "listing_id": 4603570955,
+      "title": "Tropical Cove Sunrise | Printable Postcard | Digital Download",
+      "state": "draft"
+    },
+    {
+      "listing_id": 4603570927,
+      "title": "Tropical Cove Sunrise | Printable Greeting Card | Digital Download",
+      "state": "draft"
+    },
+    {
+      "listing_id": 4603570859,
+      "title": "Tropical Cove Sunrise | Printable Wall Art | Digital Download",
+      "state": "draft"
+    },
+    {
+      "listing_id": 4603592090,
+      "title": "Autumn Waterfall | Printable Postcard | Digital Download",
+      "state": "draft"
+    },
+    {
+      "listing_id": 4603592062,
+      "title": "Autumn Waterfall | Printable Greeting Card | Digital Download",
+      "state": "draft"
+    },
+    {
+      "listing_id": 4603570643,
+      "title": "Nordic Fjord Morning | Printable Postcard | Digital Download",
+      "state": "draft"
+    },
+    {
+      "listing_id": 4603591902,
+      "title": "Nordic Fjord Morning | Printable Greeting Card | Digital Download",
+      "state": "draft"
+    },
+    {
+      "listing_id": 4603591822,
+      "title": "Lavender Hills at Sunset | Printable Postcard | Digital Download",
+      "state": "draft"
+    },
+    {
+      "listing_id": 4603591796,
+      "title": "Lavender Hills at Sunset | Printable Greeting Card | Digital Download",
+      "state": "draft"
+    },
+    {
+      "listing_id": 4603570441,
+      "title": "Lavender Hills at Sunset | Printable Wall Art | Digital Download",
+      "state": "draft"
+    },
+    {
+      "listing_id": 4603570405,
+      "title": "Golden Dune Beach | Printable Postcard | Digital Download",
+      "state": "draft"
+    },
+    {
+      "listing_id": 4603570369,
+      "title": "Golden Dune Beach | Printable Greeting Card | Digital Download",
+      "state": "draft"
+    },
+    {
+      "listing_id": 4603591598,
+      "title": "Golden Dune Beach | Printable Wall Art | Digital Download",
+      "state": "draft"
+    },
+    {
+      "listing_id": 4603591568,
+      "title": "Forest Cabin by the Lake | Printable Postcard | Digital Download",
+      "state": "draft"
+    },
+    {
+      "listing_id": 4603570217,
+      "title": "Forest Cabin by the Lake | Printable Greeting Card | Digital Download",
+      "state": "draft"
+    },
+    {
+      "listing_id": 4603570119,
+      "title": "Mediterranean Coast Sunset | Printable Postcard | Digital Download",
+      "state": "draft"
+    },
+    {
+      "listing_id": 4603591414,
+      "title": "Mediterranean Coast Sunset | Printable Greeting Card | Digital Download",
+      "state": "draft"
+    },
+    {
+      "listing_id": 4603591252,
+      "title": "Alpine Lake Sunrise | Printable Postcard | Digital Download",
+      "state": "draft"
+    },
+    {
+      "listing_id": 4603591202,
+      "title": "Alpine Lake Sunrise | Printable Greeting Card | Digital Download",
+      "state": "draft"
+    },
+    {
+      "listing_id": 4603591086,
+      "title": "Raccoon Evening Garden | Printable Postcard | Digital Download",
+      "state": "draft"
+    },
+    {
+      "listing_id": 4603591052,
+      "title": "Raccoon Evening Garden | Printable Greeting Card | Digital Download",
+      "state": "draft"
+    },
+    {
+      "listing_id": 4603569681,
+      "title": "Raccoon Evening Garden | Printable Wall Art | Digital Download",
+      "state": "draft"
+    },
+    {
+      "listing_id": 4603590970,
+      "title": "Little Owl and Flowers | Printable Postcard | Digital Download",
+      "state": "draft"
+    },
+    {
+      "listing_id": 4603569629,
+      "title": "Little Owl and Flowers | Printable Greeting Card | Digital Download",
+      "state": "draft"
+    },
+    {
+      "listing_id": 4603590868,
+      "title": "Happy Hedgehog Garden | Printable Postcard | Digital Download",
+      "state": "draft"
+    },
+    {
+      "listing_id": 4603590836,
+      "title": "Happy Hedgehog Garden | Printable Greeting Card | Digital Download",
+      "state": "draft"
+    },
+    {
+      "listing_id": 4603569457,
+      "title": "Happy Hedgehog Garden | Printable Wall Art | Digital Download",
+      "state": "draft"
+    },
+    {
+      "listing_id": 4603569413,
+      "title": "Sleepy Fox in Autumn | Printable Postcard | Digital Download",
+      "state": "draft"
+    },
+    {
+      "listing_id": 4603569385,
+      "title": "Sleepy Fox in Autumn | Printable Greeting Card | Digital Download",
+      "state": "draft"
+    },
+    {
+      "listing_id": 4603569319,
+      "title": "Highland Cow in Wildflowers | Printable Postcard | Digital Download",
+      "state": "draft"
+    },
+    {
+      "listing_id": 4603590636,
+      "title": "Highland Cow in Wildflowers | Printable Greeting Card | Digital Download",
+      "state": "draft"
+    },
+    {
+      "listing_id": 4603590558,
+      "title": "Daisy Meadow Bunny | Printable Postcard | Digital Download",
+      "state": "draft"
+    },
+    {
+      "listing_id": 4603590524,
+      "title": "Daisy Meadow Bunny | Printable Greeting Card | Digital Download",
+      "state": "draft"
+    },
+    {
+      "listing_id": 4603569083,
+      "title": "Best Friends Dog and Cat | Printable Postcard | Digital Download",
+      "state": "draft"
+    },
+    {
+      "listing_id": 4603569055,
+      "title": "Best Friends Dog and Cat | Printable Greeting Card | Digital Download",
+      "state": "draft"
+    },
+    {
+      "listing_id": 4603590352,
+      "title": "Best Friends Dog and Cat | Printable Wall Art | Digital Download",
+      "state": "draft"
+    },
+    {
+      "listing_id": 4603568965,
+      "title": "Sleepy Ginger Cat | Printable Postcard | Digital Download",
+      "state": "draft"
+    },
+    {
+      "listing_id": 4603568929,
+      "title": "Sleepy Ginger Cat | Printable Greeting Card | Digital Download",
+      "state": "draft"
+    },
+    {
+      "listing_id": 4603568885,
+      "title": "Sleepy Ginger Cat | Printable Wall Art | Digital Download",
+      "state": "draft"
+    },
+    {
+      "listing_id": 4603567007,
+      "title": "Sleepy Ginger Cat | Printable Wall Art | Digital Download",
+      "state": "draft"
+    },
+    {
+      "listing_id": 4603491613,
+      "title": "Radiate Good Energy Sun Printable | Boho Sun Wall Art | Positive Quote Digital Download",
+      "state": "draft"
+    },
+    {
+      "listing_id": 4603513112,
+      "title": "Good Things Take Time Cat Printable | Funny Cat Wall Art | Positive Digital Download",
+      "state": "draft"
+    },
+    {
+      "listing_id": 4603491521,
+      "title": "Slow Down Sea Turtle Printable | Ocean Wall Art | Mindful Quote Digital Download",
+      "state": "draft"
+    },
+    {
+      "listing_id": 4603513014,
+      "title": "Life Is Better With a Dog Printable | Dog Lover Wall Art | Happy Dog Digital Download",
+      "state": "draft"
+    },
+    {
+      "listing_id": 4603512936,
+      "title": "Just One More Chapter Cat Printable | Book Lover Wall Art | Cozy Reading Digital Download",
+      "state": "draft"
+    },
+    {
+      "listing_id": 4603491319,
+      "title": "Good Vibes Only Beach Printable | Sunset Coastal Wall Art | Positive Quote Digital Download",
+      "state": "draft"
+    }
+  ]
+}
