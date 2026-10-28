@@ -1,29 +1,44 @@
-name: Generate 30 series artworks and Etsy drafts
+name: Generate 30 series artworks for human review
 on:
   workflow_dispatch:
   push:
     paths:
       - "data/generation_run_token.txt"
+      - "scripts/generate_30_series.py"
+      - "scripts/review_gate.py"
 permissions:
   contents: read
 jobs:
-  generate-and-upload:
+  generate-review-bundle:
     runs-on: ubuntu-latest
-    timeout-minutes: 60
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v5
       - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
       - name: Install dependencies
-        run: pip install requests pillow cairosvg
-      - name: Generate 30 high-resolution artworks
+        run: pip install pillow cairosvg
+      - name: Test mandatory human-review gate
+        run: python -m unittest discover -s scripts -p "test_review_gate.py" -v
+      - name: Generate 30 high-resolution artwork candidates
         run: python scripts/generate_30_series.py
-      - name: Repurpose into product formats
-        run: python scripts/repurpose_products.py
-      - name: Create Etsy drafts
-        env:
-          ETSY_KEYSTRING: ${{ secrets.ETSY_KEYSTRING }}
-          ETSY_SHARED_SECRET: ${{ secrets.ETSY_SHARED_SECRET }}
-          ETSY_REFRESH_TOKEN: ${{ secrets.ETSY_REFRESH_TOKEN }}
-        run: python scripts/upload_repurposed_drafts.py
+      - name: Confirm generated items are blocked from Etsy upload
+        run: |
+          python scripts/review_gate.py data/generated_manifest.json
+          python - <<'PY'
+          import json
+          d=json.load(open("data/generated_manifest.json"))
+          assert d["items"], "No generated items"
+          assert all(x["status"]=="needs_human_review" for x in d["items"])
+          assert all(not x.get("human_reviewed_at") for x in d["items"])
+          print(f"{len(d['items'])} candidates correctly require individual review.")
+          PY
+      - name: Upload review bundle only
+        uses: actions/upload-artifact@v4
+        with:
+          name: etsy-series-review-bundle
+          path: |
+            assets/generated/
+            data/generated_manifest.json
+          retention-days: 7
