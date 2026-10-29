@@ -1,0 +1,164 @@
+{
+  "version": 1,
+  "purpose": "First 10 Etsy test listings: six existing owner-approved drafts + four new researched designs",
+  "price_usd": "4.90",
+  "auto_renew": false,
+  "publish_allowed": false,
+  "style": "cozy-photoreal + selected clean/celestial",
+  "items": [
+    {
+      "slot": 1,
+      "status": "EXISTING_DRAFT_READY",
+      "listing_id": 4603513112,
+      "title": "Good Things Take Time Cat Printable | Funny Cat Wall Art | Positive Quote",
+      "keyword": "cozy cat wall art",
+      "style": "cozy photoreal",
+      "asset": "assets/final/08-good-things-take-time.png"
+    },
+    {
+      "slot": 2,
+      "status": "EXISTING_DRAFT_READY",
+      "listing_id": 4603512936,
+      "title": "Just One More Chapter Cat Printable | Book Lover Wall Art | Reading Nook Decor",
+      "keyword": "book lover wall art",
+      "style": "cozy photoreal",
+      "asset": "assets/final/03-just-one-more-chapter.png"
+    },
+    {
+      "slot": 3,
+      "status": "EXISTING_DRAFT_READY",
+      "listing_id": 4603513014,
+      "title": "Life Is Better With a Dog Printable | Dog Lover Wall Art | Happy Dog Decor",
+      "keyword": "dog lover wall art",
+      "style": "cozy photoreal",
+      "asset": "assets/final/05-life-is-better-with-a-dog.png"
+    },
+    {
+      "slot": 4,
+      "status": "EXISTING_DRAFT_READY",
+      "listing_id": 4603491287,
+      "title": "Highland Cow Coffee Printable | Highland Cow Wall Art | Funny Kitchen Decor",
+      "keyword": "highland cow wall art",
+      "style": "cozy photoreal",
+      "asset": "assets/final/01-coffee-first.png"
+    },
+    {
+      "slot": 5,
+      "status": "NEEDS_NEW_IMAGE",
+      "id": "sleepy-ginger-cat",
+      "title": "Sleepy Ginger Cat Printable | Cozy Cat Wall Art | Cat Lover Decor",
+      "keyword": "cozy cat wall art",
+      "research_score": 52.8,
+      "style": "cozy photoreal",
+      "tags": [
+        "cat lover gift",
+        "cozy cat wall art",
+        "cozy home decor",
+        "cat wall art",
+        "cottagecore decor",
+        "printable wall art",
+        "whimsical cat art",
+        "digital download",
+        "sleeping cat print",
+        "cat lover decor",
+        "cat mom gift",
+        "bedroom wall art",
+        "cozy wall decor"
+      ],
+      "image_brief": "Photorealistic cozy ginger tabby asleep curled on a soft knitted blanket near a warm window, colorful but tasteful warm amber/teal accents, natural morning light, highly realistic fur, inviting home interior, premium wall-art composition, no text, no logos, no frame/mockup, vertical 4:5 composition, visually related to the owner's existing colorful photoreal cozy-animal series."
+    },
+    {
+      "slot": 6,
+      "status": "NEEDS_NEW_IMAGE",
+      "id": "eucalyptus-minimal",
+      "title": "Eucalyptus Wall Art Printable | Sage Green Botanical Print | Minimal Nature Decor",
+      "keyword": "eucalyptus wall art",
+      "research_score": 82.5,
+      "style": "clean minimal",
+      "tags": [
+        "eucalyptus wall art",
+        "botanical wall art",
+        "eucalyptus print",
+        "printable wall art",
+        "sage green decor",
+        "botanical print",
+        "sage green wall art",
+        "neutral wall art",
+        "neutral wall decor",
+        "nature wall art",
+        "digital download",
+        "eucalyptus decor",
+        "gallery wall set"
+      ],
+      "image_brief": "Clean minimal eucalyptus artwork, elegant realistic eucalyptus stems and leaves, soft sage green and warm off-white palette, refined natural shadows, lots of negative space, premium Scandinavian gallery-wall aesthetic, no text, no frame/mockup, vertical 4:5."
+    },
+    {
+      "slot": 7,
+      "status": "NEEDS_NEW_IMAGE",
+      "id": "olive-branch-sun",
+      "title": "Olive Branch Wall Art Printable | Mediterranean Botanical Print | Neutral Kitchen Decor",
+      "keyword": "olive branch wall art",
+      "research_score": 73.2,
+      "style": "clean minimal",
+      "tags": [
+        "olive branch art",
+        "botanical wall art",
+        "mediterranean decor",
+        "kitchen wall art",
+        "botanical print",
+        "rustic wall art",
+        "mediterranean art",
+        "nature wall art",
+        "neutral wall art",
+        "olive branch print",
+        "printable wall art",
+        "dining room art",
+        "olive branch decor"
+      ],
+      "image_brief": "Clean Mediterranean olive branch artwork, realistic olive leaves and small olives with a restrained warm sun-disc accent, cream/olive palette, elegant minimal composition, premium modern kitchen/dining room wall art, no text, no frame/mockup, vertical 4:5."
+    },
+    {
+      "slot": 8,
+      "status": "EXISTING_DRAFT_READY",
+      "listing_id": 4603491613,
+      "title": "Radiate Good Energy Sun Printable | Boho Sun Wall Art | Positive Quote",
+      "keyword": "boho sun wall art",
+      "style": "boho celestial",
+      "asset": "assets/final/10-radiate-good-energy.png"
+    },
+    {
+      "slot": 9,
+      "status": "EXISTING_DRAFT_READY",
+      "listing_id": 4603491575,
+      "title": "Trust The Process Moon Phase Printable | Moon Phase Wall Art | Celestial Decor",
+      "keyword": "moon phase wall art",
+      "style": "boho celestial",
+      "asset": "assets/final/09-trust-the-process.png"
+    },
+    {
+      "slot": 10,
+      "status": "NEEDS_NEW_IMAGE",
+      "id": "sun-moon-harmony",
+      "title": "Sun and Moon Wall Art Printable | Celestial Boho Print | Mystical Decor",
+      "keyword": "sun and moon wall art",
+      "research_score": 82,
+      "style": "boho celestial",
+      "tags": [
+        "celestial wall art",
+        "sun and moon art",
+        "sun and moon",
+        "sun moon wall art",
+        "celestial decor",
+        "sun and moon print",
+        "boho wall art",
+        "boho wall decor",
+        "moon wall art",
+        "astrology decor",
+        "printable wall art",
+        "mystical wall art",
+        "digital download"
+      ],
+      "image_brief": "Premium sun-and-moon celestial wall art, dark atmospheric midnight blue background, luminous warm gold and cream sun/moon elements, elegant balanced harmony motif, subtle stars, strong depth and sophisticated boho-mystical aesthetic, no text, no logos, no frame/mockup, vertical 4:5."
+    }
+  ]
+}
