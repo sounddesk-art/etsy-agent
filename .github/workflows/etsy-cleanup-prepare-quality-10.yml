@@ -27,12 +27,14 @@ jobs:
           python-version: "3.12"
       - run: pip install requests
       - name: Delete only programmed draft batch
+        continue-on-error: true
         env:
           ETSY_KEYSTRING: ${{ secrets.ETSY_KEYSTRING }}
           ETSY_SHARED_SECRET: ${{ secrets.ETSY_SHARED_SECRET }}
           ETSY_REFRESH_TOKEN: ${{ secrets.ETSY_REFRESH_TOKEN }}
         run: python scripts/cleanup_programmed_drafts.py
       - name: Optimize metadata on the 10 owner-approved quality drafts
+        if: always()
         env:
           ETSY_KEYSTRING: ${{ secrets.ETSY_KEYSTRING }}
           ETSY_SHARED_SECRET: ${{ secrets.ETSY_SHARED_SECRET }}
