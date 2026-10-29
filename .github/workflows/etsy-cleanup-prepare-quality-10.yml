@@ -1,0 +1,40 @@
+name: One-time Etsy cleanup + prepare quality 10
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/cleanup_programmed_drafts.py"
+      - "scripts/prepare_quality_10.py"
+      - ".github/workflows/etsy-cleanup-prepare-quality-10.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: etsy-cleanup-prepare-quality-10
+  cancel-in-progress: false
+
+jobs:
+  owner-approved-maintenance:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - run: pip install requests
+      - name: Delete only programmed draft batch
+        env:
+          ETSY_KEYSTRING: ${{ secrets.ETSY_KEYSTRING }}
+          ETSY_SHARED_SECRET: ${{ secrets.ETSY_SHARED_SECRET }}
+          ETSY_REFRESH_TOKEN: ${{ secrets.ETSY_REFRESH_TOKEN }}
+        run: python scripts/cleanup_programmed_drafts.py
+      - name: Optimize metadata on the 10 owner-approved quality drafts
+        env:
+          ETSY_KEYSTRING: ${{ secrets.ETSY_KEYSTRING }}
+          ETSY_SHARED_SECRET: ${{ secrets.ETSY_SHARED_SECRET }}
+          ETSY_REFRESH_TOKEN: ${{ secrets.ETSY_REFRESH_TOKEN }}
+        run: python scripts/prepare_quality_10.py
