@@ -5,7 +5,7 @@ Private Etsy seller automation for creating coherent digital-product listings as
 ## Safety defaults
 - Draft listings only
 - No automatic publishing
-- Minimum OAuth scopes: `listings_r listings_w shops_r`
+- Minimum OAuth scopes: `listings_r listings_w listings_d shops_r`
 - Shared secret and refresh token are never committed
 - Copyright/IP imitation is forbidden; generic archetypes are allowed, recognizable franchise copies are not
 
@@ -38,7 +38,7 @@ Open:
 
 Enter only the Etsy API Keystring. The helper creates PKCE values locally and requests:
 
-`listings_r listings_w shops_r`
+`listings_r listings_w listings_d shops_r`
 
 After approval, the callback attempts to exchange the one-time authorization code for OAuth tokens. Copy the returned refresh token into the GitHub secret `ETSY_REFRESH_TOKEN`.
 
