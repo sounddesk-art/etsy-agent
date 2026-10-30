@@ -5,7 +5,8 @@ Private Etsy seller automation for creating coherent digital-product listings as
 ## Safety defaults
 - Draft listings only
 - No automatic publishing
-- Minimum OAuth scopes: `listings_r listings_w listings_d shops_r`
+- Normal draft-operation OAuth scopes: `listings_r listings_w shops_r`
+- `listings_d` is optional and only needed for an explicitly owner-approved API deletion/cleanup
 - Shared secret and refresh token are never committed
 - Copyright/IP imitation is forbidden; generic archetypes are allowed, recognizable franchise copies are not
 
@@ -38,7 +39,7 @@ Open:
 
 Enter only the Etsy API Keystring. The helper creates PKCE values locally and requests:
 
-`listings_r listings_w listings_d shops_r`
+`listings_r listings_w shops_r`
 
 After approval, the callback attempts to exchange the one-time authorization code for OAuth tokens. Copy the returned refresh token into the GitHub secret `ETSY_REFRESH_TOKEN`.
 
@@ -77,3 +78,37 @@ It never activates/publishes the listing.
 
 ## Continuous efficiency rule
 After each production run, the agent should reduce redundant reasoning, duplicate research and unnecessary image generations while preserving or improving quality. Quality, commercial usefulness, IP safety and visual consistency always outrank token savings.
+
+
+## Cross-chat and resource-reuse rule
+
+Before requesting Etsy setup, OAuth reauthorization, a new secret, manual upload, or a replacement workflow, first inspect the existing repository, GitHub Actions, current granted scopes, recent successful runs, Drive archive and the private `sounddesk-art/enterprise-agent` bootstrap rules.
+
+Do not ask the owner to reauthorize merely because `listings_d` is absent. Normal draft creation/editing does not require delete scope. If deletion is not part of the current task, continue with the existing draft workflow.
+
+The canonical general rule is maintained in `sounddesk-art/enterprise-agent/docs/CROSS_CHAT_BOOTSTRAP.md`.
+
+## Image asset storage standard
+
+Google Drive is the durable archive for generated Etsy image masters. GitHub is only temporary staging when the Etsy workflow needs repository-local files.
+
+Standard path:
+
+```text
+Generate/approve image in ChatGPT
+→ assign stable numbered filename
+→ archive original in Google Drive
+→ copy temporarily into GitHub staging
+→ create Etsy listing as DRAFT only
+→ verify Etsy listing ID, image upload and digital file upload
+→ remove temporary GitHub image binary
+→ keep Drive archive + small GitHub manifest/audit metadata
+```
+
+Rules:
+
+- Never delete the Drive archive automatically as part of GitHub cleanup.
+- Never remove the temporary GitHub image until the Etsy draft and required uploads are verified.
+- Keep titles, tags, descriptions, Drive references, checksums/status and Etsy listing IDs in lightweight manifests where useful.
+- Large image binaries should not remain permanently in GitHub unless there is a specific documented reason.
+- Draft creation is allowed inside the approved Etsy experiment; activation/publication remains disabled unless separately approved.
