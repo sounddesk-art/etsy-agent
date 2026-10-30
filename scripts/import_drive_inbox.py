@@ -6,8 +6,8 @@ from googleapiclient.discovery import build
 from googleapiclient.http import MediaIoBaseDownload
 
 SCOPES=["https://www.googleapis.com/auth/drive"]
-INBOX=os.environ.get("GOOGLE_DRIVE_INBOX_FOLDER_ID","1dg_YipMZrJ5OFydC9GK1qifojdCi5zXw")
-MANIFESTS=os.environ.get("GOOGLE_DRIVE_MANIFESTS_FOLDER_ID","1_rdYUXofqyfXqD1Rijhfypc4hk9oWyLW")
+INBOX=(os.environ.get("GOOGLE_DRIVE_INBOX_FOLDER_ID") or "1dg_YipMZrJ5OFydC9GK1qifojdCi5zXw")
+MANIFESTS=(os.environ.get("GOOGLE_DRIVE_MANIFESTS_FOLDER_ID") or "1_rdYUXofqyfXqD1Rijhfypc4hk9oWyLW")
 
 WORK=Path("drive_inbox")
 ASSETS=Path("assets/generated")
