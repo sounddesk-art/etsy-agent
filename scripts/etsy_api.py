@@ -118,6 +118,22 @@ def update_listing(access_token, shop_id, listing_id, payload):
     r.raise_for_status()
     return r.json()
 
+
+def get_listing(access_token,shop_id,listing_id):
+    r=requests.get(f"{BASE}/application/listings/{listing_id}",headers=auth_headers(access_token),timeout=30)
+    r.raise_for_status()
+    return r.json()
+
+def get_listing_images(access_token,shop_id,listing_id):
+    r=requests.get(f"{BASE}/application/listings/{listing_id}/images",headers=auth_headers(access_token),timeout=30)
+    r.raise_for_status()
+    return r.json()
+
+def get_listing_files(access_token,shop_id,listing_id):
+    r=requests.get(f"{BASE}/application/shops/{shop_id}/listings/{listing_id}/files",headers=auth_headers(access_token),timeout=30)
+    r.raise_for_status()
+    return r.json()
+
 def upload_image(access_token, shop_id, listing_id, path, rank=1, alt_text=""):
     with open(path,"rb") as fh:
         r=requests.post(
