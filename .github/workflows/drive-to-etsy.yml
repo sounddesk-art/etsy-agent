@@ -27,9 +27,9 @@ jobs:
         run: pip install requests pillow google-api-python-client google-auth
       - name: Download owner-authorized images from Drive into ephemeral runner workspace
         env:
-          GOOGLE_SERVICE_ACCOUNT_JSON: \${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
-          GOOGLE_DRIVE_INBOX_FOLDER_ID: \${{ vars.GOOGLE_DRIVE_INBOX_FOLDER_ID }}
-          GOOGLE_DRIVE_MANIFESTS_FOLDER_ID: \${{ vars.GOOGLE_DRIVE_MANIFESTS_FOLDER_ID }}
+          GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
+          GOOGLE_DRIVE_INBOX_FOLDER_ID: ${{ vars.GOOGLE_DRIVE_INBOX_FOLDER_ID }}
+          GOOGLE_DRIVE_MANIFESTS_FOLDER_ID: ${{ vars.GOOGLE_DRIVE_MANIFESTS_FOLDER_ID }}
         run: python scripts/import_drive_inbox.py
       - name: Check whether inbox has images
         id: count
@@ -45,17 +45,17 @@ jobs:
         if: steps.count.outputs.count != '0'
         continue-on-error: true
         env:
-          ETSY_KEYSTRING: \${{ secrets.ETSY_KEYSTRING }}
-          ETSY_SHARED_SECRET: \${{ secrets.ETSY_SHARED_SECRET }}
-          ETSY_REFRESH_TOKEN: \${{ secrets.ETSY_REFRESH_TOKEN }}
+          ETSY_KEYSTRING: ${{ secrets.ETSY_KEYSTRING }}
+          ETSY_SHARED_SECRET: ${{ secrets.ETSY_SHARED_SECRET }}
+          ETSY_REFRESH_TOKEN: ${{ secrets.ETSY_REFRESH_TOKEN }}
         run: python scripts/upload_drive_wall_art_drafts.py
       - name: Archive successfully uploaded originals in Drive and persist receipt
         if: always() && steps.count.outputs.count != '0'
         env:
-          GOOGLE_SERVICE_ACCOUNT_JSON: \${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
-          GOOGLE_DRIVE_INBOX_FOLDER_ID: \${{ vars.GOOGLE_DRIVE_INBOX_FOLDER_ID }}
-          GOOGLE_DRIVE_ARCHIVE_FOLDER_ID: \${{ vars.GOOGLE_DRIVE_ARCHIVE_FOLDER_ID }}
-          GOOGLE_DRIVE_MANIFESTS_FOLDER_ID: \${{ vars.GOOGLE_DRIVE_MANIFESTS_FOLDER_ID }}
+          GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
+          GOOGLE_DRIVE_INBOX_FOLDER_ID: ${{ vars.GOOGLE_DRIVE_INBOX_FOLDER_ID }}
+          GOOGLE_DRIVE_ARCHIVE_FOLDER_ID: ${{ vars.GOOGLE_DRIVE_ARCHIVE_FOLDER_ID }}
+          GOOGLE_DRIVE_MANIFESTS_FOLDER_ID: ${{ vars.GOOGLE_DRIVE_MANIFESTS_FOLDER_ID }}
         run: python scripts/move_drive_uploaded.py
       - name: Fail closed if any Etsy draft failed verification
         if: always() && steps.count.outputs.count != '0'
