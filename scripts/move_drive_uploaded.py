@@ -6,9 +6,9 @@ from googleapiclient.discovery import build
 from googleapiclient.http import MediaFileUpload
 
 SCOPES=["https://www.googleapis.com/auth/drive"]
-INBOX=os.environ.get("GOOGLE_DRIVE_INBOX_FOLDER_ID","1dg_YipMZrJ5OFydC9GK1qifojdCi5zXw")
-ARCHIVE=os.environ.get("GOOGLE_DRIVE_ARCHIVE_FOLDER_ID","148AAzhyN9kZQ4x50JpEHy5_a2PclUnTV")
-MANIFESTS=os.environ.get("GOOGLE_DRIVE_MANIFESTS_FOLDER_ID","1_rdYUXofqyfXqD1Rijhfypc4hk9oWyLW")
+INBOX=(os.environ.get("GOOGLE_DRIVE_INBOX_FOLDER_ID") or "1dg_YipMZrJ5OFydC9GK1qifojdCi5zXw")
+ARCHIVE=(os.environ.get("GOOGLE_DRIVE_ARCHIVE_FOLDER_ID") or "148AAzhyN9kZQ4x50JpEHy5_a2PclUnTV")
+MANIFESTS=(os.environ.get("GOOGLE_DRIVE_MANIFESTS_FOLDER_ID") or "1_rdYUXofqyfXqD1Rijhfypc4hk9oWyLW")
 
 def main():
     info=json.loads(os.environ["GOOGLE_SERVICE_ACCOUNT_JSON"])
