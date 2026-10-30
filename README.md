@@ -112,3 +112,25 @@ Rules:
 - Keep titles, tags, descriptions, Drive references, checksums/status and Etsy listing IDs in lightweight manifests where useful.
 - Large image binaries should not remain permanently in GitHub unless there is a specific documented reason.
 - Draft creation is allowed inside the approved Etsy experiment; activation/publication remains disabled unless separately approved.
+
+## Bulk generation and timeout-safe operation
+
+Etsy image jobs follow the Sounddesk bulk standard in sounddesk-art/enterprise-agent/docs/BULK_TIMEOUT_EXECUTION.md.
+
+Default behavior for large ChatGPT-generated image jobs:
+
+1. Treat the full request as one master job.
+2. Split generation into deterministic batches of up to 10 images.
+3. Number files globally across the master job, not separately per chat.
+4. Upload each completed batch to Google Drive immediately.
+5. Persist/update the master manifest after every batch.
+6. Never regenerate a batch already durably archived and verified.
+7. When the owner asks for generation first, use collect_then_process:
+   - generate all requested batches;
+   - confirm ALL_ASSETS_READY;
+   - only then trigger the Drive/GitHub/Hetzner -> Etsy draft workflow.
+8. The external workflow may continue independently of the chat after it is triggered.
+9. A chat timeout is not an owner action. Resume from Drive + manifests.
+10. Notify the owner only at complete master-job success or when a verified owner-only blocker exists, when low-interruption execution was requested.
+
+Recommended master-job state lives in lightweight JSON manifests. Full-resolution images remain in Drive; GitHub stores only temporary staging binaries plus durable lightweight state/receipts.
