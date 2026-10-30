@@ -1,0 +1,32 @@
+name: Market intelligence (safe baseline)
+on:
+  pull_request:
+    paths:
+      - 'market-intelligence/**'
+      - '.github/workflows/market-intelligence.yml'
+  workflow_dispatch:
+  schedule:
+    - cron: '23 7 * * *'
+permissions:
+  contents: read
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Unit tests
+        run: python -m unittest discover -s market-intelligence -p 'test_*.py' -v
+      - name: Produce baseline report
+        run: python market-intelligence/scanner.py --db /tmp/sounddesk-market.sqlite --output /tmp/market-report.json
+      - name: Upload report artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: market-intelligence-report
+          path: |
+            /tmp/market-report.json
+            /tmp/market-report.csv
+          retention-days: 14
