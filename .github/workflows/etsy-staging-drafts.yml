@@ -1,0 +1,68 @@
+name: Archived Drive assets to Etsy drafts
+
+on:
+  push:
+    branches:
+      - etsy-staging
+    paths:
+      - "staging/**"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: etsy-staging-drafts
+  cancel-in-progress: false
+
+jobs:
+  create-drafts:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - name: Detect staging batch
+        id: batch
+        run: |
+          if [ -f staging/batch.json ]; then
+            echo "present=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "present=false" >> "$GITHUB_OUTPUT"
+            echo "No staging batch present; clean branch reset/no-op."
+          fi
+      - name: Install dependencies
+        if: steps.batch.outputs.present == 'true'
+        run: pip install requests pillow
+      - name: Prepare ephemeral Etsy assets
+        if: steps.batch.outputs.present == 'true'
+        run: |
+          mkdir -p assets/generated data output
+          cp staging/batch.json data/generated_manifest.json
+          cp staging/images/* assets/generated/
+      - name: Create and verify one Etsy draft per image
+        if: steps.batch.outputs.present == 'true'
+        env:
+          ETSY_KEYSTRING: \${{ secrets.ETSY_KEYSTRING }}
+          ETSY_SHARED_SECRET: \${{ secrets.ETSY_SHARED_SECRET }}
+          ETSY_REFRESH_TOKEN: \${{ secrets.ETSY_REFRESH_TOKEN }}
+        run: python scripts/upload_drive_wall_art_drafts.py
+      - name: Summarize verified result
+        if: steps.batch.outputs.present == 'true'
+        run: |
+          python - <<'PY'
+          import json,sys
+          d=json.load(open("output/etsy_upload_result.json"))
+          print(json.dumps(d,indent=2))
+          if d.get("failed",0):
+              sys.exit(2)
+          PY
+      - name: Upload lightweight receipt artifact
+        if: steps.batch.outputs.present == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: etsy-draft-receipt
+          path: output/etsy_upload_result.json
+          retention-days: 1
