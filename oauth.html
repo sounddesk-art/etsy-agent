@@ -15,11 +15,11 @@ button{margin-top:14px;background:#111827;color:white;cursor:pointer}.box{border
 <label for="key">Etsy API Keystring</label>
 <input id="key" autocomplete="off" placeholder="Paste keystring">
 <button id="go">Authorize Etsy shop</button>
-<p class="muted">Requested scopes: listings_r listings_w listings_d shops_r</p>
+<p class="muted">Requested scopes: listings_r listings_w shops_r</p>
 </div>
 <script>
 const REDIRECT='https://sounddesk-art.github.io/etsy-agent/oauth-callback.html';
-const SCOPES='listings_r listings_w listings_d shops_r';
+const SCOPES='listings_r listings_w shops_r';
 function b64url(bytes){return btoa(String.fromCharCode(...bytes)).replace(/\+/g,'-').replace(/\//g,'_').replace(/=+$/,'')}
 async function sha256(s){return new Uint8Array(await crypto.subtle.digest('SHA-256',new TextEncoder().encode(s)))}
 document.getElementById('go').onclick=async()=>{
