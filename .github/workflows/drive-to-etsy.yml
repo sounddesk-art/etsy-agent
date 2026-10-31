@@ -16,7 +16,7 @@ concurrency:
 
 jobs:
   process:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     timeout-minutes: 30
     steps:
       - uses: actions/checkout@v5
@@ -25,11 +25,18 @@ jobs:
           python-version: "3.12"
       - name: Install dependencies
         run: pip install requests pillow google-api-python-client google-auth
-      - name: Download owner-authorized images from Drive into ephemeral runner workspace
+      - name: Preflight runner credentials
         env:
-          GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
-          GOOGLE_DRIVE_INBOX_FOLDER_ID: ${{ vars.GOOGLE_DRIVE_INBOX_FOLDER_ID }}
-          GOOGLE_DRIVE_MANIFESTS_FOLDER_ID: ${{ vars.GOOGLE_DRIVE_MANIFESTS_FOLDER_ID }}
+          ETSY_KEYSTRING: ${{ secrets.ETSY_KEYSTRING }}
+          ETSY_SHARED_SECRET: ${{ secrets.ETSY_SHARED_SECRET }}
+          ETSY_REFRESH_TOKEN: ${{ secrets.ETSY_REFRESH_TOKEN }}
+        run: |
+          python - <<'PY'
+          import os
+          keys=["GOOGLE_SERVICE_ACCOUNT_JSON","ETSY_KEYSTRING","ETSY_SHARED_SECRET","ETSY_REFRESH_TOKEN"]
+          for k in keys: print(f"{k}={'SET' if bool(os.environ.get(k)) else 'MISSING'}")
+          PY
+      - name: Download owner-authorized images from Drive into ephemeral runner workspace
         run: python scripts/import_drive_inbox.py
       - name: Check whether inbox has images
         id: count
