@@ -1,2 +1,2 @@
-trigger=2026-10-30T18:16:11.862Z
-reason=retry-after-secret-expression-fix
+trigger=2026-10-31T14:50:00+01:00
+reason=self-hosted-preflight-and-batch-retry
