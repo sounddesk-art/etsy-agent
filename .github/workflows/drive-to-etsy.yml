@@ -16,38 +16,56 @@ concurrency:
 
 jobs:
   process:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
       - uses: actions/checkout@v5
       - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
+
       - name: Install dependencies
         run: pip install requests pillow google-api-python-client google-auth
-      - name: Preflight runner credentials
+
+      - name: Preflight credentials
         env:
+          GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
           ETSY_KEYSTRING: ${{ secrets.ETSY_KEYSTRING }}
           ETSY_SHARED_SECRET: ${{ secrets.ETSY_SHARED_SECRET }}
           ETSY_REFRESH_TOKEN: ${{ secrets.ETSY_REFRESH_TOKEN }}
         run: |
           python - <<'PY'
-          import os
+          import os, sys
           keys=["GOOGLE_SERVICE_ACCOUNT_JSON","ETSY_KEYSTRING","ETSY_SHARED_SECRET","ETSY_REFRESH_TOKEN"]
-          for k in keys: print(f"{k}={'SET' if bool(os.environ.get(k)) else 'MISSING'}")
+          missing=[]
+          for k in keys:
+              ok=bool(os.environ.get(k))
+              print(f"{k}={'SET' if ok else 'MISSING'}")
+              if not ok: missing.append(k)
+          if missing:
+              sys.exit("Missing required credentials: " + ", ".join(missing))
           PY
+
       - name: Download owner-authorized images from Drive into ephemeral runner workspace
+        env:
+          GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
+          GOOGLE_DRIVE_INBOX_FOLDER_ID: "1tgQ6EQADya0-tnv2sDDvZdkkmQWmIWoJ"
+          GOOGLE_DRIVE_MANIFESTS_FOLDER_ID: "1_rdYUXofqyfXqD1Rijhfypc4hk9oWyLW"
         run: python scripts/import_drive_inbox.py
+
       - name: Check whether inbox has images
         id: count
+        shell: bash
         run: |
-          python - <<'PY'
+          count="$(python - <<'PY'
           import json
           d=json.load(open("data/generated_manifest.json"))
-          n=len(d.get("items",[]))
-          print(f"count={n}")
-          with open("$GITHUB_OUTPUT","a") as f: f.write(f"count={n}\n")
+          print(len(d.get("items",[])))
           PY
+          )"
+          echo "count=$count"
+          echo "count=$count" >> "$GITHUB_OUTPUT"
+
       - name: Create and verify exactly one Etsy wall-art draft per image
         if: steps.count.outputs.count != '0'
         continue-on-error: true
@@ -56,22 +74,27 @@ jobs:
           ETSY_SHARED_SECRET: ${{ secrets.ETSY_SHARED_SECRET }}
           ETSY_REFRESH_TOKEN: ${{ secrets.ETSY_REFRESH_TOKEN }}
         run: python scripts/upload_drive_wall_art_drafts.py
+
       - name: Archive successfully uploaded originals in Drive and persist receipt
         if: always() && steps.count.outputs.count != '0'
         env:
           GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
-          GOOGLE_DRIVE_INBOX_FOLDER_ID: ${{ vars.GOOGLE_DRIVE_INBOX_FOLDER_ID }}
-          GOOGLE_DRIVE_ARCHIVE_FOLDER_ID: ${{ vars.GOOGLE_DRIVE_ARCHIVE_FOLDER_ID }}
-          GOOGLE_DRIVE_MANIFESTS_FOLDER_ID: ${{ vars.GOOGLE_DRIVE_MANIFESTS_FOLDER_ID }}
+          GOOGLE_DRIVE_INBOX_FOLDER_ID: "1tgQ6EQADya0-tnv2sDDvZdkkmQWmIWoJ"
+          GOOGLE_DRIVE_ARCHIVE_FOLDER_ID: "1IziCTuYTfNpmWP8Yzzi8eDw0-M0Z-bWV"
+          GOOGLE_DRIVE_MANIFESTS_FOLDER_ID: "1_rdYUXofqyfXqD1Rijhfypc4hk9oWyLW"
         run: python scripts/move_drive_uploaded.py
+
       - name: Fail closed if any Etsy draft failed verification
         if: always() && steps.count.outputs.count != '0'
         run: |
           python - <<'PY'
           import json,sys
-          try: d=json.load(open("output/etsy_upload_result.json"))
+          try:
+              d=json.load(open("output/etsy_upload_result.json"))
           except Exception as e:
-            print("missing upload result",e); sys.exit(2)
+              print("missing upload result",e)
+              sys.exit(2)
           print(f"verified_created={d.get('created',0)} failed={d.get('failed',0)}")
-          if d.get("failed",0): sys.exit(2)
+          if d.get("failed",0):
+              sys.exit(2)
           PY
