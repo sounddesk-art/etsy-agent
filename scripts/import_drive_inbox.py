@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-import os, io, json, re, time
+import os, io, json, re, time, datetime
 from pathlib import Path
 from google.oauth2 import service_account
 from googleapiclient.discovery import build
@@ -8,6 +8,10 @@ from googleapiclient.http import MediaIoBaseDownload
 SCOPES=["https://www.googleapis.com/auth/drive"]
 INBOX=(os.environ.get("GOOGLE_DRIVE_INBOX_FOLDER_ID") or "1dg_YipMZrJ5OFydC9GK1qifojdCi5zXw")
 MANIFESTS=(os.environ.get("GOOGLE_DRIVE_MANIFESTS_FOLDER_ID") or "1_rdYUXofqyfXqD1Rijhfypc4hk9oWyLW")
+OWNER_BATCH_AUTHORIZED=(os.environ.get("OWNER_BATCH_AUTHORIZED") or "").strip().lower() in {"1","true","yes"}
+OWNER_BATCH_AUTHORIZED_BY=(os.environ.get("OWNER_BATCH_AUTHORIZED_BY") or "owner").strip()
+OWNER_PROMPT_OR_NOTES=(os.environ.get("OWNER_PROMPT_OR_NOTES") or "Owner-authorized Drive batch for Etsy draft creation").strip()
+OWNER_BATCH_ID=(os.environ.get("OWNER_BATCH_ID") or "").strip() or None
 
 WORK=Path("drive_inbox")
 ASSETS=Path("assets/generated")
@@ -69,6 +73,7 @@ def main():
     svc=service(); meta_map=manifests(svc)
     images=[f for f in list_files(svc,INBOX) if f["mimeType"].startswith("image/")]
     items=[]; move_map=[]
+    authorized_at=datetime.datetime.now(datetime.timezone.utc).isoformat() if OWNER_BATCH_AUTHORIZED else None
     for i,f in enumerate(images,1):
         ext=Path(f["name"]).suffix.lower()
         if ext not in [".png",".jpg",".jpeg",".webp"]: continue
@@ -83,11 +88,12 @@ def main():
             "display_name":display,"series":series,"file":f["name"],
             "products":meta.get("products") or ["wall_art"],"tags":tags,
             "keyword":meta.get("keyword"),"title":meta.get("title"),"price":meta.get("price","4.90"),
-            "status":meta.get("status","needs_review"),"drive_file_id":f["id"],
-            "batch_id":meta.get("batch_id"),"style":meta.get("style"),
-            "owner_batch_authorized_at":meta.get("owner_batch_authorized_at"),
-            "owner_batch_authorized_by":meta.get("owner_batch_authorized_by"),
-            "owner_prompt_or_notes":meta.get("owner_prompt_or_notes"),
+            "status":meta.get("status") or ("approved_for_draft" if OWNER_BATCH_AUTHORIZED else "needs_review"),
+            "drive_file_id":f["id"],
+            "batch_id":meta.get("batch_id") or OWNER_BATCH_ID,"style":meta.get("style"),
+            "owner_batch_authorized_at":meta.get("owner_batch_authorized_at") or authorized_at,
+            "owner_batch_authorized_by":meta.get("owner_batch_authorized_by") or (OWNER_BATCH_AUTHORIZED_BY if OWNER_BATCH_AUTHORIZED else None),
+            "owner_prompt_or_notes":meta.get("owner_prompt_or_notes") or (OWNER_PROMPT_OR_NOTES if OWNER_BATCH_AUTHORIZED else None),
             "human_reviewed_at":meta.get("human_reviewed_at"),
             "human_reviewed_by":meta.get("human_reviewed_by"),
             "human_prompt_or_notes":meta.get("human_prompt_or_notes")
