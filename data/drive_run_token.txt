@@ -1,2 +1,2 @@
-trigger=2026-10-31T14:50:00+01:00
-reason=self-hosted-preflight-and-batch-retry
+trigger=2026-11-01T19:20:00+01:00
+reason=hosted-drive-secret-explicit-folder-test
