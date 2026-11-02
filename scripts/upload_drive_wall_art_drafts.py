@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 from __future__ import annotations
-import json, time, zipfile, traceback
+import json, time, zipfile, traceback, re
 from pathlib import Path
 from PIL import Image, ImageOps
 from etsy_api import refresh_access_token,get_owner_shop,find_taxonomy_id,create_draft,upload_image,upload_file,get_listing,get_listing_images,get_listing_files
@@ -27,19 +27,34 @@ def norm_tags(tags):
         if tag not in out: out.append(tag)
     return out[:13]
 
+def clean_display_name(value):
+    s=str(value or "").strip()
+    s=re.sub(r"^[A-Z]{2,6}[- _]?\d{2,4}[- _]*", "", s, flags=re.I).strip(" -_")
+    return s or str(value or "").strip()
+
+def internal_ref(item):
+    m=re.match(r"^([A-Z]{2,6}[- _]?\d{2,4})", str(item.get("file") or ""), flags=re.I)
+    return (m.group(1).replace("_","-").upper() if m else str(item.get("id") or "").upper())
+
 def title_for(item):
-    if item.get("title"): return str(item["title"])[:140]
+    if item.get("title"):
+        return re.sub(r"^[A-Z]{2,6}[- _]?\d{2,4}[- _]*", "", str(item["title"]), flags=re.I).strip()[:140]
+    name=clean_display_name(item.get("display_name"))
     kw=item.get("keyword") or "Landscape Wall Art"
-    return "{} Printable Wall Art | {} | Digital Download".format(item["display_name"],kw.title())[:140]
+    return "{} Printable Wall Art | {} | Digital Download".format(name,kw.title())[:140]
 
 def description(item):
+    name=clean_display_name(item.get("display_name"))
+    ref=internal_ref(item)
     return """{} — Printable Wall Art
 
 Instant digital download. No physical item will be shipped.
 
 YOU RECEIVE
-• 1 high-resolution 4:5 PNG artwork in a ZIP archive
-• Prepared for an 8x10 / 16x20 style aspect ratio
+• 1 high-resolution PNG artwork in a ZIP archive
+• Pixel dimensions: 2400 × 3000 px
+• Aspect ratio: 4:5
+• Equivalent to 8 × 10 inches at 300 PPI
 
 PRINTING
 Print at home, with a local print shop, or with an online printing service. Colors may vary slightly between screens and printers.
@@ -49,7 +64,9 @@ Created with AI-assisted creative tools from seller-directed creative input, the
 
 LICENSE
 Personal use only. Do not resell, redistribute, share or upload the digital file for resale.
-""".format(item["display_name"])
+
+Internal reference: {}
+""".format(name, ref)
 
 def prepare_file(item):
     src=ASSETS/item["file"]
