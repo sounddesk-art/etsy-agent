@@ -1,0 +1,2 @@
+trigger=2026-11-02T13:26:00+01:00
+reason=clean-titles-and-add-pixel-resolution
