@@ -1,0 +1,34 @@
+name: Etsy sales read-only analysis
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  sales:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment: etsy-readonly
+    env:
+      ETSY_KEYSTRING: ${{ secrets.ETSY_KEYSTRING }}
+      ETSY_SHARED_SECRET: ${{ secrets.ETSY_SHARED_SECRET }}
+      ETSY_REFRESH_TOKEN: ${{ secrets.ETSY_REFRESH_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install requests
+      - name: Test collector
+        run: python -m unittest discover -s market-intelligence -p 'test_*.py' -v
+      - name: Read aggregate shop transactions (no raw buyer records)
+        run: python market-intelligence/etsy_sales.py --mapping market-intelligence/listing-keywords.csv --output /tmp/etsy-sales.json
+      - name: Join sales to niche ranking
+        run: python market-intelligence/scanner.py --db /tmp/market.sqlite --sales /tmp/etsy-sales.json --output /tmp/market-intelligence.json
+      - name: Store aggregate report only
+        uses: actions/upload-artifact@v4
+        with:
+          name: etsy-aggregate-sales
+          path: |
+            /tmp/market-intelligence.json
+            /tmp/market-intelligence.csv
+          retention-days: 7
