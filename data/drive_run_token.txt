@@ -1,2 +1,5 @@
-trigger=2026-11-01T19:24:00+01:00
-reason=owner-authorized-ready-folder-draft-test
+trigger=2026-11-16T16:07:00+01:00
+reason=owner-requested-five-new-draft-hardtest
+batch_id=NDS-TEST-20261116
+expected_files=5
+publishing=disabled
